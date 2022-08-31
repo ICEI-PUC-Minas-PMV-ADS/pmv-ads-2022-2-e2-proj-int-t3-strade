@@ -74,6 +74,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | **RF-004** | O sistema deve permitir a avaliação da transportadora depois da entrega. | ALTA |
 | **RF-005** | O sistema deve disponibilizar meios de contato com o cliente, seja para a transportadora, seja para a loja. | ALTA |
 | **RF-006** | O sistema deve permitir a escolha do tema escuro ou claro para facilitar a navegação das pessoas com hipersensibilidade a luz. | ALTA |
+| **RF-007** | O sistema deve gerar um relatório das comunicações feitas pela transportadora ou pelos lojistas. | ALTA |
 
 ### Requisitos não Funcionais
 
