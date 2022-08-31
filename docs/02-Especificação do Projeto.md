@@ -36,7 +36,7 @@ A seguir estão apresentadas as personas que foram encontradas durante a pesquis
 
 | Tamara Furtado | Idade: 29 |Persona 6 - Consumidor (necessidade especial)|
 |:---:|:---:|:---:|
-| ![Persona Vitor Andrade](img/persona-vitor-andrade.png) | **Ocupação:**  | **Aplicativos:** Instagram, Facebook, Netflix |
+| ![Persona Vitor Andrade](img/persona-vitor-andrade.png) | **Ocupação:** Estudante universitária em engenharia ambiental | **Aplicativos:** Instagram, Facebook, Netflix |
 | **Motivações**| **Frustrações**| **Hobbies e História** |
 | Ser cliente de empresas que pensam em diversidade, inclusão e acessibilidade para que isso aconteça cada vez mais. | Não ter informação de quais empresas são inclusivas. | Ver filmes e jogar basquete com seu grupo de amigos. |
 
