@@ -1,44 +1,64 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A seguir estão apresentadas as personas que foram encontradas durante a pesquisa de resolução e entendimento do problema.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+| Júlio Assis | Idade:58 |Persona 1 - Consumidor|
+|:---:|:---:|:---:|
+| ![Persona Maria Helen](img/persona-maria-helen.png)| **Ocupação:**  Motorista de ônibus da empresa RandBus.| **Aplicativos:** Facebook, WhatsApp, YouTube |
+| **Motivações**| **Frustrações** | **Hobbies e História** |
+| Ser um bom motorista. | Sempre que compra um produto pela internet não consegue saber onde está o pacote, as informações nunca estão claras. | Adora praticar esportes ao ar livre. Gosta de bicicleta e ama comprar acessórios para ela. |
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+| Matheus Pereira | Idade:23 |Persona 2 - Lojista|
+|:---:|:---:|:---:|
+| ![Persona Maria Helen](img/persona-maria-helen.png)| **Ocupação:**  MEI em um e-commerce de artigos de pesca que atende a região de Belo Horizonte. | **Aplicativos:**  Instagram, LinkedIn, YouTube |
+| **Motivações**| **Frustrações** | **Hobbies e História** |
+| Oferecer os melhores experiências de compra para seus clientes. | Muitas vezes ocorrem avarias na entrega dos seus produtos. | Pescar com suas família. |
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+| Chiara Fernandes | Idade: 34 |Persona 3 - Transportadora|
+|:---:|:---:|:---:|
+| ![Persona Fabricio Ferreira](img/persona-fabricio-ferreira.png) | **Ocupação:** CEO de uma transportadora com 12 empregados e 4 vans de transporte. | **Aplicativos:** Telegram, YouTube, Instagram, Aplicativos de bancos, LinkedIn |
+| **Motivações**| **Frustrações**| **Hobbies e História** |
+| Ter seus clientes satisfeitos com as entregas feitas de forma rápida, eficaz e sem danos ao produto. | Sente que perde muito tempo em diversas reuniões com lojas parceiras. | Gosta de viajar a lugares novos, conhecer pessoas e sempre viajar com sua primeira van, um presente de seu pai. |
+
+| Adriana Andrade | Idade: 42 |Persona 4 - Transportadora|
+|:---:|:---:|:---:|
+| ![Persona Vitor Andrade](img/persona-vitor-andrade.png) | **Ocupação:** CEO de uma transportadora com 40 empregados com múltiplos veículos de diferentes portes.| **Aplicativos:** Telegram, YouTube, LinkedIn, Whatsapp, Teams, Instagram |
+| **Motivações**| **Frustrações**| **Hobbies e História** |
+| Sua maior motivação está na satisfação dos lojistas. Para Adriana, se o lojista está satisfeito é porque seus clientes estão satisfeitos. | Sente que perde muito tempo para resolver problemas que poderiam ser resolvidos rapidamente com o contato direto com o cliente. | Paintball com os amigos. Gosta de frequentar restaurantes elegantes. Comidas apimentadas. |
+
+| Diego Furtado | Idade: 21 |Persona 5 - Consumidor|
+|:---:|:---:|:---:|
+| ![Persona Vitor Andrade](img/persona-vitor-andrade.png) | **Ocupação:** Desenvolvedor de Jogos para uma empresa de grande porte. | **Aplicativos:** Roblox, Minecraft, Tiktok, Instagram, Teams |
+| **Motivações**| **Frustrações**| **Hobbies e História** |
+| Quer transformar a vida das crianças e dos adolescentes através de seus jogos. Aplica sua criatividade em todos os seus trabalhos. | Sente-se frustrado com a falta de opções de frete na hora da compra de seus equipamentos para o trabalho. | Começou a desenvolver aos 15 anos com aplicativos de desenvolvimento como Unreal Engine. Hoje está no início de seus sonhos. Sua única paixão são os jogos. |
+
+| Tamara Furtado | Idade: 29 |Persona 6 - Consumidor (necessidade especial)|
+|:---:|:---:|:---:|
+| ![Persona Vitor Andrade](img/persona-vitor-andrade.png) | **Ocupação:**  | **Aplicativos:** Instagram, Facebook, Netflix |
+| **Motivações**| **Frustrações**| **Hobbies e História** |
+| Ser cliente de empresas que pensam em diversidade, inclusão e acessibilidade para que isso aconteça cada vez mais. | Não ter informação de quais empresas são inclusivas. | Ver filmes e jogar basquete com seu grupo de amigos. |
+
+| Kim Oculamat | Idade: 32 |Persona 7 - Lojista|
+|:---:|:---:|:---:|
+| ![Persona Maria Helen](img/persona-maria-helen.png)| **Ocupação:**  Fisioterapeuta, vende artigos de fisioterapia, musculação e esportes. | **Aplicativos:** Mercado livre, Ifood, Drogaria Araújo, Instagram, Youtube e Twitter  |
+| **Motivações**| **Frustrações** | **Hobbies e História** |
+| Que seus clientes recebam suas encomendas num prazo minimo (dentro prazo) e em bom estado | Não ter acesso a qualidade do serviço das transportadoras | Iniciou sua carreira na fisioterapia por conta da musculação e sua paixão pelo futebol americano, que se tornaram um hobbie |
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Registramos as histórias das personas encontradas para o projeto e analisamos suas histórias. 
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR`                |
+| -------------------- | ---------------------------------- | -------------------------------------- |
+|**Júlio Assis**| saber onde está o meu pacote. | ficar tranquilo sabendo que o pacote está seguro e chegará no tempo certo.|
+|**Matheus Pereira**| quando comprar ou vender, não ocorra avarias nos produtos. | para evitar transtornos devido a burocracia para resolver o problema. |
+|**Chiara Fernandes**| reduzir a quantidade de reuniões com lojistas para um único contrato | economizar tempo e conseguir focar em outros assuntos que podem ser otimizados.|
+|**Adriana Andrade**| ter contato com o cliente | resolver seus problemas de forma mais eficiente.|
+|**Diego Furtado**| maior quantidade de opções de frete | escolher aquele que atender melhor sua necessidade de tempo. |
+|**Tamara Furtado**| Seja possível identificar quais transportadoras possuem funcionários que se encaixam em PCD. | poder escolher a empresa baseado nessa informação. |
+|**Kim Oculamat**| Seja possivel ver as avaliaçoes feitas por clientes das transportadoras | Para ter acesso a qualidade do serviço prestado ao cliente |
 
 ## Requisitos
 
@@ -46,48 +66,33 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+| **ID** | **Descrição do Requisito** | **Prioridade** |
+| ------ | -------------------------- | -------------- |
+| **RF-001** | O sistema deve listar as transportadoras disponíveis para entrega no endereço indicado. | ALTA |
+| **RF-002** | O site do sistema deve permitir o cadastro de transportadoras locais. | ALTA |
+| **RF-003** | O site do sistema deve disponibilizar uma página para atualização dos status dos itens. | ALTA |
+| **RF-004** | O sistema deve permitir a avaliação da transportadora depois da entrega. | ALTA |
+| **RF-005** | O sistema deve disponibilizar meios de contato com o cliente, seja para a transportadora, seja para a loja. | ALTA |
+| **RF-006** | O sistema deve permitir a escolha do tema escuro ou claro para facilitar a navegação das pessoas com hipersensibilidade a luz. | ALTA |
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+| **ID** | **Descrição do Requisito** | **Prioridade** |
+| ------ | -------------------------- | -------------- |
+| **RNF-001** | O sistema deve ter uma lista com uma regra de negócios para o cadastro das transportadoras. | ALTA |
+| **RNF-002** | O site do sistema de cadastro das transportadoras deverá ser responsivo, permitindo a visualização em um celular de forma adequada. | ALTA |
+| **RNF-003** | A lista de transportadoras deve indicar quais delas possuem funciorários PCD. | ALTA |
+| **RNF-004** | O sistema deve ter um banco de dados relacional que permita que a API o consulte. | ALTA |
+| **RNF-005** | A equipe somente deve utilizar as linguagens HTML, CSS, JS e C#. | Alta |
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+| **ID** | **Restrição** |
+| ------ | ------------- |
+| 01  | O projeto completo deve ser entregue no dia 11/12/2022. | Alta |
+| 02  | A equipe não pode terceirizar o desenvolvimento do projeto. | Alta |
 
 ## Diagrama de Casos de Uso
 
