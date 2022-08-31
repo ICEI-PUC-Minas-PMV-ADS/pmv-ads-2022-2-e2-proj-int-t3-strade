@@ -1,23 +1,32 @@
-# TÍTULO DO PROJETO
+# Strade
 
-`CURSO`
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`PROJETO: DESENVOLVIMENTO DE UMA APLICAÇÃO INTERATIVA`
 
-`SEMESTRE`
+`EIXO 2`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo desse projeto é permitir que as lojas de e-commerce possam direcionar os esforços que hoje são direcionados para manutenção de contratos de transporte em atividades mais relevantes com a atividade primária dos seus negócios. Temos como metas: 
+
+ - Atuar como hub de transportadoras locais de vários portes e modais de entrega; 
+ - Produzir uma solução de software que se integre ao ecossistema de vendas online das lojas; 
+ - Produzir uma solução de software que comunique às transportadoras os dados necessários à cada entrega; 
+ - Receber das operadoras o status de processamento dos pedidos; 
+ - Possuir uma interface de comunicação com o cliente para acompanhamento do seu pedido 
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* [Bruno de Melo Ruas](https://www.linkedin.com/in/brunoruas2/)
+* [Diego Menezes Soares](https://www.linkedin.com/in/diego-soares-1913451b7)
+* [Gabriel da Silva Oliveira](https://www.linkedin.com/in/gsogabriel/)
+* [Lucas Célio Neves Silva](https://www.linkedin.com/in/lucascns/)
+* [Marina Gonçalves Duque](https://www.linkedin.com/in/marina-duque-1b2ab6156)
+* [Mikaelly da Silva Carneiro](https://www.linkedin.com/in/MikaellyCarneiro)
+* [Thassia Diandra Ferreira](https://www.linkedin.com/in/thassiaferr)
 
 ## Orientador
 
-* Nome completo do professor 1
+* José Wilson Da Costa
 
 ## Instruções de utilização
 
