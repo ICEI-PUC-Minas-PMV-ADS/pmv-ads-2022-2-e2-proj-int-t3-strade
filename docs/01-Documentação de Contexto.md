@@ -1,46 +1,46 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+O comércio eletrônico direto para o consumidor final vem se tornando a maior fatia de receita de várias empresas que se consolidaram mesmo no setor de vendas diretas antes da revolução das comunicações trazida pela popularização da internet (Portal G1, 2021). Além dessas empresas tradicionais, novas marcas decidiram atuar especificamente no segmento virtual, sendo a Amazon a principal empresa desse segmento.
+
+https://g1.globo.com/economia/noticia/2021/02/26/com-pandemia-comercio-eletronico-tem-salto-em-2020-e-dobra-participacao-no-varejo-brasileiro.ghtml
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Diante dessa modernização do consumo de bens diretos ao consumidor final, novos desafios surgiram. Alguns dos mais relevantes são diretamente relacionados a estrutura de transporte e entrega das compras em tempo oportuno e de maneira satisfatória ao consumidor. 
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+Atualmente, as lojas virtuais optam por fazer uso de algumas estratégias de entrega dos seus produtos como: 
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+ - Possuem a própria infraestrutura de entregas; 
+
+ - Terceirizam suas entregas por meio de contratos diretos com distribuidoras; 
+
+ - Usam os serviços de empresas de microsserviços como Uber, Rappi e outros  
 
 ## Objetivos
+O objetivo é permitir que as lojas de e-commerce possam direcionar os esforços que hoje são direcionados para manutenção de contratos de transporte em atividades mais relevantes com a atividade primária dos seus negócios. Temos como metas: 
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+ - Atuar como hub de transportadoras locais de vários portes e modais de entrega; 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+ - Produzir uma solução de software que se integre ao ecossistema de vendas online das lojas; 
+
+ - Produzir uma solução de software que comunique às transportadoras os dados necessários à cada entrega; 
+
+ - Receber das operadoras o status de processamento dos pedidos; 
+
+ - Possuir uma interface de comunicação com o cliente para acompanhamento do seu pedido 
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A solução proposta para o problema supracitado consiste em diferentes camadas de desenvolvimento e atuação. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+No lado das lojas virtuais, serão produzidos iframes em html com a lógica de negócio necessária para comunicação com as APIs desenvolvidas pelo time de desenvolvimento que permitirão a produção de uma lista de opções de transportadoras a partir das condições de entrega definidas pelo cliente no momento da compra. 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+No lado das transportadoras, primeiramente, serão feitos os cadastros necessários para a elaboração da regra de negócio e filtros no momento da definição da lista de transportadoras possíveis para cada entrega solicitada. Além disso, uma camada de atualização do status de cada pacote de entrega bem como a confirmação de entrega. Desse modo, são reduzidos alguns dos principais problemas enfrentados por parte das empresas de transporte (Hivecloud, 2022).
 
-## Público-Alvo
+No lado do consumidor final, a sinalização do serviço de entrega bem como o informe sempre que o status da encomenda sofrer alteração. Como método de melhoria, também será obtida uma nota pelo serviço de entrega para melhor manutenção do ecossistema de transportadoras parceiras da solução. 
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+https://www.hivecloud.com.br/post/principais-dificuldades-dos-prestadores-de-servico/
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+## Público Alvo
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Como a proposta é relativa ao modelo B2B de intermediação de serviços, têm-se duas frentes de público alvo. Na frente de clientes da solução, o projeto tem como público alvo lojas de e-commerce que oferecem entregas em cidades cobertas por contratos com transportadoras parceiras. Na frente de fornecedores, o público alvo são distribuidoras de todos os portes que possuírem capacidade mínima de tecnologia de informação. 
