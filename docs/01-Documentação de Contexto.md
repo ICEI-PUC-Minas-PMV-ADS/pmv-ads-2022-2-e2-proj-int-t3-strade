@@ -2,8 +2,6 @@
 
 O comércio eletrônico direto para o consumidor final vem se tornando a maior fatia de receita de várias empresas que se consolidaram mesmo no setor de vendas diretas antes da revolução das comunicações trazida pela popularização da internet (Portal G1, 2021). Além dessas empresas tradicionais, novas marcas decidiram atuar especificamente no segmento virtual, sendo a Amazon a principal empresa desse segmento.
 
-https://g1.globo.com/economia/noticia/2021/02/26/com-pandemia-comercio-eletronico-tem-salto-em-2020-e-dobra-participacao-no-varejo-brasileiro.ghtml
-
 ## Problema
 
 Diante dessa modernização do consumo de bens diretos ao consumidor final, novos desafios surgiram. Alguns dos mais relevantes são diretamente relacionados a estrutura de transporte e entrega das compras em tempo oportuno e de maneira satisfatória ao consumidor. 
@@ -38,8 +36,6 @@ No lado das lojas virtuais, serão produzidos iframes em html com a lógica de n
 No lado das transportadoras, primeiramente, serão feitos os cadastros necessários para a elaboração da regra de negócio e filtros no momento da definição da lista de transportadoras possíveis para cada entrega solicitada. Além disso, uma camada de atualização do status de cada pacote de entrega bem como a confirmação de entrega. Desse modo, são reduzidos alguns dos principais problemas enfrentados por parte das empresas de transporte (Hivecloud, 2022).
 
 No lado do consumidor final, a sinalização do serviço de entrega bem como o informe sempre que o status da encomenda sofrer alteração. Como método de melhoria, também será obtida uma nota pelo serviço de entrega para melhor manutenção do ecossistema de transportadoras parceiras da solução. 
-
-https://www.hivecloud.com.br/post/principais-dificuldades-dos-prestadores-de-servico/
 
 ## Público Alvo
 
