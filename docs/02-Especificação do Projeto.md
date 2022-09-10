@@ -56,7 +56,7 @@ Registramos as histórias das personas encontradas para o projeto e analisamos s
 |**Matheus Pereira**| quando comprar ou vender, não ocorra avarias nos produtos. | para evitar transtornos devido a burocracia para resolver o problema. |
 |**Chiara Fernandes**| reduzir a quantidade de reuniões com lojistas para um único contrato | economizar tempo e conseguir focar em outros assuntos que podem ser otimizados.|
 |**Adriana Andrade**| ter contato com o cliente | resolver seus problemas de forma mais eficiente.|
-|**Diego Furtado**| maior quantidade de opções de frete | escolher aquele que atender melhor sua necessidade de tempo. |
+|**Diego Novaes**| maior quantidade de opções de frete | escolher aquele que atender melhor sua necessidade de tempo. |
 |**Tamara Furtado**| Seja possível identificar quais transportadoras possuem funcionários que se encaixam em PCD. | poder escolher a empresa baseado nessa informação. |
 |**Kim Oculamat**| Seja possivel ver as avaliaçoes feitas por clientes das transportadoras | Para ter acesso a qualidade do serviço prestado ao cliente |
 
