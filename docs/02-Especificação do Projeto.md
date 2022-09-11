@@ -68,9 +68,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | **ID** | **Descrição do Requisito** | **Prioridade** |
 | ------ | -------------------------- | -------------- |
-| **RF-001** | O sistema deve listar as transportadoras disponíveis para entrega no endereço indicado. | ALTA |
+| **RF-001** | O sistema deve listar as transportadoras disponíveis para entrega no endereço indicado. | MÉDIA |
 | **RF-002** | O site do sistema deve permitir o cadastro de transportadoras locais. | ALTA |
-| **RF-003** | O site do sistema deve disponibilizar uma página para atualização dos status dos itens. | ALTA |
+| **RF-003** | O site do sistema deve disponibilizar uma página para atualização dos status dos itens. | MÉDIA |
 | **RF-004** | O sistema deve permitir a avaliação da transportadora depois da entrega. | ALTA |
 | **RF-005** | O sistema deve disponibilizar meios de contato com o cliente, seja para a transportadora, seja para a loja. | ALTA |
 | **RF-006** | O sistema deve permitir a escolha do tema escuro ou claro para facilitar a navegação das pessoas com hipersensibilidade a luz. | ALTA |
@@ -84,7 +84,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | **RNF-002** | O site do sistema de cadastro das transportadoras deverá ser responsivo, permitindo a visualização em um celular de forma adequada. | ALTA |
 | **RNF-003** | A lista de transportadoras deve indicar quais delas possuem funciorários PCD. | ALTA |
 | **RNF-004** | O sistema deve ter um banco de dados relacional que permita que a API o consulte. | ALTA |
-| **RNF-005** | A equipe somente deve utilizar as linguagens HTML, CSS, JS e C#. | Alta |
+| **RNF-005** | A equipe somente deve utilizar as linguagens HTML, CSS, JS e C#. | ALTA |
 
 ## Restrições
 
