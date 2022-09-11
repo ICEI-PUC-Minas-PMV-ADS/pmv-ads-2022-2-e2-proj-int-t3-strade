@@ -71,10 +71,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | **RF-001** | O sistema deve listar as transportadoras disponíveis para entrega no endereço indicado. | ALTA |
 | **RF-002** | O site do sistema deve permitir o cadastro de transportadoras locais. | ALTA |
 | **RF-003** | O site do sistema deve disponibilizar uma página para atualização dos status dos itens. | ALTA |
-| **RF-004** | O sistema deve permitir a avaliação da transportadora depois da entrega. | ALTA |
-| **RF-005** | O sistema deve disponibilizar meios de contato com o cliente, seja para a transportadora, seja para a loja. | ALTA |
-| **RF-006** | O sistema deve permitir a escolha do tema escuro ou claro para facilitar a navegação das pessoas com hipersensibilidade a luz. | ALTA |
-| **RF-007** | O sistema deve gerar um relatório das comunicações feitas pela transportadora ou pelos lojistas. | ALTA |
+| **RF-004** | O sistema deve permitir a avaliação da transportadora depois da entrega. | BAIXA |
+| **RF-005** | O sistema deve disponibilizar meios de contato com o cliente, seja para a transportadora, seja para a loja. | BAIXA |
+| **RF-006** | O sistema deve permitir a escolha do tema escuro ou claro para facilitar a navegação das pessoas com hipersensibilidade a luz. | BAIXA |
+| **RF-007** | O sistema deve gerar um relatório das comunicações feitas pela transportadora ou pelos lojistas. | MÉDIA |
 
 ### Requisitos não Funcionais
 
