@@ -1,7 +1,7 @@
 
 # Metodologia
 
-O projeto será desenvolvido com a metodologia ágil, com as divisões feitas em backlog. O sistema será criado de modo iterativo, com incrementos a cada fase do projeto. Cada desenvolvedor terá sua própria branch e seus próprios arquivos de edição, com exceção de issues que necessitarão de dois desenvolvedores atuando juntos. 
+O projeto será desenvolvido com a metodologia ágil, com as divisões feitas em backlog. O sistema será criado de modo iterativo, com incrementos a cada fase do projeto. Cada desenvolvedor terá sua própria branch e seus próprios arquivos de edição, com exceção de issues que necessitarão de dois ou mais desenvolvedores atuando juntos. 
 
 ## Controle de Versão
 
@@ -36,12 +36,15 @@ etiquetas:
 
 Cada desenvolvedor terá sua resposabilidade recebida em cada sprint.
 
-/** Apresente a divisão de papéis entre os membros do grupo.
+> <h4><b>Sprint 1</b></h4>
+- 01 Documentação de contexto: Bruno, Diego, Gabriel, Lucas, Marina, Mikaelly e Thassia
+- 02 Especificação do projeto: Gabriel e Mikaelly
+- 12 Apresentação(Video): Lucas e Thassia
 
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0) **/
+> <h4><b>Sprint 2</b></h4>
+- 03 Metodologia: Gabriel e Mikaelly
+- 05 Arquitetura de solução (Diagrama de Classes): Diego
+
 
 ### Processo
 
@@ -62,8 +65,9 @@ Todo o processo do trabalho está documentado na forma de Kanban pela aba de pro
 As ferramentas empregadas no projeto são:
 
 - Editor de código: VS Code.
-- Ferramentas de comunicação: Discord e Teams
+- Ferramentas de comunicação: Discord, Teams e whatsApp.
 - Ferramentas de desenho de tela (_wireframing_): Lucidchart
+- Versionamento: GitHub
 
 O editor de código foi escolhido porque ele possui uma integração com o
 sistema de versão. As ferramentas de comunicação utilizadas possuem
