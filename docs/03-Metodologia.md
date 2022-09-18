@@ -1,7 +1,7 @@
 
 # Metodologia
 
-O projeto será desenvolvido com a metodologia ágil, com as divisões feitas em backlog. O sistema será criado de modo iterativo, com incrementos a cada fase do projeto. Cada desenvolvedor terá sua própria branch e seus próprios arquivos de edição, com exceção issues que necessitarão de dois desenvolvedores atuando juntos. 
+O projeto será desenvolvido com a metodologia ágil, com as divisões feitas em backlog. O sistema será criado de modo iterativo, com incrementos a cada fase do projeto. Cada desenvolvedor terá sua própria branch e seus próprios arquivos de edição, com exceção de issues que necessitarão de dois desenvolvedores atuando juntos. 
 
 ## Controle de Versão
 
