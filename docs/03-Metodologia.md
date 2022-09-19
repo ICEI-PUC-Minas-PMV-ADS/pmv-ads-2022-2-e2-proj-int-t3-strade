@@ -52,7 +52,7 @@ Todo o processo do trabalho está documentado na forma de Kanban pela aba de pro
 
 [comment]: # "/** Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução."
  
-[comment]: # "> **Links Úteis**:
+[comment]: # "> **Links Úteis**:"
 [comment]: # "> - [Project management, made simple](https://github.com/features/project-management/)"
 [comment]: # "> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)"
 [comment]: # "> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)"
@@ -62,7 +62,7 @@ Todo o processo do trabalho está documentado na forma de Kanban pela aba de pro
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código: VS Code.
+- Editor de código: Visual Studio Code.
 - Ferramentas de comunicação: Discord, Teams e whatsApp.
 - Ferramentas de desenho de tela (_wireframing_): Lucidchart
 - Versionamento: GitHub
@@ -73,10 +73,8 @@ integração semelhante e por isso foram selecionadas. Por fim, para criar
 diagramas utilizamos essa ferramenta por melhor captar as
 necessidades da nossa solução.
 
-/** Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
+[comment]: # "/** Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível."
  
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
-
-**/
+[comment]: # "> **Possíveis Ferramentas que auxiliarão no gerenciamento**: "
+[comment]: # "> - [Slack](https://slack.com/)"
+[comment]: # "> - [Github](https://github.com/)"
