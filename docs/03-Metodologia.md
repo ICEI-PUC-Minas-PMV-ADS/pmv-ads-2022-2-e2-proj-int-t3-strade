@@ -48,17 +48,15 @@ Cada desenvolvedor terá sua resposabilidade recebida em cada sprint.
 
 ### Processo
 
-[comment]: <> (Todo o processo do trabalho está documentado na forma de Kanban pela aba de projects do GitHub. Nessa aba temos toda organização das atribuições de tarefas, etapas de cada processo e tarefas concluídas.
+Todo o processo do trabalho está documentado na forma de Kanban pela aba de projects do GitHub. Nessa aba temos toda organização das atribuições de tarefas, etapas de cada processo e tarefas concluídas.
 
-/** Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+[comment]: # "/** Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução."
  
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
-
-**/)
+[comment]: # "> **Links Úteis**:
+[comment]: # "> - [Project management, made simple](https://github.com/features/project-management/)"
+[comment]: # "> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)"
+[comment]: # "> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)"
+[comment]: # "> - [Tutorial Slack](https://slack.com/intl/en-br/)"
 
 ### Ferramentas
 
