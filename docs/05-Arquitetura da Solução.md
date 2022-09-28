@@ -23,7 +23,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 [comment]: <> (> - [Como fazer um diagrama entidade relacionamento | Lucidchart] https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
 
-![Modelo Entidade Relacionamento](https://raw.githubusercontent.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-strade/main/docs/img/Modelo%20de%20Entidade%20e%20Relacionamento%20Strade.png)
+![Modelo Entidade Relacionamento](img/Modelo%20de%20Entidade%20e%20Relacionamento%20Strade.png)
 
 ## Projeto da Base de Dados
 
