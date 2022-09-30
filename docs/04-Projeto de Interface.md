@@ -22,6 +22,10 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
+# Página da Loja do Cliente
+
+Nesta página, o cliente da Loja deverá colocar o CEP para entrega. Caso o seu CEP seja da região de Belo Horizonte-MG, ele receberá as melhores transportadoras para a entrega.
+
 ![Exemplo de Wireframe](img/Pagina_da_Loja_Cliente.png)
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
