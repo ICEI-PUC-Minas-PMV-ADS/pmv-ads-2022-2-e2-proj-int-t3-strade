@@ -43,8 +43,14 @@ O usuário do deverá colocar o Código de Rastreio do pedido para saber se a en
 ![Página para saber o status da encomenda](img/Localizar_Encomenda.png)
 
 
-### Status de Encomenda Enviada
+### Status da Encomenda Enviada
 
 Esta tela é mostrada ao usuário caso sua encomenda tenha sido enviada.
 
 ![Página Encomenda Enviada](img/Informação_da_Encomenda-Enviada.png)
+
+### Status da Encomenda Entregue
+
+Esta tela é mostrada ao usuário caso sua encomenda tenha sido entregue.
+
+![Página Encomenda Entregue](img/Informação_da_Encomenda-Entregue.png)
