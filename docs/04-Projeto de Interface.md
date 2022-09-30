@@ -22,14 +22,14 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-# Página da Loja do Cliente
+### Página da Loja do Cliente
 
 Nesta página, o cliente da Loja deverá colocar o CEP para entrega. Caso o seu CEP seja da região de Belo Horizonte-MG, ele receberá as melhores transportadoras para a entrega.
 
 ![Página da Loja do Cliente da Strade](img/Pagina_da_Loja_Cliente.png)
 
 
-# Transportadoras Disponíveis
+### Transportadoras Disponíveis
 
 Após digitar um CEP da região de Belo Horizonte-MG, aparecerá as melhores transportadoras para a entrega.
 
