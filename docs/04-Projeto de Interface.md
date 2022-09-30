@@ -41,3 +41,10 @@ Após digitar um CEP da região de Belo Horizonte-MG, aparecerá as melhores tra
 O usuário do deverá colocar o Código de Rastreio do pedido para saber se a encomenda foi enviada ou já está entregue. Podendo ter localização em tempo real através da empresa que está responsável pela entrega, caso a empresa forneça este serviço.
 
 ![Página para saber o status da encomenda](img/Localizar_Encomenda.png)
+
+
+### Status de Encomenda Enviada
+
+Esta tela é mostrada ao usuário caso sua encomenda tenha sido enviada.
+
+![Página Encomenda Enviada](img/Informação_da_Encomenda-Enviada.png)
