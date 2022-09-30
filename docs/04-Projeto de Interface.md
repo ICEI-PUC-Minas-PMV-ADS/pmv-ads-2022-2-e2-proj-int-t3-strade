@@ -35,4 +35,9 @@ Após digitar um CEP da região de Belo Horizonte-MG, aparecerá as melhores tra
 
 ![Página Mostrando as Transportadoras Disponíveis](img/Transportadoras.png)
 
-Nesta página, o cliente da Loja deverá colocar o CEP para entrega. Caso o seu CEP seja da região de Belo Horizonte-MG, ele receberá as melhores transportadoras para a entrega.
+
+### Saber Status da Encomenda
+
+O usuário do deverá colocar o Código de Rastreio do pedido para saber se a encomenda foi enviada ou já está entregue. Podendo ter localização em tempo real através da empresa que está responsável pela entrega, caso a empresa forneça este serviço.
+
+![Página para saber o status da encomenda](img/Localizar_Encomenda.png)
