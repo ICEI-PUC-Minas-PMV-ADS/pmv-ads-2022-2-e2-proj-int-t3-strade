@@ -54,3 +54,25 @@ Esta tela é mostrada ao usuário caso sua encomenda tenha sido enviada.
 Esta tela é mostrada ao usuário caso sua encomenda tenha sido entregue.
 
 ![Página Encomenda Entregue](img/Informação_da_Encomenda-Entregue.png)
+
+
+### Página Inicial de Cadastro de Transportadora
+
+Página de Cadastro de transportadoras parceiras. O usuário será redirecionado para esta página quando for fazer um cadastro, ou tiver feito um cadastro bem sucedido.
+
+![Página Cadastro de Transportadora Inicial](img/Página_de_Cadastro_Transportadora_Strade-Inicial.png)
+
+
+### Cadastro de Transportadora ao Banco de Dados da Strade
+
+Empresas que querem ser parceiras da Strade e serem clientes, poderão cadastrar sua transportadoras nesta página, preenchendo os dados e clicando em 'Cadastrar'.
+
+![Página Cadastro de Transportadora](img/Página_de_Cadastro_Transportadora_Strade-Preenchida.png)
+
+### Transportadora em Análise
+
+Após cadastrar a transportadora, ela será analisada e o usuário receberá essa mensagem.
+
+![Página Transportadora em Análise](img/Transportadora_em_Análise.png)
+
+
