@@ -72,3 +72,5 @@ Após cadastrar a transportadora, ela será analisada e o usuário receberá ess
 O usuário virá para essa tela após receber um link no seu e-mail constando a identificação do seu pedido e poderá avaliar a empresa que foi responsável pela entrega da encomenda.
 
 ![Página de Avaliação de Entrega da Encomenda](img/Avaliação.png)
+
+### Meios de Contato
