@@ -1,0 +1,13 @@
+﻿Como criar uma migração:
+
+(Faça todas suas mudanças)
+
+Vá ao terminal de nuget -> EntityFrameworkCore\Add-Migration NOMEMIGRATION (enter)         ------ ex: add nova coluna X
+
+Pós isso, vc deve atualizar o banco com essa migration:
+
+No mesmo terminal de nuget -> EntityFrameworkCore\Update-Database
+
+Para cancelar a migration atual ou a ultima:
+
+No mesmo terminal de nuget -> EntityFrameworkCore\Remove-Migration
