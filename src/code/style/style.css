@@ -1,3 +1,8 @@
 .paragraph-carousel {
   font-size: 1.2em;
 }
+
+.separation {
+  position: relative;
+  top: 0.5em;
+}
