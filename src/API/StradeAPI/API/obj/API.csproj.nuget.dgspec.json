@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\source\\repos\\pmv-ads-2022-2-e2-proj-int-t3-strade\\src\\API\\StradeAPI\\API\\API.csproj": {}
+    "C:\\Users\\bruno\\Documentos\\GitHub\\pmv-ads-2022-2-e2-proj-int-t3-strade\\src\\API\\StradeAPI\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\source\\repos\\pmv-ads-2022-2-e2-proj-int-t3-strade\\src\\API\\StradeAPI\\API\\API.csproj": {
+    "C:\\Users\\bruno\\Documentos\\GitHub\\pmv-ads-2022-2-e2-proj-int-t3-strade\\src\\API\\StradeAPI\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\pmv-ads-2022-2-e2-proj-int-t3-strade\\src\\API\\StradeAPI\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\bruno\\Documentos\\GitHub\\pmv-ads-2022-2-e2-proj-int-t3-strade\\src\\API\\StradeAPI\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\pmv-ads-2022-2-e2-proj-int-t3-strade\\src\\API\\StradeAPI\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\pmv-ads-2022-2-e2-proj-int-t3-strade\\src\\API\\StradeAPI\\API\\obj\\",
+        "projectPath": "C:\\Users\\bruno\\Documentos\\GitHub\\pmv-ads-2022-2-e2-proj-int-t3-strade\\src\\API\\StradeAPI\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bruno\\Documentos\\GitHub\\pmv-ads-2022-2-e2-proj-int-t3-strade\\src\\API\\StradeAPI\\API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,7 +75,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -91,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
