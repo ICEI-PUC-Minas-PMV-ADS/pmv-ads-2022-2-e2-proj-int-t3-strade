@@ -6,3 +6,30 @@
   position: relative;
   top: 0.5em;
 }
+
+  .items-checkbox {
+    display: grid;
+    grid-template-areas: "l r";
+    grid-auto-flow: row;
+  }
+
+  .checkbox-l {
+    display: inline-grid;
+    grid-area: l;
+  }
+
+  .checkbox-r {
+    display: inline-grid;
+    grid-area: r;
+    
+  }
+
+ /* Media Query */
+
+ @media (max-width: 768px)
+ {
+  .items-checkbox {
+    grid-template-areas: 
+    "l" 
+    "r"}
+ }
