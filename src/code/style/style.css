@@ -7,22 +7,38 @@
   top: 0.5em;
 }
 
-  .items-checkbox {
-    display: grid;
-    grid-template-areas: "l r";
-    grid-auto-flow: row;
-  }
+.items-checkbox {
+  display: grid;
+  grid-template-areas: "l r";
+  grid-auto-flow: row;
+}
 
-  .checkbox-l {
-    display: inline-grid;
-    grid-area: l;
-  }
+.checkbox-l {
+  display: inline-grid;
+  grid-area: l;
+}
 
-  .checkbox-r {
-    display: inline-grid;
-    grid-area: r;
-    
-  }
+.checkbox-r {
+  display: inline-grid;
+  grid-area: r;
+  
+}
+
+.container-button{
+  display: flex;
+  justify-content: end;
+  margin-top: 0.5em;
+}
+
+/* Tirar setas do input type number */
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;  
+}
+
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
 
  /* Media Query */
 
