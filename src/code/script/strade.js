@@ -2,6 +2,7 @@ window.onload = function () {
   configurarMascaraCnpj();
   configurarMascaraCep();
   configurarMascaraTel();
+  clickBotao();
 
 }
 
@@ -46,8 +47,28 @@ function configurarMascaraCep() {
   })
 }
 
+function clickBotao(){  
+  const Cadastrar = document.getElementById('botaoCadastrar')   
+  Cadastrar.addEventListener('click', enviarMensagem); 
+}
 
+function enviarMensagem(){
+ if (!validarEmail()) {
+   alert("Email inv\u00e1lido, deve conter um @ e .com.");
+    const emailInput = document.getElementById("email") 
+    emailInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
+   return;
+  }
+}
 
+function validarEmail(){
+  const emailInput = document.getElementById("email") 
+  let email = emailInput.value;
+  if (email.search('@') != -1 && email.search('.com') != -1) {
+    return true;
+  }
+  return false;
+}
 
 
 
