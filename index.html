@@ -143,33 +143,33 @@
           <!-- Inputs -->
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Nome Fantasia</span>
-            <input type="text" class="form-control" aria-label="Sizing example input"
+            <input id='inputNomeFantasia' type="text" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Nome da Transportadora</span>
-            <input type="text" class="form-control" aria-label="Sizing example input"
+            <input id='inputNomeTransportadora' type="text" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">CNPJ</span>
-            <input id="cnpj" type="text" maxlength="18" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default">
+            <input id="inputCnpj" type="text" maxlength="18" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">E-mail</span>
-            <input id="email" type="email" class="form-control" aria-label="Sizing example input"
+            <input id="inputEmail" type="email" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Telefone</span>
-            <input id="tel" type="text" maxlength="15" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default">
+            <input id="inputTel" type="text" maxlength="15" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">CEP</span>
-            <input id="cep" type="text" maxlength="9" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default">
+            <input id="inputCep" type="text" maxlength="9" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
           </div>
           <!-- Inputs termina -->
           <!-- Checkboxes -->
