@@ -7,6 +7,7 @@ window.onload = function () {
   configurarMascaraCep();
   configurarMascaraTel();
   clickCadastrar();
+  desativaInputs();
 }
 
 function clickCadastrar(){  
@@ -15,12 +16,14 @@ function clickCadastrar(){
   console.log('clicou')
 }
 
+/* Envia MSG e Valida no botão cadastrar */
 function enviarMensagem(){
   const nomeFantasiaInput = document.getElementById('inputNomeFantasia')
   const nomeTransportadoraInput = document.getElementById('inputNomeTransportadora')
   const cnjpInput = document.getElementById('inputCnpj')
   const emailInput = document.getElementById('inputEmail')
   const telInput = document.getElementById('inputTel')
+  const cepInput = document.getElementById("inputCep")
 
   if (!validarNomeFantasia()) {
     //alert("Nome Fantasia inválido, mínimo 2 caracteres.");
@@ -57,20 +60,42 @@ function enviarMensagem(){
    } 
     telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
 
-    if (!validacaoTel()) {
-      alert("Telefone inválido, digite os dados corretamente.");
-        telInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
-        return;
-       } 
-        telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+  if (!validacaoTel()) {
+    alert("Telefone inválido, digite os dados corretamente.");
+      telInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
+      return;
+      } 
+      telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+    
+  if (!validacaoCep()) {
+    alert("CEP inválido, digite os dados corretamente.");
+      cepInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
+      return;
+      } 
+      cepInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
    
 }
 
-/* Validações */
+/* Número de caracteres no  */
 const minimoAlgarismosNome = 2
 const minimoAlgarismosCnpj = 18
-const minimoAlgarismosTel = 15;
+const minimoAlgarismosTel = 15
+const minimoAlgarismosCep = 9
 
+/* Desativar inputs do form */
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('inputConcordo').onchange = desativaInputs;
+}, false);
+
+function desativaInputs() {
+  var itensForm = document.querySelectorAll('#itensForm input, button');
+  
+  for (var i = 0; i < itensForm.length; i++) {
+    itensForm[i].disabled = !itensForm[i].disabled;
+  }
+}
+
+/* Validações */
 function validarNomeFantasia(){
   let inputNomeFantasia = document.getElementById('inputNomeFantasia')
   return inputNomeFantasia.value.length >= minimoAlgarismosNome;
@@ -87,7 +112,7 @@ function validarCnpj(){
 }
   
 function validarEmail(){
-  const emailInput = document.getElementById("inputEmail") 
+  const emailInput = document.getElementById("inputEmail")
   let email = emailInput.value;
   if (email.search('@') != -1 && email.search('.com') != -1) {
     return true;
@@ -96,12 +121,12 @@ function validarEmail(){
 }
 
 function validacaoTel(){
-  const telInput = document.getElementById("inputTel") 
+  const telInput = document.getElementById("inputTel")
   return telInput.value.length >= minimoAlgarismosTel;
 }
 
 function validarTel(){
-  const telInput = document.getElementById("inputTel") 
+  const telInput = document.getElementById("inputTel")
   const dddEstados = 
   [
   /* AC */  "(68)",
@@ -132,13 +157,17 @@ function validarTel(){
   /* SP */  "(11)", "(12)", "(13)", "(14)", "(15)", "(16)", "(17)", "(18)", "(19)",
   /* TO */  "(63)"
   ]
-  
-  
+
   let telefone = telInput.value;
   if (telefone.search(dddEstados.value) != -1 && telefone.search(' 9') != -1 && telefone.search('-') != -1) {
     return true;
   }
   return false;
+}
+
+function validacaoCep(){
+  const cepInput = document.getElementById("inputCep")
+  return cepInput.value.length >= minimoAlgarismosCep;
 }
 
 /* DDD Json */
