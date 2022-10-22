@@ -49,3 +49,67 @@ input[type=number] {
     "l" 
     "r"}
  }
+
+ /* DARK MODE */
+ .bi {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.bi-moon {
+  display: none;
+}
+
+.dark,
+.dark header,
+#fundo-main, .container-fluid,
+.navbar   {
+    background-color: #263238;
+    color: #fff;
+}
+
+.dark main {
+  background-color: #263238;
+  color: #fff;
+}
+
+.dark .bi-sun {
+    display: none;
+}
+
+.dark .bi-moon {
+    display: block;
+}
+
+.dark .container-fluid
+.navbar {
+  background-color: #37474f;
+  color: #fff;
+}
+
+.dark #fundo-img {
+  background-color: #37474f;
+  color: #fff;
+}
+
+/*.dark .card-image {
+    background-color: #273035;
+}
+
+.dark .subtitle {
+    color: #67b4f3;
+}
+
+.dark .description {
+    color: #2196f3;
+}*/
+
+
+.dark .navbar-toggler,
+.dark .btn-close {
+    background-color: #37474f;
+}
+
+.dark .botaoCadastrar {
+  background-color: #05543E;
+}

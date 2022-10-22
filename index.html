@@ -17,14 +17,22 @@
     </head>
     
     <body>
-    <main>
-      <nav class="navbar bg-light" aria-label="Light offcanvas navbar">
+    <main id="fundo-main">
+      <nav class="navbar" aria-label="Light offcanvas navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Strade</a>
+          <div>
+            <input type="checkbox" name="change-theme" id="change-theme" />
+            <label for="change-theme">
+                <i class="bi bi-sun"></i>
+                <i class="bi bi-moon"></i>
+            </label>
+        </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight"
             aria-controls="offcanvasNavbarLight">
             <span class="navbar-toggler-icon"></span>
           </button>
+         
           <!-- Collapse -->
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight"
             aria-labelledby="offcanvasNavbarLightLabel">
@@ -108,8 +116,8 @@
 
       <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
-          <div class="card">
-            <img src="src/code/img/strade-img-avaliacao.png" class="card-img-top" alt="...">
+          <div id= "fundo-img" class="card dark">
+            <img  src="src/code/img/strade-img-avaliacao.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -117,8 +125,8 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
-            <img src="src/code/img/strade-img-envio.png" class="card-img-top" alt="...">
+          <div id= "fundo-img" class="card">
+            <img  src="src/code/img/strade-img-envio.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -126,8 +134,8 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
-            <img src="src/code/img/strade-img-local.png" class="card-img-top" alt="...">
+          <div id= "fundo-img" class="card">
+            <img  src="src/code/img/strade-img-local.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -135,8 +143,8 @@
           </div>
         </div>
         <div class="col">
-          <div class="card">
-            <img src="src/code/img/strade-img-text.png" class="card-img-top" alt="...">
+          <div id= "fundo-img" class="card">
+            <img  src="src/code/img/strade-img-text.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
