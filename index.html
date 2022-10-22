@@ -106,20 +106,42 @@
       <!-- Texto e Vídeo termina-->
       <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">Texto aqui.<span class="text-muted">Texto aqui.</span></h2>
-          <p class="lead">Texto aqui.</p>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="src/code/img/strade-img-avaliacao.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-            preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
-              dy=".3em">500x500</text>
-          </svg>
-
+        <div class="col">
+          <div class="card">
+            <img src="src/code/img/strade-img-envio.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="src/code/img/strade-img-local.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="src/code/img/strade-img-text.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -132,44 +154,44 @@
           <p class="lead">Mas para se cadastrar, saiba que:</p>
           <p class="lead">Regras de negócio</p>
           <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Concorda com nossos termos e condições?</label>
+            <input class="form-check-input" type="checkbox" role="switch" id="inputConcordo">
+            <label class="form-check-label" for="inputConcordo">Concorda com as regras de negócio?</label>
           </div>
         </div>
 
 
-        <div class="col-md-6">
+        <div id='itensForm'class="col-md-6">
           <p class="lead">Insira todos os dados abaixo:</p>
           <!-- Inputs -->
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Nome Fantasia</span>
-            <input type="text" class="form-control" aria-label="Sizing example input"
+            <input id='inputNomeFantasia' type="text" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Nome da Transportadora</span>
-            <input type="text" class="form-control" aria-label="Sizing example input"
+            <input id='inputNomeTransportadora' type="text" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">CNPJ</span>
-            <input id="cnpj" type="text" maxlength="18" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default">
+            <input id="inputCnpj" type="text" maxlength="18" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">E-mail</span>
-            <input id="email" type="email" class="form-control" aria-label="Sizing example input"
+            <input id="inputEmail" type="email" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Telefone</span>
-            <input id="tel" type="text" maxlength="15" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default">
+            <input id="inputTel" type="text" maxlength="15" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">CEP</span>
-            <input id="cep" type="text" maxlength="9" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default">
+            <input id="inputCep" type="text" maxlength="9" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
           </div>
           <!-- Inputs termina -->
           <!-- Checkboxes -->
