@@ -6,7 +6,7 @@
 
 `EIXO 2`
 
-O objetivo desse projeto é permitir que as lojas de e-commerce possam direcionar os esforços que hoje são direcionados para manutenção de contratos de transporte em atividades mais relevantes com a atividade primária dos seus negócios. Temos como metas: 
+O objetivo desse projeto é permitir que as lojas de e-commerce possam direcionar os esforços, que hoje são utilizados para manutenção de contratos de transporte, em atividades mais relevantes com a atividade primária dos seus negócios. Temos como metas: 
 
  - Atuar como hub de transportadoras locais de vários portes e modais de entrega; 
  - Produzir uma solução de software que se integre ao ecossistema de vendas online das lojas; 
