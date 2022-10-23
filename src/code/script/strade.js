@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
 }, false);
 
 function desativaInputs() {
-  var itensForm = document.querySelectorAll('#itensForm input, button');
+  var itensForm = document.querySelectorAll('#itensForm input, #botaoCadastrar');
   
   for (var i = 0; i < itensForm.length; i++) {
     itensForm[i].disabled = !itensForm[i].disabled;
@@ -241,8 +241,6 @@ function somenteNumeros(e) {
 /* DARK MODE */
 loadTheme();
 
-
-
 // Toggle dark mode
 function toggleDarkMode() {
     document.body.classList.toggle("dark");
@@ -256,6 +254,7 @@ function loadTheme() {
         toggleDarkMode();
     }
 }
+
 function clickDarkBtn() {
   const changeThemeBtn = document.querySelector("#change-theme");
 
