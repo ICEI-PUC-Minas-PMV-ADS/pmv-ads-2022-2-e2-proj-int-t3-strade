@@ -31,6 +31,15 @@
   margin-top: 0.5em;
 }
 
+.plead{
+    margin-top: 2em;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.text-muted{
+    font-weight: bold;
+}
 /* Tirar setas do input type number */
 input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;  
