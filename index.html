@@ -18,23 +18,34 @@
     
     <body>
     <main>
-      <nav class="navbar" aria-label="Light offcanvas navbar">
+      <nav class="navbar navbar-expand-lg fixed-top bg-ligth" aria-label="Light offcanvas navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Strade</a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="#carouselExampleFade">Início</a>
+              <span class="separation nav-item av-link px-2 text-muted">•</span>
+              <a class="nav-link" href="#sobre-nos">Sobre Nós</a>
+              <span class="separation nav-item av-link px-2 text-muted">•</span>
+              <a class="nav-link" href="#menu-cadastro">Cadastrar Transportadora</a>
+              <span class="separation nav-item av-link px-2 text-muted">•</span>
+              <a class="nav-link" href="#">Consultar Pedido</a>
+            </div>
+          </div>
           <div>
             <input type="checkbox" name="change-theme" id="change-theme" />
             <label for="change-theme">
                 <i class="bi bi-sun"></i>
                 <i class="bi bi-moon"></i>
             </label>
-        </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight"
+          </div>
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight"
             aria-controls="offcanvasNavbarLight">
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> -->
          
           <!-- Collapse -->
-          <div class="dark offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight"
+          <!-- <div class="dark offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight"
             aria-labelledby="offcanvasNavbarLightLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Menu de Pesquisa</h5>
@@ -46,6 +57,9 @@
                   <a class="nav-link active" aria-current="page" href="#">Início</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="#menu-cadastro">Cadastrar Transportadora</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="#">Consultar Pedido</a>
                 </li>
                 <li class="nav-item">
@@ -53,7 +67,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
           <!-- Collapse termina -->
         </div>
       </nav>
@@ -115,7 +129,7 @@
       <!-- Texto e Vídeo termina-->
       <hr class="featurette-divider">
 
-      <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div id='sobre-nos' class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
           <div id= "fundo-img" class="card dark">
             <img  src="src/code/img/strade-img-avaliacao.png" class="card-img-top" alt="...">
@@ -139,7 +153,7 @@
             <img  src="src/code/img/strade-img-local.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Abrangência</h5>
-              <p class="card-text">Atuamos ativamente em toda Grande BH com especialistas em entregas na região.</p>
+              <p class="card-text">Atuamos ativamente em toda Grande Belo Horizonte com especialistas em entregas na região.</p>
             </div>
           </div>
         </div>
@@ -170,35 +184,35 @@
 
 
         <div id='itensForm'class="col-md-6">
-          <p class="lead">Insira todos os dados abaixo:</p>
+          <p id='menu-cadastro' class="lead">Insira todos os dados abaixo:</p>
           <!-- Inputs -->
           <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Nome Fantasia</span>
+            <span class="dark input-group-text" id="inputGroup-sizing-default">Nome Fantasia</span>
             <input id='inputNomeFantasia' type="text" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Nome da Transportadora</span>
+            <span class="dark input-group-text" id="inputGroup-sizing-default">Nome da Transportadora</span>
             <input id='inputNomeTransportadora' type="text" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">CNPJ</span>
+            <span class="dark input-group-text" id="inputGroup-sizing-default">CNPJ</span>
             <input id="inputCnpj" type="text" maxlength="18" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
           </div>
           <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">E-mail</span>
+            <span class="dark input-group-text" id="inputGroup-sizing-default">E-mail</span>
             <input id="inputEmail" type="email" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default">
           </div>
           <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Telefone</span>
+            <span class="dark input-group-text" id="inputGroup-sizing-default">Telefone</span>
             <input id="inputTel" type="text" maxlength="15" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
           </div>
           <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">CEP</span>
+            <span class="dark input-group-text" id="inputGroup-sizing-default">CEP</span>
             <input id="inputCep" type="text" maxlength="9" class="form-control" aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
           </div>

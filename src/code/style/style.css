@@ -50,6 +50,31 @@ input[type=number] {
    appearance: textfield;
 }
 
+#botaoCadastrar {
+  --bs-btn-border-color: #05543E;
+  --bs-btn-hover-bg: #05543E;
+}
+
+
+.nav-link{
+  transition: 2s all;
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
+.fixed-top{
+  opacity: 85%;
+  background-color: #fff;
+
+}
+
+.navbar-nav {
+  position: relative;
+  left: 2em;
+}
+
  /* Media Query */
 
  @media (max-width: 768px)
@@ -67,7 +92,7 @@ input[type=number] {
  }
 
  .bi {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 
@@ -75,20 +100,25 @@ input[type=number] {
   display: none;
 }
 
-.dark,
-.dark header,
-.dark main  
-.dark body{
-    background-color: #263238;
-    color: #fff;
+.dark .bi-moon {
+  display: block;
 }
 
 .dark .bi-sun {
-    display: none;
+  display: none;
 }
 
-.dark .bi-moon {
-    display: block;
+.dark .fixed-top{
+  background-color: #263238;
+    color: #fff;
+}
+
+.dark,
+.dark header,
+.dark main,
+.dark body{
+    background-color: #263238;
+    color: #fff;
 }
 
 .dark 
@@ -121,34 +151,22 @@ a.nav-link:hover {
 .dark 
 .container-fluid
 .navbar 
-.list-group {
+.list-group,
+.dark .input-group-text {
   background-color: #37474f;
   color: #fff;
 }
+
 
 .dark #fundo-img {
   background-color: #37474f;
   color: #fff;
 }
 
-/*.dark .card-image {
-    background-color: #273035;
-}
-
-.dark .subtitle {
-    color: #67b4f3;
-}
-
-.dark .description {
-    color: #2196f3;
-}*/
-
-
 .dark .navbar-toggler,
 .dark .btn-close {
     background-color: #37474f;
 }
 
-.dark .botaoCadastrar {
-  background-color: #05543E;
-}
+
+
