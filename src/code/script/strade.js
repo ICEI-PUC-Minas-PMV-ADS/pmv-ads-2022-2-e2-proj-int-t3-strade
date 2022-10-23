@@ -8,15 +8,13 @@ window.onload = function () {
   configurarMascaraTel();
   clickCadastrar();
   desativaInputs();
-  //toggleDarkMode();
   loadTheme();
   clickDarkBtn();
 }
 
 function clickCadastrar(){  
   const Cadastrar = document.getElementById('botaoCadastrar')   
-  Cadastrar.addEventListener('click', enviarMensagem); 
-  console.log('clicou')
+  Cadastrar.addEventListener('click', enviarMensagem);
 }
 
 /* Envia MSG e Valida no botão cadastrar */
@@ -29,14 +27,14 @@ function enviarMensagem(){
   const cepInput = document.getElementById("inputCep")
 
   if (!validarNomeFantasia()) {
-    //alert("Nome Fantasia inválido, mínimo 2 caracteres.");
+    alert("Nome Fantasia inválido, mínimo 2 caracteres.");
     nomeFantasiaInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
   }
   nomeFantasiaInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
   
   if (!validarNomeTransportadora()) {
-    //alert("Nome da Transportadora inválido, mínimo 2 caracteres.");
+    alert("Nome da Transportadora inválido, mínimo 2 caracteres.");
     nomeTransportadoraInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
   }
@@ -76,7 +74,11 @@ function enviarMensagem(){
       return;
       } 
       cepInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
-   
+
+  if(!validarCheckbox()){
+    alert('Selecione ao menos um tipo de encomenda.');
+    return;
+  } alert('Sua transportadora foi cadastrada.')
 }
 
 /* Número de caracteres no  */
@@ -269,5 +271,41 @@ function clickDarkBtn() {
     }
 });
 }
+
+
+function validarCheckbox(){
+  var checkboxes = document.getElementsByName('checkboxEncomendas')
+  console.log(checkboxes)
+  
+  for (let i=0; i<checkboxes.length; i++){
+    if (checkboxes[i].checked)
+      return true;
+  }
+  return false;
+}
+
+/* function validaCheckbox(){
+  checkBoxes = document.querySelectorAll(".checkboxes")
+  var selecionados = 0;
+  btn = document.querySelector('#botaoCadastrar')
+  
+  selecionados = 0;
+  
+  btn.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    checkBoxes.forEach(function(el){
+      if (el.checked){
+        return true
+        
+      }
+      return false
+    });
+    console.log(selecionados)
+    
+    return (selecionados !== 0)
+  });
+} */
 
 
