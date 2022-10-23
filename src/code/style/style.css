@@ -1,3 +1,4 @@
+
 .paragraph-carousel {
   font-size: 1.2em;
 }
@@ -51,6 +52,11 @@ input[type=number] {
  }
 
  /* DARK MODE */
+
+ #change-theme {
+  display: none;
+ }
+
  .bi {
   font-size: 1.3rem;
   cursor: pointer;
@@ -62,15 +68,10 @@ input[type=number] {
 
 .dark,
 .dark header,
-#fundo-main, .container-fluid,
-.navbar   {
+.dark main  
+.dark body{
     background-color: #263238;
     color: #fff;
-}
-
-.dark main {
-  background-color: #263238;
-  color: #fff;
 }
 
 .dark .bi-sun {
@@ -81,8 +82,37 @@ input[type=number] {
     display: block;
 }
 
-.dark .container-fluid
+.dark 
+ul.list-group {
+  --bs-list-group-bg: #37474f;
+  --bs-list-group-color: #fff;
+}
+
+.dark
+.navbar-brand{
+  --bs-navbar-brand-color: #fff
+}
+
+.dark 
+.offcanvas{
+  --bs-offcanvas-bg: #37474f;
+  --bs-navbar-active-color: #fff;
+  --bs-offcanvas-color: #fff;
+}
+
+a.nav-link:hover {
+  --bs-navbar-active-color: black;
+}
+
+.dark
 .navbar {
+  --bs-navbar-color: #fff;
+}
+
+.dark 
+.container-fluid
+.navbar 
+.list-group {
   background-color: #37474f;
   color: #fff;
 }
