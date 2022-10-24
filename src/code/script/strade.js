@@ -175,6 +175,17 @@ function validacaoCep(){
   return cepInput.value.length >= minimoAlgarismosCep;
 }
 
+function validarCheckbox(){
+  var checkboxes = document.getElementsByName('checkboxEncomendas')
+  console.log(checkboxes)
+  
+  for (let i=0; i<checkboxes.length; i++){
+    if (checkboxes[i].checked)
+      return true;
+  }
+  return false;
+}
+
 /* DDD Json */
 async function getDddFromDatabase() {
   console.log("Chamou a função getDDDFromDatabase");
@@ -271,7 +282,7 @@ function clickDarkBtn() {
     }
 });
 }
-
+}
 
 function validarCheckbox(){
   var checkboxes = document.getElementsByName('checkboxEncomendas')
@@ -283,29 +294,3 @@ function validarCheckbox(){
   }
   return false;
 }
-
-/* function validaCheckbox(){
-  checkBoxes = document.querySelectorAll(".checkboxes")
-  var selecionados = 0;
-  btn = document.querySelector('#botaoCadastrar')
-  
-  selecionados = 0;
-  
-  btn.addEventListener('click', function(e){
-
-    e.preventDefault();
-
-    checkBoxes.forEach(function(el){
-      if (el.checked){
-        return true
-        
-      }
-      return false
-    });
-    console.log(selecionados)
-    
-    return (selecionados !== 0)
-  });
-} */
-
-
