@@ -282,7 +282,6 @@ function clickDarkBtn() {
     }
 });
 }
-}
 
 function validarCheckbox(){
   var checkboxes = document.getElementsByName('checkboxEncomendas')
