@@ -40,15 +40,6 @@
 .text-muted{
     font-weight: bold;
 }
-/* Tirar setas do input type number */
-input[type=number]::-webkit-inner-spin-button { 
-    -webkit-appearance: none;  
-}
-
-input[type=number] { 
-   -moz-appearance: textfield;
-   appearance: textfield;
-}
 
 #botaoCadastrar {
   --bs-btn-border-color: #05543E;
@@ -86,13 +77,22 @@ input[type=number] {
 
  /* DARK MODE */
 
- #change-theme {
-  display: none;
- }
+.card{
+  --bs-card-cap-color: black;
+}
 
- .bi {
-  font-size: 1.4rem;
-  cursor: pointer;
+.dark
+.dark .card{
+  --bs-card-cap-color: #fff;
+}
+
+#change-theme {
+display: none;
+}
+
+.bi {
+font-size: 1.4rem;
+cursor: pointer;
 }
 
 .bi-moon {
@@ -127,8 +127,13 @@ ul.list-group {
 }
 
 .dark
-.navbar-brand{
+.navbar-brand {
   --bs-navbar-brand-color: #fff
+}
+
+.dark
+.separation{
+  color: #fff;
 }
 
 .dark 
@@ -147,10 +152,9 @@ a.nav-link:hover {
   --bs-navbar-color: #fff;
 }
 
-.dark 
-.container-fluid
-.navbar 
-.list-group,
+.dark .container-fluid
+.dark .navbar 
+.dark .list-group
 .dark .input-group-text {
   background-color: #37474f;
   color: #fff;
