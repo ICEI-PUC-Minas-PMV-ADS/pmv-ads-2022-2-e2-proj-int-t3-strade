@@ -11,3 +11,9 @@ No mesmo terminal de nuget -> EntityFrameworkCore\Update-Database
 Para cancelar a migration atual ou a ultima:
 
 No mesmo terminal de nuget -> EntityFrameworkCore\Remove-Migration
+
+Scafold -> Database First
+
+Primeiro vc faz oq quiser no seu banco, depois remove DataContext e Models, comenta os problemas e fé:
+
+Scaffold-DbContext "Server=localhost;Database=STRADE;Persist Security info=True;Trusted_Connection=True;Integrated Security=SSPI" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models

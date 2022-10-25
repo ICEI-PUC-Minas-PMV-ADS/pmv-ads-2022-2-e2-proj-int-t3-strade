@@ -1,18 +1,24 @@
-﻿using Microsoft.EntityFrameworkCore;
-using API.Data;
-using API.Models;
-
+﻿using API.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Data {
-    public partial class DataContext : DbContext {
-        public DataContext(DbContextOptions<DataContext> options) : base(options){
-            
+    public partial class DataContext : DbContext
+    {
+        public DataContext()
+        {
+        }
+
+        public DataContext(DbContextOptions<DataContext> options)
+            : base(options)
+        {
         }
 
         public virtual DbSet<Bairro> Bairros { get; set; } = null!;
         public virtual DbSet<BairroTransportadora> BairroTransportadoras { get; set; } = null!;
         public virtual DbSet<Informacao> Informacaos { get; set; } = null!;
+        public virtual DbSet<Pedido> Pedidos { get; set; } = null!;
         public virtual DbSet<Transportadora> Transportadoras { get; set; } = null!;
+        public virtual DbSet<TransportadoraTipoEncomendum> TransportadoraTipoEncomenda { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,7 +33,7 @@ namespace API.Data {
             modelBuilder.Entity<Bairro>(entity =>
             {
                 entity.HasKey(e => e.IdBairro)
-                    .HasName("PK__Bairro__4F198E84DDE68F66");
+                    .HasName("PK__Bairro__4F198E846A8FD32F");
 
                 entity.ToTable("Bairro");
 
@@ -44,7 +50,7 @@ namespace API.Data {
             modelBuilder.Entity<BairroTransportadora>(entity =>
             {
                 entity.HasKey(e => e.IdBairroTransportadora)
-                    .HasName("PK__BairroTr__239077AE985D2E7F");
+                    .HasName("PK__BairroTr__239077AE3A563C22");
 
                 entity.ToTable("BairroTransportadora");
 
@@ -62,7 +68,7 @@ namespace API.Data {
             modelBuilder.Entity<Informacao>(entity =>
             {
                 entity.HasKey(e => e.IdInformacao)
-                    .HasName("PK__Informac__40403D5976A461AE");
+                    .HasName("PK__Informac__40403D592D27B42E");
 
                 entity.ToTable("Informacao");
 
@@ -85,10 +91,27 @@ namespace API.Data {
                     .IsUnicode(false);
             });
 
+            modelBuilder.Entity<Pedido>(entity =>
+            {
+                entity.HasKey(e => e.IdPedido)
+                    .HasName("PK__Pedido__9D335DC33CB9FACB");
+
+                entity.ToTable("Pedido");
+
+                entity.Property(e => e.Detalhes)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.IdTransportadoraNavigation)
+                    .WithMany(p => p.Pedidos)
+                    .HasForeignKey(d => d.IdTransportadora)
+                    .HasConstraintName("FK__Pedido__IdTransp__3C69FB99");
+            });
+
             modelBuilder.Entity<Transportadora>(entity =>
             {
                 entity.HasKey(e => e.IdTransportadora)
-                    .HasName("PK__Transpor__477CF3FC1971B51E");
+                    .HasName("PK__Transpor__477CF3FCA58601D2");
 
                 entity.ToTable("Transportadora");
 
@@ -103,11 +126,21 @@ namespace API.Data {
                     .HasConstraintName("FK__Transport__IdInf__286302EC");
             });
 
+            modelBuilder.Entity<TransportadoraTipoEncomendum>(entity =>
+            {
+                entity.HasKey(e => e.IdTransportadoraTipoEncomenda)
+                    .HasName("PK__Transpor__657B1FCE36854F03");
+
+                entity.HasOne(d => d.IdTransportadoraNavigation)
+                    .WithMany(p => p.TransportadoraTipoEncomenda)
+                    .HasForeignKey(d => d.IdTransportadora)
+                    .HasConstraintName("FK__Transport__IdTra__32E0915F");
+            });
+
             OnModelCreatingPartial(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-        
     }
-
+        
 }

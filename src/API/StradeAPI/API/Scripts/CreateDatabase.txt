@@ -43,3 +43,20 @@ CREATE TABLE BairroTransportadora (
 	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora)
 	PRIMARY KEY(IdBairroTransportadora),
 );
+
+CREATE TABLE Pedido (
+
+	IdPedido INT NOT NULL IDENTITY(1,1),
+	Detalhes VARCHAR(100),
+	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora),
+	Status INT NULL,
+	PRIMARY KEY(IdPedido),
+);
+
+CREATE TABLE TransportadoraTipoEncomenda  (
+
+	IdTransportadoraTipoEncomenda INT NOT NULL IDENTITY(1,1),
+	IdTipo INT NULL,
+	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora),
+	PRIMARY KEY(IdTransportadoraTipoEncomenda),
+);

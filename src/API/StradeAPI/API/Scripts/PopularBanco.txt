@@ -1,0 +1,50 @@
+/*SELECT * FROM Informacao;
+
+INSERT INTO Informacao(Nome, Endereco, Aniversario, NumeroContato, Email) VALUES ('Nome 1', 'Endereço 1', '2002-01-01', '31 995617433', 'email@teste.com'); 
+INSERT INTO Informacao(Nome, Endereco, Aniversario, NumeroContato, Email) VALUES ('Nome 2', 'Endereço 2', '2002-01-01', '31 995617433', 'email@teste.com'); 
+INSERT INTO Informacao(Nome, Endereco, Aniversario, NumeroContato, Email) VALUES ('Nome 3', 'Endereço 3', '2002-01-01', '31 995617433', 'email@teste.com'); 
+
+
+
+SELECT * FROM Transportadora;
+
+INSERT INTO Transportadora(CNPJ, NotaMediaQualidade, MediaPreco, IdInformacao) VALUES ('CNPJ 1', 5, 30, 2);
+INSERT INTO Transportadora(CNPJ, NotaMediaQualidade, MediaPreco, IdInformacao) VALUES ('CNPJ 2', 2, 45, 3);
+INSERT INTO Transportadora(CNPJ, NotaMediaQualidade, MediaPreco, IdInformacao) VALUES ('CNPJ 3', 4, 27, 4);
+
+SELECT * FROM Bairro;
+
+INSERT INTO Bairro(Nome, CEP) VALUES ('Bairro 1', 'CEP 1');
+INSERT INTO Bairro(Nome, CEP) VALUES ('Bairro 2', 'CEP 2');
+INSERT INTO Bairro(Nome, CEP) VALUES ('Bairro 3', 'CEP 3');
+
+SELECT * FROM BairroTransportadora;
+
+INSERT INTO BairroTransportadora(IdBairro, IdTransportadora) VALUES (1, 2);
+INSERT INTO BairroTransportadora(IdBairro, IdTransportadora) VALUES (2, 2);
+
+INSERT INTO BairroTransportadora(IdBairro, IdTransportadora) VALUES (2, 3);
+INSERT INTO BairroTransportadora(IdBairro, IdTransportadora) VALUES (3, 3);
+
+INSERT INTO BairroTransportadora(IdBairro, IdTransportadora) VALUES (3, 4);
+INSERT INTO BairroTransportadora(IdBairro, IdTransportadora) VALUES (1, 4);
+
+SELECT * FROM Pedido;
+
+INSERT INTO Pedido(Detalhes, IdTransportadora, Status) VALUES ('Pedido da casa do caralho', 2, 3);
+INSERT INTO Pedido(Detalhes, IdTransportadora, Status) VALUES ('Pedido pra casa do Fallen', 3, 2);
+INSERT INTO Pedido(Detalhes, IdTransportadora, Status) VALUES ('Pedido da placa de video', 4, 1); 
+
+select * FROM TransportadoraTipoEncomenda;
+
+INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (1,2);
+INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (2,2);
+INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (3,2);
+
+INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (4,3);
+INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (5,3);
+INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (6,3);
+
+INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (7,4);
+INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (8,4);
+INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (9,4); */
