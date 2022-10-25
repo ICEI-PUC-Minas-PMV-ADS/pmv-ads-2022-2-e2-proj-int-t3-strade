@@ -9,7 +9,6 @@ namespace API.Controllers {
     [ApiController]
     [Route("v1/controller")]
     public class BairroController : ControllerBase {
-
         [HttpPost]
         [Route("bairros/{idTransportadora}")]
         public async Task<ActionResult<bool>> SaveBairros([FromServices] DataContext context, int idTransportadora, [FromBody] List<BairroDTO> bairrosDto){
