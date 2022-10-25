@@ -80,6 +80,7 @@ function setSuccessFor(input) {
 const getBtn = document.querySelector("#getTransportadora");
 const modal = document.querySelector("dialog");
 const closeModal = document.querySelector("dialog button");
+const notesContainer = document.querySelector("#notes_container")
 
 var consoleStorage = [];
 
@@ -92,9 +93,28 @@ function getTransportadora(){
     modal.showModal();
     fetch('https://localhost:7292/v1/controller/transportadora/')
     .then(data => data.json())
-    .then(response => console.log(response));
+    .then(response => displayNotes(response));
   }
 }
+
+function displayNotes(notes){
+  let allNotes = '';
+
+  notes.forEach(note => {
+    const noteElement = 
+    `<div class="note">
+      <h3>Transportadora: ${note.nome}</h3>
+      <p>Preço: ${note.mediaPreco}</p>
+      <p>Nota: ${note.notaMediaQualidade}</p>
+      </div>`;
+
+    allNotes += noteElement;
+
+  })
+
+  notesContainer.innerHTML = allNotes;
+}
+
 closeModal.onclick = function(){
   modal.close();
 }
