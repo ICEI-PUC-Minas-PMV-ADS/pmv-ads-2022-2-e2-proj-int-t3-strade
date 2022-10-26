@@ -80,7 +80,7 @@ function setSuccessFor(input) {
 const getBtn = document.querySelector("#getTransportadora");
 const modal = document.querySelector("dialog");
 const closeModal = document.querySelector("dialog button");
-const notesContainer = document.querySelector("#notes_container")
+const notesContainer = document.querySelector("#notes_container");
 
 var consoleStorage = [];
 

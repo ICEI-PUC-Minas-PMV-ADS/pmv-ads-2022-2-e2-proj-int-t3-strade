@@ -81,6 +81,7 @@ function setSuccessFor(input) {
 const getBtn = document.querySelector("#getTransportadora");
 const modal = document.querySelector("dialog");
 const closeModal = document.querySelector("dialog button");
+const notesContainer = document.querySelector("#notes_container");
 
 var consoleStorage = [];
 
@@ -91,9 +92,9 @@ function getTransportadora(){
     setErrorFor(cep, "Número cep obrigatório.");
   } else {
     modal.showModal();
-    fetch('https://localhost:7292/v1/controller/transportadora/')
+    fetch('https://localhost:7292/v1/controller/transportadora/cep/' + cepValue)
     .then(data => data.json())
-    .then(response => console.log(response));
+    .then(response => displayNotes(response));
   }
 }
 closeModal.onclick = function(){
@@ -129,4 +130,22 @@ function somenteNumeros(e) {
           return false;
       }
   }
+}
+
+function displayNotes(notes){
+  let allNotes = '';
+
+  notes.forEach(note => {
+    const noteElement = 
+    `<div class="note">
+      <h3>Transportadora: ${note.nome}</h3>
+      <p>Preço: ${note.mediaPreco}</p>
+      <p>Nota: ${note.notaMediaQualidade}</p>
+      </div>`;
+
+    allNotes += noteElement;
+
+  })
+
+  notesContainer.innerHTML = allNotes;
 }
