@@ -38,12 +38,14 @@
                         <input
                           type="text"
                           id="cep"
+                          maxlength="9"
                           placeholder="Calcular CEP"
+                          onkeypress="return somenteNumeros(event)"
                         />
                         <i class="fas fa-exclamation-circle"></i>
                         <i class="fas fa-check-circle"></i>
                         <small>Mensagem de erro</small>
-                        <button class="btn" id="getTransportadora" type="submit">Buscar</button>
+                        <button class="btn" id="getTransportadora" type="submit" onclick="enviarMensagem()">Buscar</button>
                         
                       </div>
                       
