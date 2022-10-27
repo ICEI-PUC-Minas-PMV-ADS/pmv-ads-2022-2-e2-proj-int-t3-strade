@@ -60,3 +60,19 @@ CREATE TABLE TransportadoraTipoEncomenda  (
 	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora),
 	PRIMARY KEY(IdTransportadoraTipoEncomenda),
 );
+
+CREATE TABLE Loja (
+
+    IdLoja INT NOT NULL IDENTITY(1,1),
+    CNPJ VARCHAR(20) NOT NULL,
+    PRIMARY KEY(IdLoja),
+    IdInformacao INT FOREIGN KEY REFERENCES Informacao(IdInformacao)
+);
+
+CREATE TABLE Cliente (
+
+    IdCliente INT NOT NULL IDENTITY(1,1),
+    PRIMARY KEY(IdCliente),
+    IdInformacao INT FOREIGN KEY REFERENCES Informacao(IdInformacao),
+    IdLoje INT FOREIGN KEY REFERENCES Loja(IdLoja)
+);
