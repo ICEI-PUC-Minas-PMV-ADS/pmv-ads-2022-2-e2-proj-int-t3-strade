@@ -103,6 +103,7 @@ namespace API.Controllers {
                 Email = transportadoraDto.Email,
                 Endereco = transportadoraDto.Endereco,
                 NumeroContato = transportadoraDto.NumeroContato
+
             };
 
             context.Informacaos.Add(informacao);
