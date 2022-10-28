@@ -4,7 +4,26 @@
 
 Para cada caso de teste definido no Plano de Testes de Software, realize o registro das evidências dos testes feitos na aplicação pela equipe, que comprovem que o critério de êxito foi alcançado (ou não!!!). Para isso, utilize uma ferramenta de captura de tela que mostre cada um dos casos de teste definidos (obs.: cada caso de teste deverá possuir um vídeo do tipo _screencast_ para caracterizar uma evidência do referido caso).
 
+## CT-06 - Verificar a função de Hipersensibilidade -Dark Mode 
+
+>### Dark Mode Inativo:
+><img src="./img/dark-mode-inativo.png" height="100%" width="100%">
+>
+>### Dark Mode ativo
+><img src="./img/dark-mode-ativo.png" height="100%" width="100%">
+>
+
 ## Avaliação
+
+### Verificar a função de Hipersensibilidade -Dark Mode
+ 
+ O site Strade possui o recurso de Dark Mode e de acordo com os testes executados o site atualizou corretamente com as cores alteradas.
+
+
+
+
+
+
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
 
