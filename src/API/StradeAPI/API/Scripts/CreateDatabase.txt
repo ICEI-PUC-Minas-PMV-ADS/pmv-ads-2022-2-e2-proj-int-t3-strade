@@ -74,5 +74,5 @@ CREATE TABLE Cliente (
     IdCliente INT NOT NULL IDENTITY(1,1),
     PRIMARY KEY(IdCliente),
     IdInformacao INT FOREIGN KEY REFERENCES Informacao(IdInformacao),
-    IdLoje INT FOREIGN KEY REFERENCES Loja(IdLoja)
+    IdLoja INT FOREIGN KEY REFERENCES Loja(IdLoja)
 );
