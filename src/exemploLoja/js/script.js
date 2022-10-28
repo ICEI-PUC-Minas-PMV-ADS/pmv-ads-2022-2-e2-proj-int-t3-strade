@@ -1,4 +1,7 @@
 loadTheme();
+validacaoCep();
+configurarMascaraCep();
+
 
 const changeThemeBtn = document.querySelector("#change-theme");
 
@@ -122,3 +125,44 @@ closeModal.onclick = function(){
 getBtn.addEventListener('click', function() {
     getTransportadora();
 })
+
+//Envia MSG Validação
+function enviarMensagem(){
+  if (!validacaoCep()) {
+    alert("CEP inválido, digite os dados corretamente.");
+      return;
+      }
+}
+
+//Valida CEP
+function validacaoCep(){
+  const minimoAlgarismosCep = 9
+  const cepInput = document.getElementById("cep")
+  return cepInput.value.length >= minimoAlgarismosCep;
+}
+
+//Máscara CEP
+function configurarMascaraCep() {
+  const cep = document.getElementById("cep")
+  cep.addEventListener('keypress', () => {
+    let inputlength = cep.value.length
+
+    if (inputlength === 5) {
+      cep.value += '-'
+    }
+  })
+}
+
+//Somente números no input type='text'
+function somenteNumeros(e) {
+  var charCode = e.charCode ? e.charCode : e.keyCode;
+  // charCode 8 = backspace   
+  // charCode 9 = tab
+  if (charCode != 8 && charCode != 9) {
+      // charCode 48 equivale a 0   
+      // charCode 57 equivale a 9
+      if (charCode < 48 || charCode > 57) {
+          return false;
+      }
+  }
+}

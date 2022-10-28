@@ -105,6 +105,20 @@ getBtn.addEventListener('click', function() {
     getTransportadora();
 })
 
+//Envia MSG Validação
+function enviarMensagem(){
+  if (!validacaoCep()) {
+    alert("CEP inválido, digite os dados corretamente.");
+      return;
+      }
+}
+
+//Valida CEP
+function validacaoCep(){
+  const minimoAlgarismosCep = 9
+  const cepInput = document.getElementById("cep")
+  return cepInput.value.length >= minimoAlgarismosCep;
+}
 
 //Máscara CEP
 function configurarMascaraCep() {
