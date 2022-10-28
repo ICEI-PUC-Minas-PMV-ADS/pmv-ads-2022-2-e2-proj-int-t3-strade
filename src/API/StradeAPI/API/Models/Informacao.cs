@@ -7,6 +7,8 @@ namespace API.Models
     {
         public Informacao()
         {
+            Clientes = new HashSet<Cliente>();
+            Lojas = new HashSet<Loja>();
             Transportadoras = new HashSet<Transportadora>();
         }
 
@@ -17,6 +19,8 @@ namespace API.Models
         public string NumeroContato { get; set; } = null!;
         public string Email { get; set; } = null!;
 
+        public virtual ICollection<Cliente> Clientes { get; set; }
+        public virtual ICollection<Loja> Lojas { get; set; }
         public virtual ICollection<Transportadora> Transportadoras { get; set; }
     }
 }

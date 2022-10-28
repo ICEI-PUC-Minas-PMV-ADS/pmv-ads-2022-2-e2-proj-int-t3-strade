@@ -1,4 +1,5 @@
-﻿using API.Models;
+﻿//using API.Models;
+using API.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Data {
@@ -15,7 +16,9 @@ namespace API.Data {
 
         public virtual DbSet<Bairro> Bairros { get; set; } = null!;
         public virtual DbSet<BairroTransportadora> BairroTransportadoras { get; set; } = null!;
+        public virtual DbSet<Cliente> Clientes { get; set; } = null!;
         public virtual DbSet<Informacao> Informacaos { get; set; } = null!;
+        public virtual DbSet<Loja> Lojas { get; set; } = null!;
         public virtual DbSet<Pedido> Pedidos { get; set; } = null!;
         public virtual DbSet<Transportadora> Transportadoras { get; set; } = null!;
         public virtual DbSet<TransportadoraTipoEncomendum> TransportadoraTipoEncomenda { get; set; } = null!;
@@ -65,6 +68,24 @@ namespace API.Data {
                     .HasConstraintName("FK__BairroTra__IdTra__2C3393D0");
             });
 
+            modelBuilder.Entity<Cliente>(entity =>
+            {
+                entity.HasKey(e => e.IdCliente)
+                    .HasName("PK__Cliente__D5946642A3A237F3");
+
+                entity.ToTable("Cliente");
+
+                entity.HasOne(d => d.IdInformacaoNavigation)
+                    .WithMany(p => p.Clientes)
+                    .HasForeignKey(d => d.IdInformacao)
+                    .HasConstraintName("FK__Cliente__IdInfor__4222D4EF");
+
+                entity.HasOne(d => d.IdLojaNavigation)
+                    .WithMany(p => p.Clientes)
+                    .HasForeignKey(d => d.IdLoja)
+                    .HasConstraintName("FK__Cliente__IdLoja__4316F928");
+            });
+
             modelBuilder.Entity<Informacao>(entity =>
             {
                 entity.HasKey(e => e.IdInformacao)
@@ -89,6 +110,24 @@ namespace API.Data {
                 entity.Property(e => e.NumeroContato)
                     .HasMaxLength(15)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Loja>(entity =>
+            {
+                entity.HasKey(e => e.IdLoja)
+                    .HasName("PK__Loja__38C45D6436B6D012");
+
+                entity.ToTable("Loja");
+
+                entity.Property(e => e.Cnpj)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("CNPJ");
+
+                entity.HasOne(d => d.IdInformacaoNavigation)
+                    .WithMany(p => p.Lojas)
+                    .HasForeignKey(d => d.IdInformacao)
+                    .HasConstraintName("FK__Loja__IdInformac__3F466844");
             });
 
             modelBuilder.Entity<Pedido>(entity =>
