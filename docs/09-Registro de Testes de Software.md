@@ -13,19 +13,43 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 ><img src="./img/dark-mode-ativo.png" height="100%" width="100%">
 >
 
+## CT-02 – Cadastrar transportadora
+
+### Cadastro Preenchido
+><img src="./img/cadastro-preenchido.png" height="100%" width="100%">
+
+### Aviso Cadastro Errado
+Todos os campos de cadastro são validados e geram alerta de erro caso preenchido incorretamente.
+><img src="./img/erro-cadastro.png" height="100%" width="100%">
+
+### Aviso Cadastro Concluido
+
+><img src="./img/aviso-cadastro-concluido.png" height="100%" width="100%">
+
+
+## CT-01 - Lista de Trasportadoras - Site Loja
+
+### Preenchimento do CEP - Site Loja
+
+><img src="./img/busca-cep.png" height="100%" width="100%">
+
+### Listagem Trasnportadoras
+
+><img src="./img/lista-transportadora.png" height="100%" width="100%">
+
 ## Avaliação
 
-### Verificar a função de Hipersensibilidade -Dark Mode
+### CT-06 Verificar a função de Hipersensibilidade -Dark Mode
  
  O site Strade possui o recurso de Dark Mode e de acordo com os testes executados o site atualizou corretamente com as cores alteradas.
 
+ ### CT-01 Verificar listagem das trasportadoras
 
+ O sistema lista as transportadoras disponíveis para entrega no endereço indicado. Porém ainda não conseguimos listar mais que uma trasportadora e ao cadastrar nova, só aparece a primeira cadastrada.
+ #### Plano de correção 
+Atualização no Front-end para processamento de um Array de tamanho *n*.
+ ### CT-2 Cadastrar Trasportadora
 
-
-
-
-
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
-
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+ O site cadastra a trasportadora, mas nem todos os dados (Nome fantasia e tipos de encomenda) estão sendo anexados ao banco de dados.
+#### Plano de correção 
+ Serão feitas atualizações no Back-end para o processamento e devido armazenamento desses Dados. 
