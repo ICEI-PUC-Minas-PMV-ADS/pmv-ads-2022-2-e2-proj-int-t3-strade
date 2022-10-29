@@ -94,10 +94,24 @@ function getTransportadora(){
     setErrorFor(cep, "Número cep obrigatório.");
   } else {
     modal.showModal();
-    fetch('https://localhost:7292/v1/controller/transportadora/')
-    .then(data => data.json())
-    .then(response => displayNotes(response));
+    fetch('https://localhost:7292/v1/controller/transportadora/cep/' + cepValue)
+    .then( function(response) {
+      if(response.ok){
+        displayNotes(response.json());
+      }else{
+        cepNotFound();
+      }
+    });
   }
+}
+
+function cepNotFound(){
+  const noteElement = 
+    `<div class="note">
+      <h3>Nenhuma transportadora disponível para a região buscada.</h3>
+      </div>`;
+  
+  notesContainer.innerHTML = noteElement;
 }
 
 function displayNotes(notes){

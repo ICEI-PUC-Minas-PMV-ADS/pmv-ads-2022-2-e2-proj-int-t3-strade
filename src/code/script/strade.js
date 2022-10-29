@@ -1,6 +1,15 @@
 let dddDatabaseJson;
+
+const nomeFantasiaInput = document.getElementById('inputNomeFantasia')
+const nomeTransportadoraInput = document.getElementById('inputNomeTransportadora')
+const cnjpInput = document.getElementById('inputCnpj')
+const emailInput = document.getElementById('inputEmail')
+const telInput = document.getElementById('inputTel')
+const cepInput = document.getElementById("inputCep")
   
 window.onload = function () {
+  const telInput = document.getElementById('inputTel').getAttribute("value")
+  console.log(telInput);
   console.log("Chamou a função window.onload");
   dddDatabaseJson =  getDddFromDatabase();
   configurarMascaraCnpj();
@@ -14,71 +23,112 @@ window.onload = function () {
 
 function clickCadastrar(){  
   const Cadastrar = document.getElementById('botaoCadastrar')   
-  Cadastrar.addEventListener('click', enviarMensagem);
+  Cadastrar.addEventListener('click', validarTodosOsCampos);
+}
+
+//const nomeTransportadoraInput = document.getElementById('inputNomeTransportadora')
+  //const cnjpInput = document.getElementById('inputCnpj')
+  //const emailInput = document.getElementById('inputEmail')
+ // const telInput = document.getElementById('inputTel')
+ // const endereco = "Endereço"
+ // const bairros = []
+
+function addTransportadora(nome, cnpj, email, tel, cep){
+  
+  var body = {
+    "nome": nome,
+    "endereco": cep,
+    "cnpj": cnpj,
+    "email": email,
+    "numeroContato": tel,
+    "bairros": [
+      {
+        "idBairro": 0,
+        "nome": "bairro novo",
+        "cep": "12345-678"
+      }
+    ]
+  }
+  
+  fetch('https://localhost:7292/v1/controller/transportadora/', {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers: {
+      "content-type": "application/json"
+    }
+  })
+  .then(data => data.json())
+  .then(response => console.log(response));
 }
 
 /* Envia MSG e Valida no botão cadastrar */
-function enviarMensagem(){
-  const nomeFantasiaInput = document.getElementById('inputNomeFantasia')
-  const nomeTransportadoraInput = document.getElementById('inputNomeTransportadora')
-  const cnjpInput = document.getElementById('inputCnpj')
-  const emailInput = document.getElementById('inputEmail')
-  const telInput = document.getElementById('inputTel')
-  const cepInput = document.getElementById("inputCep")
+
+function validarTodosOsCampos(){
+  const nomeFantasiaInput = document.getElementById('inputNomeFantasia').value
+  const nomeTransportadoraInput = document.getElementById('inputNomeTransportadora').value
+  const cnjpInput = document.getElementById('inputCnpj').value
+  const emailInput = document.getElementById('inputEmail').value
+  const telInput = document.getElementById('inputTel').value
+  const cepInput = document.getElementById("inputCep").value
+
 
   if (!validarNomeFantasia()) {
     alert("Nome Fantasia inválido, mínimo 2 caracteres.");
     nomeFantasiaInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
   }
-  nomeFantasiaInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+  //nomeFantasiaInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
   
   if (!validarNomeTransportadora()) {
     alert("Nome da Transportadora inválido, mínimo 2 caracteres.");
     nomeTransportadoraInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
   }
-  nomeTransportadoraInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+  //nomeTransportadoraInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
   
   if (!validarCnpj()) {
     alert("CNPJ inválido, insira os dados corretos.");
     cnjpInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
    } 
-   cnjpInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+   //cnjpInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
   
   if (!validarEmail()) {
    alert("Email inválido, deve conter um @ e .com.");
    emailInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
    return;
   } 
-  inputEmail.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+  //inputEmail.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
   
   if (!validarTel()) {
   alert("Telefone inválido, digite os dados corretamente.");
     telInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
    } 
-    telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+  //telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
 
   if (!validacaoTel()) {
     alert("Telefone inválido, digite os dados corretamente.");
       telInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
       return;
       } 
-      telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+    //telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
     
   if (!validacaoCep()) {
     alert("CEP inválido, digite os dados corretamente.");
       cepInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
       return;
       } 
-      cepInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+      //cepInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
 
   if(!validarCheckbox()){
     alert('Selecione ao menos um tipo de encomenda.');
     return;
-  } alert('Sua transportadora foi cadastrada.')
+  }
+
+  addTransportadora(nomeTransportadoraInput, cnjpInput, emailInput, telInput, cepInput);
+  
+  alert('Sua transportadora foi cadastrada.');
 }
 
 /* Número de caracteres no  */

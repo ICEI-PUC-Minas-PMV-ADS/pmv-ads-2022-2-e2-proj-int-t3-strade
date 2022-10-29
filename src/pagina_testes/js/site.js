@@ -1,9 +1,14 @@
 const getBtn = document.querySelector("#clickToGet");
 
 function getTransportadora(){
-    fetch('https://localhost:7292/v1/controller/transportadora')
-    .then(data => data.json())
-    .then(response => console.log(response))
+    fetch('https://localhost:7292/v1/controller/transportadora/teste', {
+    method: 'POST',
+    headers: {
+      "content-type": "application/json"
+    }
+  })
+  .then(data => data.json())
+  .then(response => console.log(response));
 }
 
 getBtn.addEventListener('click', function() {
