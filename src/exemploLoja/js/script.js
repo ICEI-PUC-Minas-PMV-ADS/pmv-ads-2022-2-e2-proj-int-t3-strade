@@ -94,14 +94,16 @@ function getTransportadora(){
     setErrorFor(cep, "Número cep obrigatório.");
   } else {
     modal.showModal();
-    fetch('https://localhost:7292/v1/controller/transportadora/cep/' + cepValue)
-    .then( function(response) {
-      if(response.ok){
-        displayNotes(response.json());
-      }else{
+    fetch('https://localhost:7292/v1/controller/transportadora/cep/' + cepValue).then(function(response) {
+      var contentType = response.headers.get("content-type");
+      if(contentType && contentType.indexOf("application/json") !== -1) {
+        return response.json().then(function(json) {
+          displayNotes(json);
+        });
+      } else {
         cepNotFound();
       }
-    });
+    }); 
   }
 }
 
