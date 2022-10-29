@@ -32,7 +32,7 @@
 
  ●  Banimento  de  determinada  transportadora  em  casa  de  problemas  com  a  entrega  de algum produto anterior.  
 
- Será  feito  um  questionário  com  10  perguntas,  e  para  cada  uma  dessas  perguntas  o  usuário  poderá  dar  uma  nota  numa  escala  Likert  que  varia  de  1  a  5,  onde  1  significa  que  discorda  completamente  e  5  que  concorda  completamente.  Esse  teste  é  feito  sem  nenhuma  explicação prévia, em que o usuário avalia, tendo o seu  primeiro contato com a aplicação.  
+ Será  feito  um  questionário  com  10  perguntas no forms da Google(https://forms.gle/hzBYjZAxacM4v7oq8),  e  para  cada  uma  dessas  perguntas  o  usuário  poderá  dar  uma  nota  numa  escala  Likert  que  varia  de  1  a  5,  onde  1  significa  que  discorda  completamente  e  5  que  concorda  completamente.  Esse  teste  é  feito  sem  nenhuma  explicação prévia, em que o usuário avalia, tendo o seu  primeiro contato com a aplicação.  
 
  1.  Eu acho que gostaria de usar esse sistema com frequência.  
 
@@ -46,7 +46,9 @@
 
  6.  Eu acho que o sistema apresenta muita inconsistência.  
 
- 7.  Eu imagino que as pessoas aprenderão como usar esse sistema rapidamente.  8.  Eu achei o sistema atrapalhado de usar.  
+ 7.  Eu imagino que as pessoas aprenderão como usar esse sistema rapidamente. 
+ 
+ 8.  Eu achei o sistema atrapalhado de usar.  
 
  9.  Eu me senti confiante ao usar o sistema.  
 
