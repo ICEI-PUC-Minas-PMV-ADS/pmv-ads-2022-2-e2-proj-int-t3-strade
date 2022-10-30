@@ -7,35 +7,35 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 ## CT-06 - Verificar a função de Hipersensibilidade -Dark Mode 
 
 >### Dark Mode Inativo:
-><img src="./img/dark-mode-inativo.png" height="100%" width="100%">
+><img src="./img/Dark-mode-inativo.png" height="100%" width="100%">
 >
 >### Dark Mode ativo
-><img src="./img/dark-mode-ativo.png" height="100%" width="100%">
+><img src="./img/Dark-mode-ativo.png" height="100%" width="100%">
 >
 
 ## CT-02 – Cadastrar transportadora
 
 ### Cadastro Preenchido
-><img src="./img/cadastro-preenchido.png" height="100%" width="100%">
+><img src="./img/Cadastro-Preenchido.png" height="100%" width="100%">
 
 ### Aviso Cadastro Errado
 Todos os campos de cadastro são validados e geram alerta de erro caso preenchido incorretamente.
-><img src="./img/erro-cadastro.png" height="100%" width="100%">
+><img src="./img/Erro-Cadastro.png" height="100%" width="100%">
 
 ### Aviso Cadastro Concluido
 
-><img src="./img/aviso-cadastro-concluido.png" height="100%" width="100%">
+><img src="./img/Aviso-Cadastro-Concluido.png" height="100%" width="100%">
 
 
 ## CT-01 - Lista de Trasportadoras - Site Loja
 
 ### Preenchimento do CEP - Site Loja
 
-><img src="./img/busca-cep.png" height="100%" width="100%">
+><img src="./img/Busca-CEP.png" height="100%" width="100%">
 
 ### Listagem Trasnportadoras
 
-><img src="./img/lista-transportadora.png" height="100%" width="100%">
+><img src="./img/Lista-Transportadora.png" height="100%" width="100%">
 
 ## Avaliação
 
