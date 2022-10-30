@@ -1,8 +1,7 @@
 # Registro de Testes de Usabilidade
 
-Após realizar os testes de usabilidade, obtém-se um relatório a partir das análises realizadas. O Registro de Testes de Usabilidade é um relatório que contém as evidências dos testes e relatos dos usuários participantes, baseado no Plano de Testes de Usabilidade desenvolvido para os casos de uso desta etapa.
+## Resultado Piloto teste de usabilidade
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Registro de Testes de Usabilidade”.
-
-> **Links Úteis**:
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+ Em primeiro momento, foi realizado o teste para avaliação da usabilidade do sistema pelo Google Forms com endereço https://forms.gle/VcUBL8WgG7cDfVTq8 . A aplicação depende da integração com os sistemas de lojas, para seu funcionamento, foi feito então um exemplo de Front-end para que o teste fosse realizado. Baseado no Plano de Testes de Usabilidade desenvolvido para os casos de uso, ele foi aplicado para facilitar a intervenção e correção pelos desenvolvedores em caso de dificuldade e falta de clareza na utilização do aplicação pelo usuário.
+  
+No total 5  participantes fizeram o teste SUS, e a aplicação obteve a porcentagem "vazio". O score obtido foi "vazio". Sendo parâmetro as regras do próprio método, se a nota for acima de 90 são considerados excepcionais, entre 80 e 90 bons, 70 a 80 aceitáveis, e abaixo de 70, há sérios problemas de usabilidade no sistema. E com isso houve uma reformulação para os pontos fracos. E melhora para a próxima e última etapa. 
