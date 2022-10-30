@@ -15,15 +15,15 @@ O template é composto pelos seguintes layouts:
 
 Layout no estilo página única, que abrange o inicio, o sobre nós, serviços e cadastro. 
 
-><img src="./img/template1.png" height="100%" width="100%">
-><img src="./img/template2.png" height="100%" width="100%">
-><img src="./img/template3.png" height="100%" width="100%">
+><img src="./img/Template1.png" height="100%" width="100%">
+><img src="./img/Template2.png" height="100%" width="100%">
+><img src="./img/Template3.png" height="100%" width="100%">
 
 ## Menu de Navegação
 
 Menu onde o usuário tem a opção de navegar pela página. Além de conseguir fazer a troca para o modo de Hipersensibilidade.
 
-><img src="./img/navbar.png" height="100%" width="100%">
+><img src="./img/Navbar.png" height="100%" width="100%">
 
 ## Conteúdo Principal
 ### Inicio
@@ -34,24 +34,24 @@ Imagens de apresentação e Navbar.
 
 Faz uma breve apresentação da Strade para o usuário.
 
-><img src="./img/sobre-nós.png" height="100%" width="100%">
+><img src="./img/Sobre-nós.png" height="100%" width="100%">
 
 ### Serviços
 
 Faz uma breve apresentação dos serviços prestados pela empresa para o usuário.
-><img src="./img/serviços.png" height="100%" width="100%">
+><img src="./img/Serviços.png" height="100%" width="100%">
 
 ### Cadastrar
 
 Formulário para cadastro do cliente. Campos para preenchimeto com dados das trasportadoras e explicação das regras para fazer parte da STRADE.
 
-><img src="./img/cadastro.png" height="100%" width="100%">
+><img src="./img/Cadastro.png" height="100%" width="100%">
 
 ### Footer
 
 Navegação pela página.
 
-><img src="./img/footer.png" height="100%" width="100%">
+><img src="./img/Footer.png" height="100%" width="100%">
 
 
 ## Tela Principal Loja
@@ -60,7 +60,7 @@ Layout no estilo do site da Loja, em que nosso sistema irá atuar na seleção d
 
 ### Tela do Produto da Loja
 
-><img src="./img/página-loja.png" height="100%" width="100%">
+><img src="./img/Página-loja.png" height="100%" width="100%">
 
 ### CEP
 
@@ -68,9 +68,9 @@ Cliente precisa buscar o CEP de entrega para ter acesso a lista de trasportadora
 
 ><img src="./img/CEP.png" height="70%" width="70%">
 
-### Lista de Traspotadoras
+### Lista de Transpotadoras
 
 Lista das trasportadoras disponiveis para seleção do cliente.
-><img src="./img/lista-transportadoras.png" height="100%" width="100%">
+><img src="./img/Lista-transportadoras.png" height="100%" width="100%">
 
 
