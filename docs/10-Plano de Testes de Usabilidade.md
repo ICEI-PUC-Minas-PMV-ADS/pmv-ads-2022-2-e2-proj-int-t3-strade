@@ -65,7 +65,7 @@ Passo 1: Converter para a escala de números as respostas das questões
  * Concordo totalmente: 5 pontos
  
 
-Passo 2: Calculo
+Passo 2: Cálculo
 
  X = Soma dos pontos de todas as questões ímpares - 5
  
