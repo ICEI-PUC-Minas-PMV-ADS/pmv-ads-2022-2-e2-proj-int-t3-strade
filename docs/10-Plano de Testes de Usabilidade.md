@@ -54,4 +54,17 @@
 
  10.  Eu precisei aprender várias coisas novas antes de conseguir usar o sistema.  
 
- O  cálculo  para  pontuação  final  é  feito  da  seguinte  forma:  para  as  respostas  1,3,5  subtraia  1,  da  pontuação  do  usuário,  para  2  e  4  subtraia  5.  Ao  final,  soma-se  o  valor  das  10  perguntas  e  multiplica-se  por  2.5.  Sendo  que  a  pontuação  final  pode  ir  de  0  a  100.  Sendo  a  média  “System  Usability  Score”,  68  pontos.  Se  a  nota  for  acima  de  90  são  considerados  excepcionais,  entre  80  e  90  bons,  70  a  80  aceitáveis,  e  abaixo  de  70,  há  sérios  problemas  de usabilidade no sistema.  
+Passos para o desenvolvimento dos testes: 
+Passo 1: Converter para a escala de números as respostas das questões
+
+ Discordo totalmente: 1 ponto
+ Discordo: 2 pontos
+ Neutro: 3 pontos
+ Concordo: 4 pontos
+ Concordo totalmente: 5 pontos
+
+Passo 2: Calculo
+
+ X = Soma dos pontos de todas as questões ímpares - 5
+ Y = 25 – Soma dos pontos de todas as outras questões
+ Ponbtuação SUS = (X + Y) x 2.5
