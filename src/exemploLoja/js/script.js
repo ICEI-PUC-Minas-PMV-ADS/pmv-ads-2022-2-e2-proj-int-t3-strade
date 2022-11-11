@@ -128,6 +128,7 @@ function displayNotes(notes){
       </div>`;
 
     allNotes += noteElement;
+    console.log(notes);
 
   })
 

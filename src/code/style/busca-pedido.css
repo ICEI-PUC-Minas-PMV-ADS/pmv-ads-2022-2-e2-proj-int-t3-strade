@@ -1,0 +1,187 @@
+/* ID conteudo-principal */
+#conteudo-principal {
+  margin: auto;
+  padding: 200px;
+}
+
+#search-field{
+  justify-content: center;
+}
+
+
+
+/* Header e Footer */
+.paragraph-carousel {
+  font-size: 1.2em;
+}
+
+.separation {
+  position: relative;
+  top: 0.5em;
+}
+
+.items-checkbox {
+  display: grid;
+  grid-template-areas: "l r";
+  grid-auto-flow: row;
+}
+
+.checkbox-l {
+  display: inline-grid;
+  grid-area: l;
+}
+
+.checkbox-r {
+  display: inline-grid;
+  grid-area: r;
+  
+}
+
+.container-button{
+  display: flex;
+  justify-content: end;
+  margin-top: 0.5em;
+}
+
+.plead{
+    margin-top: 2em;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.text-muted{
+    font-weight: bold;
+}
+
+#botaoCadastrar {
+  --bs-btn-border-color: #05543E;
+  --bs-btn-hover-bg: #05543E;
+}
+
+.nav-link{
+  transition: 2s all;
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
+.fixed-top{
+  opacity: 85%;
+  background-color: #fff;
+
+}
+
+.navbar-nav {
+  position: relative;
+  left: 2em;
+}
+
+ /* Media Query */
+
+ @media (max-width: 768px)
+ {
+  .items-checkbox {
+    grid-template-areas: 
+    "l" 
+    "r"}
+ }
+
+ /* DARK MODE */
+
+.card{
+  --bs-card-cap-color: black;
+}
+
+.dark
+.dark .card{
+  --bs-card-cap-color: #fff;
+}
+
+#change-theme {
+display: none;
+}
+
+.bi {
+font-size: 1.4rem;
+cursor: pointer;
+}
+
+.bi-moon {
+  display: none;
+}
+
+.dark .bi-moon {
+  display: block;
+}
+
+.dark .bi-sun {
+  display: none;
+}
+
+.dark .fixed-top{
+  background-color: #263238;
+    color: #fff;
+}
+
+.dark,
+.dark header,
+.dark main,
+.dark body{
+    background-color: #263238;
+    color: #fff;
+}
+
+.dark 
+ul.list-group {
+  --bs-list-group-bg: #37474f;
+  --bs-list-group-color: #fff;
+}
+
+.dark
+.navbar-brand {
+  --bs-navbar-brand-color: #fff
+}
+
+.dark
+.separation{
+  color: #fff;
+}
+
+.dark 
+.offcanvas{
+  --bs-offcanvas-bg: #37474f;
+  --bs-navbar-active-color: #fff;
+  --bs-offcanvas-color: #fff;
+}
+
+a.nav-link:hover {
+  --bs-navbar-active-color: black;
+}
+
+.dark
+.navbar {
+  --bs-navbar-color: #fff;
+}
+
+.dark .container-fluid
+.dark .navbar 
+.dark .list-group
+.dark .input-group-text {
+  background-color: #37474f;
+  color: #fff;
+}
+
+
+.dark #fundo-img {
+  background-color: #37474f;
+  color: #fff;
+}
+
+.dark .navbar-toggler,
+.dark .btn-close {
+    background-color: #37474f;
+}
+
+
+
