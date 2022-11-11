@@ -10,10 +10,10 @@ namespace API.Controllers {
     [Route("v1/controller")]
     public class TransportadoraController : ControllerBase {
 
-        private BairroController _bairroController;
+        private RegiaoController _regiaoController;
 
         public TransportadoraController () {
-            _bairroController = new BairroController();
+            _regiaoController = new RegiaoController();
         }
 
         [HttpGet]
@@ -21,9 +21,6 @@ namespace API.Controllers {
         public async Task<ActionResult<List<TransportadoraDTO>>> GetTransportadoras([FromServices] DataContext context){
 
             var transportadoras = await (from trans in context.Transportadoras
-                                         let bairrosVinculados = context.BairroTransportadoras
-                                                .Where(bt => bt.IdTransportadora == trans.IdTransportadora)
-                                                .ToList()
                                          let info = context.Informacaos
                                                 .FirstOrDefault(i => i.IdInformacao == trans.IdInformacao)
                                          select new TransportadoraDTO() {
@@ -40,13 +37,12 @@ namespace API.Controllers {
                                              MediaPreco = trans.MediaPreco,
                                              NotaMediaQualidade = trans.NotaMediaQualidade,
                                              
-                                             Bairros =  (from b in context.Bairros
-                                                        join bv in bairrosVinculados on b.IdBairro equals bv.IdBairro
-                                                        select new BairroDTO() {
-                                                            IdBairro = b.IdBairro,
-                                                            Cep = b.Cep,
-                                                            Nome = b.Nome,
-                                                        }).ToList(),
+                                             Regioes = context.RegiaoTransportadoras.Where(rt => rt.IdTransportadora == trans.IdTransportadora)
+                                                                .Select(s => new RegiaoDTO() {
+                                                                    IdTransportadora = s.IdTransportadora,
+                                                                    IdRegiao = (Regiao)s.IdRegiao,
+                                                                    IdRegiaoTransportadora = s.IdRegiaoTransportadora })
+                                                                .ToList()
 
                                          }).ToListAsync();
                                          
@@ -59,12 +55,13 @@ namespace API.Controllers {
 
         [HttpGet]
         [Route("transportadora/cep/{cep}")]
-        public async Task<ActionResult<List<TransportadoraDTO>>> GetTransportadorasByCEP([FromServices] DataContext context, [FromRoute] string cep){
-            var bairro = await context.Bairros.FirstOrDefaultAsync(b => b.Cep.Equals(cep));
+        public async Task<ActionResult<List<TransportadoraDTO>>> GetTransportadorasByCEP([FromServices] DataContext context, [FromRoute] Regiao regiao){
 
-            if(bairro != null) {
                 var transportadoras = await (from trans in context.Transportadoras
-                                         where trans.BairroTransportadoras.Where(t => t.IdBairro == bairro.IdBairro).Count() > 0
+
+                                         join reg in context.RegiaoTransportadoras on trans.IdTransportadora equals reg.IdTransportadora
+                                         where reg.IdRegiao == (int)regiao
+
                                          let info = context.Informacaos
                                                 .FirstOrDefault(i => i.IdInformacao == trans.IdInformacao)
                                          select new TransportadoraDTO() {
@@ -83,10 +80,9 @@ namespace API.Controllers {
 
                                          }).ToListAsync();
 
-                if(transportadoras != null && transportadoras.Count() > 0) {
-                    return Ok(transportadoras);
-                }
-            }                               
+            if(transportadoras != null && transportadoras.Count() > 0) {
+                return Ok(transportadoras);
+            }                              
             
 
             return NotFound("Não existe transportadoras.");
@@ -95,6 +91,9 @@ namespace API.Controllers {
         [HttpPost]
         [Route("transportadora")]
         public async Task<ActionResult<int>> SaveTransportadora([FromServices] DataContext context, [FromBody] TransportadoraDTO transportadoraDto){
+
+            if(transportadoraDto == null)
+                return NotFound("Transportadora DTO inválida.");
 
             var informacao = new Informacao() {
                 Nome = transportadoraDto.Nome,
@@ -117,8 +116,14 @@ namespace API.Controllers {
             };
 
             context.Transportadoras.Add(transportadora);
+
             await context.SaveChangesAsync();
-            await this._bairroController.SaveBairros(context, transportadora.IdTransportadora, transportadoraDto.Bairros);
+
+            var regioesIndex = new List<Regiao>();
+            foreach(var regiao in transportadoraDto.Regioes)
+                regioesIndex.Add(regiao.IdRegiao);
+
+            await this._regiaoController.SaveRegioes(context, transportadora.IdTransportadora, regioesIndex.ToArray());
 
             return Ok(transportadora.IdTransportadora);
         }

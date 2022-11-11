@@ -1,5 +1,4 @@
-﻿//using API.Models;
-using API.Models;
+﻿using API.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Data {
@@ -14,12 +13,11 @@ namespace API.Data {
         {
         }
 
-        public virtual DbSet<Bairro> Bairros { get; set; } = null!;
-        public virtual DbSet<BairroTransportadora> BairroTransportadoras { get; set; } = null!;
         public virtual DbSet<Cliente> Clientes { get; set; } = null!;
         public virtual DbSet<Informacao> Informacaos { get; set; } = null!;
         public virtual DbSet<Loja> Lojas { get; set; } = null!;
         public virtual DbSet<Pedido> Pedidos { get; set; } = null!;
+        public virtual DbSet<RegiaoTransportadora> RegiaoTransportadoras { get; set; } = null!;
         public virtual DbSet<Transportadora> Transportadoras { get; set; } = null!;
         public virtual DbSet<TransportadoraTipoEncomendum> TransportadoraTipoEncomenda { get; set; } = null!;
 
@@ -33,63 +31,28 @@ namespace API.Data {
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Bairro>(entity =>
-            {
-                entity.HasKey(e => e.IdBairro)
-                    .HasName("PK__Bairro__4F198E846A8FD32F");
-
-                entity.ToTable("Bairro");
-
-                entity.Property(e => e.Cep)
-                    .HasMaxLength(15)
-                    .IsUnicode(false)
-                    .HasColumnName("CEP");
-
-                entity.Property(e => e.Nome)
-                    .HasMaxLength(40)
-                    .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<BairroTransportadora>(entity =>
-            {
-                entity.HasKey(e => e.IdBairroTransportadora)
-                    .HasName("PK__BairroTr__239077AE3A563C22");
-
-                entity.ToTable("BairroTransportadora");
-
-                entity.HasOne(d => d.IdBairroNavigation)
-                    .WithMany(p => p.BairroTransportadoras)
-                    .HasForeignKey(d => d.IdBairro)
-                    .HasConstraintName("FK__BairroTra__IdBai__2B3F6F97");
-
-                entity.HasOne(d => d.IdTransportadoraNavigation)
-                    .WithMany(p => p.BairroTransportadoras)
-                    .HasForeignKey(d => d.IdTransportadora)
-                    .HasConstraintName("FK__BairroTra__IdTra__2C3393D0");
-            });
-
             modelBuilder.Entity<Cliente>(entity =>
             {
                 entity.HasKey(e => e.IdCliente)
-                    .HasName("PK__Cliente__D5946642A3A237F3");
+                    .HasName("PK__Cliente__D59466425C5DBBCC");
 
                 entity.ToTable("Cliente");
 
                 entity.HasOne(d => d.IdInformacaoNavigation)
                     .WithMany(p => p.Clientes)
                     .HasForeignKey(d => d.IdInformacao)
-                    .HasConstraintName("FK__Cliente__IdInfor__4222D4EF");
+                    .HasConstraintName("FK__Cliente__IdInfor__36B12243");
 
                 entity.HasOne(d => d.IdLojaNavigation)
                     .WithMany(p => p.Clientes)
                     .HasForeignKey(d => d.IdLoja)
-                    .HasConstraintName("FK__Cliente__IdLoja__4316F928");
+                    .HasConstraintName("FK__Cliente__IdLoja__37A5467C");
             });
 
             modelBuilder.Entity<Informacao>(entity =>
             {
                 entity.HasKey(e => e.IdInformacao)
-                    .HasName("PK__Informac__40403D592D27B42E");
+                    .HasName("PK__Informac__40403D5962470CF0");
 
                 entity.ToTable("Informacao");
 
@@ -115,7 +78,7 @@ namespace API.Data {
             modelBuilder.Entity<Loja>(entity =>
             {
                 entity.HasKey(e => e.IdLoja)
-                    .HasName("PK__Loja__38C45D6436B6D012");
+                    .HasName("PK__Loja__38C45D6491E1114D");
 
                 entity.ToTable("Loja");
 
@@ -127,13 +90,13 @@ namespace API.Data {
                 entity.HasOne(d => d.IdInformacaoNavigation)
                     .WithMany(p => p.Lojas)
                     .HasForeignKey(d => d.IdInformacao)
-                    .HasConstraintName("FK__Loja__IdInformac__3F466844");
+                    .HasConstraintName("FK__Loja__IdInformac__33D4B598");
             });
 
             modelBuilder.Entity<Pedido>(entity =>
             {
                 entity.HasKey(e => e.IdPedido)
-                    .HasName("PK__Pedido__9D335DC33CB9FACB");
+                    .HasName("PK__Pedido__9D335DC322938805");
 
                 entity.ToTable("Pedido");
 
@@ -141,16 +104,34 @@ namespace API.Data {
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
+                entity.HasOne(d => d.IdClienteNavigation)
+                    .WithMany(p => p.Pedidos)
+                    .HasForeignKey(d => d.IdCliente)
+                    .HasConstraintName("FK__Pedido__IdClient__3B75D760");
+
                 entity.HasOne(d => d.IdTransportadoraNavigation)
                     .WithMany(p => p.Pedidos)
                     .HasForeignKey(d => d.IdTransportadora)
-                    .HasConstraintName("FK__Pedido__IdTransp__3C69FB99");
+                    .HasConstraintName("FK__Pedido__IdTransp__3A81B327");
+            });
+
+            modelBuilder.Entity<RegiaoTransportadora>(entity =>
+            {
+                entity.HasKey(e => e.IdRegiaoTransportadora)
+                    .HasName("PK__RegiaoTr__E1AB131CB96DA58E");
+
+                entity.ToTable("RegiaoTransportadora");
+
+                entity.HasOne(d => d.IdTransportadoraNavigation)
+                    .WithMany(p => p.RegiaoTransportadoras)
+                    .HasForeignKey(d => d.IdTransportadora)
+                    .HasConstraintName("FK__RegiaoTra__IdTra__29572725");
             });
 
             modelBuilder.Entity<Transportadora>(entity =>
             {
                 entity.HasKey(e => e.IdTransportadora)
-                    .HasName("PK__Transpor__477CF3FCA58601D2");
+                    .HasName("PK__Transpor__477CF3FCE932F2D8");
 
                 entity.ToTable("Transportadora");
 
@@ -162,18 +143,18 @@ namespace API.Data {
                 entity.HasOne(d => d.IdInformacaoNavigation)
                     .WithMany(p => p.Transportadoras)
                     .HasForeignKey(d => d.IdInformacao)
-                    .HasConstraintName("FK__Transport__IdInf__286302EC");
+                    .HasConstraintName("FK__Transport__IdInf__267ABA7A");
             });
 
             modelBuilder.Entity<TransportadoraTipoEncomendum>(entity =>
             {
                 entity.HasKey(e => e.IdTransportadoraTipoEncomenda)
-                    .HasName("PK__Transpor__657B1FCE36854F03");
+                    .HasName("PK__Transpor__657B1FCE79CFFF99");
 
                 entity.HasOne(d => d.IdTransportadoraNavigation)
                     .WithMany(p => p.TransportadoraTipoEncomenda)
                     .HasForeignKey(d => d.IdTransportadora)
-                    .HasConstraintName("FK__Transport__IdTra__32E0915F");
+                    .HasConstraintName("FK__Transport__IdTra__3E52440B");
             });
 
             OnModelCreatingPartial(modelBuilder);

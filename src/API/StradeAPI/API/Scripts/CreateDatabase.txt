@@ -14,16 +14,6 @@ CREATE TABLE Informacao (
 ); 
 
 
-
-CREATE TABLE Bairro (
-	IdBairro INT NOT NULL IDENTITY(1,1),
-	Nome VARCHAR(40) NOT NULL,
-	CEP VARCHAR(15) NOT NULL,
-	PRIMARY KEY(IdBairro)
-);
-
-
-
 CREATE TABLE Transportadora (
 
 	IdTransportadora INT NOT NULL IDENTITY(1,1),
@@ -36,29 +26,11 @@ CREATE TABLE Transportadora (
 
 
 
-CREATE TABLE BairroTransportadora (
-
-	IdBairroTransportadora INT NOT NULL IDENTITY(1,1),
-	IdBairro INT FOREIGN KEY REFERENCES Bairro(IdBairro),
+CREATE TABLE RegiaoTransportadora (
+	IdRegiaoTransportadora INT NOT NULL IDENTITY(1,1),
+	IdRegiao INT NOT NULL,
 	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora)
-	PRIMARY KEY(IdBairroTransportadora),
-);
-
-CREATE TABLE Pedido (
-
-	IdPedido INT NOT NULL IDENTITY(1,1),
-	Detalhes VARCHAR(100),
-	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora),
-	Status INT NULL,
-	PRIMARY KEY(IdPedido),
-);
-
-CREATE TABLE TransportadoraTipoEncomenda  (
-
-	IdTransportadoraTipoEncomenda INT NOT NULL IDENTITY(1,1),
-	IdTipo INT NULL,
-	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora),
-	PRIMARY KEY(IdTransportadoraTipoEncomenda),
+	PRIMARY KEY(IdRegiaoTransportadora),
 );
 
 CREATE TABLE Loja (
@@ -75,4 +47,23 @@ CREATE TABLE Cliente (
     PRIMARY KEY(IdCliente),
     IdInformacao INT FOREIGN KEY REFERENCES Informacao(IdInformacao),
     IdLoja INT FOREIGN KEY REFERENCES Loja(IdLoja)
+
+);
+
+CREATE TABLE Pedido (
+
+	IdPedido INT NOT NULL IDENTITY(1,1),
+	Detalhes VARCHAR(100),
+	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora),
+	IdCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente),
+	Status INT NULL,
+	PRIMARY KEY(IdPedido),
+);
+
+CREATE TABLE TransportadoraTipoEncomenda  (
+
+	IdTransportadoraTipoEncomenda INT NOT NULL IDENTITY(1,1),
+	IdTipo INT NULL,
+	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora),
+	PRIMARY KEY(IdTransportadoraTipoEncomenda),
 );

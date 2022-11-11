@@ -7,8 +7,8 @@ namespace API.Models
     {
         public Transportadora()
         {
-            BairroTransportadoras = new HashSet<BairroTransportadora>();
             Pedidos = new HashSet<Pedido>();
+            RegiaoTransportadoras = new HashSet<RegiaoTransportadora>();
             TransportadoraTipoEncomenda = new HashSet<TransportadoraTipoEncomendum>();
         }
 
@@ -19,8 +19,8 @@ namespace API.Models
         public int? IdInformacao { get; set; }
 
         public virtual Informacao? IdInformacaoNavigation { get; set; }
-        public virtual ICollection<BairroTransportadora> BairroTransportadoras { get; set; }
         public virtual ICollection<Pedido> Pedidos { get; set; }
+        public virtual ICollection<RegiaoTransportadora> RegiaoTransportadoras { get; set; }
         public virtual ICollection<TransportadoraTipoEncomendum> TransportadoraTipoEncomenda { get; set; }
     }
 }

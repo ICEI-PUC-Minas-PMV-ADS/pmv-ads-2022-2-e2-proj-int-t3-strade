@@ -4,6 +4,6 @@
         public string Cnpj { get; set; } = null!;
         public int? NotaMediaQualidade { get; set; }
         public int? MediaPreco { get; set; }
-        public List<BairroDTO>? Bairros { get; set; }
+        public List<RegiaoDTO>? Regioes { get; set; }
     }
 }
