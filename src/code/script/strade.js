@@ -7,10 +7,19 @@ const emailInput = document.getElementById('inputEmail')
 const telInput = document.getElementById('inputTel')
 const cepInput = document.getElementById("inputCep")
   
+const norte = document.getElementById("norte")
+const sul = document.getElementById('sul')
+const oeste = document.getElementById('oeste')
+const leste = document.getElementById('leste')
+
 window.onload = function () {
   const telInput = document.getElementById('inputTel').getAttribute("value")
   console.log(telInput);
   console.log("Chamou a função window.onload");
+  console.log(norte)
+  console.log(sul)
+  console.log(oeste)
+  console.log(leste)
   dddDatabaseJson =  getDddFromDatabase();
   configurarMascaraCnpj();
   configurarMascaraCep();
@@ -70,7 +79,6 @@ function validarTodosOsCampos(){
   const emailInput = document.getElementById('inputEmail').value
   const telInput = document.getElementById('inputTel').value
   const cepInput = document.getElementById("inputCep").value
-
 
   if (!validarNomeFantasia()) {
     alert("Nome Fantasia inválido, mínimo 2 caracteres.");
@@ -144,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function desativaInputs() {
   var itensForm = document.querySelectorAll('#itensForm input, #botaoCadastrar');
-  
+  console.log(norte)
   for (var i = 0; i < itensForm.length; i++) {
     itensForm[i].disabled = !itensForm[i].disabled;
   }
