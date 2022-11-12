@@ -1,0 +1,69 @@
+﻿CREATE DATABASE STRADE;
+
+USE STRADE;
+
+CREATE TABLE Informacao (
+
+	IdInformacao INT NOT NULL IDENTITY(1,1),
+	Nome VARCHAR(40) NOT NULL,
+	Endereco VARCHAR(50) NOT NULL,
+	Aniversario DATETIME NULL,
+	NumeroContato VARCHAR(15) NOT NULL,
+	Email VARCHAR(30) NOT NULL,
+	PRIMARY KEY(IdInformacao)
+); 
+
+
+CREATE TABLE Transportadora (
+
+	IdTransportadora INT NOT NULL IDENTITY(1,1),
+	CNPJ VARCHAR(20) NOT NULL,
+	NotaMediaQualidade INT NULL,
+	MediaPreco INT NULL,
+	PRIMARY KEY(IdTransportadora),
+	IdInformacao INT FOREIGN KEY REFERENCES Informacao(IdInformacao)
+); 
+
+
+
+CREATE TABLE RegiaoTransportadora (
+	IdRegiaoTransportadora INT NOT NULL IDENTITY(1,1),
+	IdRegiao INT NOT NULL,
+	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora)
+	PRIMARY KEY(IdRegiaoTransportadora),
+);
+
+CREATE TABLE Loja (
+
+    IdLoja INT NOT NULL IDENTITY(1,1),
+    CNPJ VARCHAR(20) NOT NULL,
+    PRIMARY KEY(IdLoja),
+    IdInformacao INT FOREIGN KEY REFERENCES Informacao(IdInformacao)
+);
+
+CREATE TABLE Cliente (
+
+    IdCliente INT NOT NULL IDENTITY(1,1),
+    PRIMARY KEY(IdCliente),
+    IdInformacao INT FOREIGN KEY REFERENCES Informacao(IdInformacao),
+    IdLoja INT FOREIGN KEY REFERENCES Loja(IdLoja)
+
+);
+
+CREATE TABLE Pedido (
+
+	IdPedido INT NOT NULL IDENTITY(1,1),
+	Detalhes VARCHAR(100),
+	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora),
+	IdCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente),
+	Status INT NULL,
+	PRIMARY KEY(IdPedido),
+);
+
+CREATE TABLE TransportadoraTipoEncomenda  (
+
+	IdTransportadoraTipoEncomenda INT NOT NULL IDENTITY(1,1),
+	IdTipo INT NULL,
+	IdTransportadora INT FOREIGN KEY REFERENCES Transportadora(IdTransportadora),
+	PRIMARY KEY(IdTransportadoraTipoEncomenda),
+);
