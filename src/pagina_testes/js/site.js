@@ -1,7 +1,7 @@
 const getBtn = document.querySelector("#clickToGet");
 var comboCidades = document.getElementById("cboCidades");
 
-const norte = document.getElementById("norte")
+const norte = document.getElementById("norte1")
 
 window.onload = function(){
  console.log(norte)

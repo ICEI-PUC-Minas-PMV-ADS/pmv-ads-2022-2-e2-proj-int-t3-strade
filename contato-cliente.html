@@ -1,0 +1,83 @@
+<html>
+  <!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Strade</title>
+    <link rel="stylesheet" href="src/code/style/busca-pedido.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="src/code/script/darkmode.js"></script>
+      
+    </head>
+    
+    <body>
+    <main>
+      <nav class="navbar navbar-expand-lg fixed-top" aria-label="Light offcanvas navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Strade</a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="#carouselExampleFade">Início</a>
+              <span class="separation nav-item av-link px-2 text-muted">•</span>
+              <a class="nav-link" href="#sobre-nos">Sobre Nós</a>
+              <span class="separation nav-item av-link px-2 text-muted">•</span>
+              <a class="nav-link" href="#menu-cadastro">Cadastrar Transportadora</a>
+              <span class="separation nav-item av-link px-2 text-muted">•</span>
+              <a class="nav-link" href="#">Consultar Pedido</a>
+            </div>
+          </div>
+          <div>
+            <input type="checkbox" name="change-theme" id="change-theme" />
+            <label for="change-theme">
+                <i class="bi bi-sun"></i>
+                <i class="bi bi-moon"></i>
+            </label>
+          </div>
+          <!-- Collapse termina -->
+        </div>
+      </nav>
+    </main>
+
+    <div class="container" id="conteudo-principal">
+      
+      <div class="row">
+        <div class="col">
+          <div class="input-group mb-3">
+            <input type="text" id="id-pedido" class="form-control" placeholder="Número do pedido" aria-label="Número do pedido" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+          </div>
+        </div>
+        <div class="col">
+          <input type="text" id="nome-cliente" class="form-control" placeholder="Nome do cliente" aria-label="Nome do cliente" disabled>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+        <textarea class="form-control" id="mensagem" rows="3"></textarea>
+      </div>
+    </div>
+    
+        <!-- Footer -->
+    <div class="container">
+      <footer class="py-3 my-4 border-top">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Início</a></li>
+          <span class="separation nav-item av-link px-2 text-muted">•</span>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Perguntas frequentes</a></li>
+          <span class="separation nav-item av-link px-2 text-muted">•</span>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sobre nós</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2022 Company, Inc</p>
+      </footer>
+      <!-- Footer termina -->
+      
+    <script type="text/javascript" src="src/code/script/contato-cliente.js"></script>
+    </div>
+  </body>
+</html>

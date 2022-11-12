@@ -7,7 +7,7 @@ const emailInput = document.getElementById('inputEmail')
 const telInput = document.getElementById('inputTel')
 const cepInput = document.getElementById("inputCep")
   
-const norte = document.getElementById("norte")
+const norte = document.getElementById('norte')
 const sul = document.getElementById('sul')
 const oeste = document.getElementById('oeste')
 const leste = document.getElementById('leste')
@@ -42,7 +42,7 @@ function clickCadastrar(){
  // const endereco = "Endereço"
  // const bairros = []
 
-function addTransportadora(nome, cnpj, email, tel, cep){
+function addTransportadora(nome, cnpj, email, tel, cep, regioes){
   
   var body = {
     "nome": nome,
@@ -56,7 +56,8 @@ function addTransportadora(nome, cnpj, email, tel, cep){
         "nome": "bairro novo",
         "cep": "12345-678"
       }
-    ]
+    ],
+    "regioes": regioes
   }
   
   fetch('https://localhost:7292/v1/controller/transportadora/', {
@@ -69,6 +70,24 @@ function addTransportadora(nome, cnpj, email, tel, cep){
   .then(data => data.json())
   .then(response => console.log(response));
 }
+
+function regioesValidas(norte, sul, leste, oeste){
+  var regioes = []
+  if (norte == true){
+    regioes.push(1);
+  }
+  if (sul == true){
+    regioes.push(2);
+  }
+  if (leste == true){
+    regioes.push(3);
+  }
+  if (oeste == true){
+    regioes.push(4);
+  }
+  return regioes;
+}
+
 
 /* Envia MSG e Valida no botão cadastrar */
 
@@ -134,7 +153,8 @@ function validarTodosOsCampos(){
     return;
   }
 
-  addTransportadora(nomeTransportadoraInput, cnjpInput, emailInput, telInput, cepInput);
+  const regioes = regioesValidas(norte.checked, sul.checked, leste.checked, oeste.checked)
+  addTransportadora(nomeTransportadoraInput, cnjpInput, emailInput, telInput, cepInput, regioes);
   
   alert('Sua transportadora foi cadastrada.');
 }
@@ -152,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function desativaInputs() {
   var itensForm = document.querySelectorAll('#itensForm input, #botaoCadastrar');
-  console.log(norte)
   for (var i = 0; i < itensForm.length; i++) {
     itensForm[i].disabled = !itensForm[i].disabled;
   }
@@ -309,45 +328,3 @@ function somenteNumeros(e) {
   }
 }
 
-/* DARK MODE */
-loadTheme();
-
-// Toggle dark mode
-function toggleDarkMode() {
-    document.body.classList.toggle("dark");
-}
-
-// Load light or dark mode
-function loadTheme() {
-    const darkMode = localStorage.getItem("dark")
-
-    if(darkMode) {
-        toggleDarkMode();
-    }
-}
-
-function clickDarkBtn() {
-  const changeThemeBtn = document.querySelector("#change-theme");
-
-  changeThemeBtn.addEventListener("change", function () {
-    toggleDarkMode();
-
-    // Save or remove dark mode
-    localStorage.removeItem("dark");
-
-    if(document.body.classList.contains("dark")) {
-        localStorage.setItem("dark", 1);
-    }
-});
-}
-
-function validarCheckbox(){
-  var checkboxes = document.getElementsByName('checkboxEncomendas')
-  console.log(checkboxes)
-  
-  for (let i=0; i<checkboxes.length; i++){
-    if (checkboxes[i].checked)
-      return true;
-  }
-  return false;
-}
