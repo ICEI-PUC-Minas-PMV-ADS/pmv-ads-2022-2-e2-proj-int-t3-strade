@@ -25,7 +25,11 @@ namespace API.Data {
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=localhost;Database=STRADE;Persist Security info=True;Trusted_Connection=True;Integrated Security=SSPI");
+                // for local test
+                // optionsBuilder.UseSqlServer("Server=localhost;Database=STRADE;Persist Security info=True;Trusted_Connection=True;Integrated Security=SSPI");
+
+                // for server database
+                optionsBuilder.UseSqlServer("Data Source=SQL5101.site4now.net;Initial Catalog=db_a8fbe5_stradedb;User Id=db_a8fbe5_stradedb_admin;Password=strade135Bb@");
             }
         }
 
