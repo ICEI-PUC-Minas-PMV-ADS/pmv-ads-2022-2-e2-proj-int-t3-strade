@@ -11,6 +11,7 @@ namespace API.Controllers {
     public class TransportadoraController : ControllerBase {
 
         private RegiaoController _regiaoController;
+        private InformacaoController _informacaoController = new InformacaoController();
 
         public TransportadoraController () {
             _regiaoController = new RegiaoController();
@@ -95,22 +96,20 @@ namespace API.Controllers {
             if(transportadoraDto == null)
                 return NotFound("Transportadora DTO inválida.");
 
-            var informacao = new Informacao() {
+            var informacao = new InformacaoDTO() {
                 Nome = transportadoraDto.Nome,
                 IdInformacao = transportadoraDto.IdInformacao,
                 Aniversario = transportadoraDto.Aniversario,
                 Email = transportadoraDto.Email,
                 Endereco = transportadoraDto.Endereco,
                 NumeroContato = transportadoraDto.NumeroContato
-
             };
 
-            context.Informacaos.Add(informacao);
-            await context.SaveChangesAsync();
+            var idTransportadora = await _informacaoController.SaveInformacao(context, informacao);
 
             var transportadora = new Transportadora() {
                 Cnpj = transportadoraDto.Cnpj,
-                IdInformacao = informacao.IdInformacao,
+                IdInformacao = idTransportadora.Value,
                 MediaPreco = transportadoraDto.MediaPreco,
                 NotaMediaQualidade = transportadoraDto.NotaMediaQualidade,
             };

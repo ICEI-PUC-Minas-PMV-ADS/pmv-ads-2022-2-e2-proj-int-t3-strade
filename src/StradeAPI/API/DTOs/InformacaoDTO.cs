@@ -1,5 +1,5 @@
 ﻿namespace API.DTOs {
-    public abstract class InformacaoDTO {
+    public class InformacaoDTO {
         public int IdInformacao { get; set; }
         public string Nome { get; set; } = null!;
         public string Endereco { get; set; } = null!;
