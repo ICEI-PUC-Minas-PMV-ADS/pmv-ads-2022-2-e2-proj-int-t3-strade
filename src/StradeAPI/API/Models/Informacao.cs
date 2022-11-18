@@ -18,6 +18,7 @@ namespace API.Models
         public DateTime? Aniversario { get; set; }
         public string NumeroContato { get; set; } = null!;
         public string Email { get; set; } = null!;
+        public string Senha { get; set; } = null!;
 
         public virtual ICollection<Cliente> Clientes { get; set; }
         public virtual ICollection<Loja> Lojas { get; set; }

@@ -96,13 +96,19 @@ namespace API.Controllers {
             if(transportadoraDto == null)
                 return NotFound("Transportadora DTO inválida.");
 
+            if(transportadoraDto.Senha.Length < 8)
+                return NotFound("A senha deve ter no minimo 8 caracteres.");
+
+            var senhaHash = BCrypt.Net.BCrypt.HashPassword(transportadoraDto.Senha);
+
             var informacao = new InformacaoDTO() {
                 Nome = transportadoraDto.Nome,
                 IdInformacao = transportadoraDto.IdInformacao,
                 Aniversario = transportadoraDto.Aniversario,
                 Email = transportadoraDto.Email,
                 Endereco = transportadoraDto.Endereco,
-                NumeroContato = transportadoraDto.NumeroContato
+                NumeroContato = transportadoraDto.NumeroContato,
+                Senha = senhaHash
             };
 
             var idTransportadora = await _informacaoController.SaveInformacao(context, informacao);
@@ -129,7 +135,7 @@ namespace API.Controllers {
             await this._regiaoController.SaveRegioes(context, transportadora.IdTransportadora, regioesIndex.ToArray());
             await this._tipoEncomendaController.SaveTipoEncomenda(context, tipoEncomendasIndex, idTransportadora.Value);
 
-            return Ok(transportadora.IdTransportadora);
+            return Ok(idTransportadora.Value);
         }
 
         private static string GetEnumDescription(Enum value)

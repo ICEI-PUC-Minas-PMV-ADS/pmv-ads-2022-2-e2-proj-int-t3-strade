@@ -6,5 +6,6 @@
         public DateTime? Aniversario { get; set; }
         public string NumeroContato { get; set; } = null!;
         public string Email { get; set; } = null!;
+        public string Senha { get; set; } = null!;
     }
 }

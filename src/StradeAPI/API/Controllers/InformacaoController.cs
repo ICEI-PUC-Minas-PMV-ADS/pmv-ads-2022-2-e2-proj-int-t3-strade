@@ -23,7 +23,8 @@ namespace API.Controllers {
                 Aniversario = informacaoDto.Aniversario,
                 Email = informacaoDto.Email,
                 Endereco = informacaoDto.Endereco,
-                NumeroContato = informacaoDto.NumeroContato
+                NumeroContato = informacaoDto.NumeroContato,
+                Senha =informacaoDto.Senha
 
             };
 
