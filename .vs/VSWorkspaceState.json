@@ -4,9 +4,7 @@
     "\\src",
     "\\src\\API",
     "\\src\\API\\StradeAPI",
-    "\\src\\API\\StradeAPI\\API",
-    "\\src\\API\\StradeAPI\\API\\DTOs",
-    "\\src\\API\\StradeAPI\\API\\Enums"
+    "\\src\\API\\StradeAPI\\API"
   ],
   "PreviewInSolutionExplorer": false
 }

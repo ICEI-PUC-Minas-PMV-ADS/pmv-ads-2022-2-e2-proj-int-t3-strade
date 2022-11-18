@@ -27,13 +27,14 @@
   /* formatando o cabeçalho dos formulários */
   h1{
     font-size: 10em;
-    color: green;
+    color: #263238;
     padding: 6px 0;
     font-family: Arial,sans-serif;
     font-weight: bold;
     text-align: center;
     padding-bottom: 20px;
   }
+
   h1:after{
     content: ' ';
     display: block;
@@ -49,7 +50,7 @@
     margin: 0px;
   }
   label{
-    color: green;
+    color: #263238;
     position: relative;
   }
   
@@ -59,6 +60,7 @@
     color: #bebcbc; 
     font-style: italic;
   }
+
   input:-moz-placeholder,
   textarea:-moz-placeholder{
     color: #bebcbc;
@@ -85,7 +87,7 @@
   }
   
   /*estilo do botão submit */
-  input[type="submit"]{
+  input[type="button"]{
     width: 100%!important;
     cursor: pointer;  
     background: #228B22;
@@ -101,7 +103,7 @@
     
     transition: all 0.2s linear;
   }
-  input[type="submit"]:hover{
+  input[type="button"]:hover{
     background: #66CDAA;
   }
   
@@ -163,8 +165,10 @@
       animation-timing-function: ease;
       animation-fill-mode: both;
   }
+
+
   
-  #login{
+  .login{
     position: absolute;
     top: 0px;
     width: 88%; 
@@ -199,7 +203,7 @@
     animation-name: fadeOutLeft;
   }
   
-  /fadeInLeft/
+  /* /fadeInLeft/
   @-webkit-keyframes fadeInLeft {
     0% {
       opacity: 0;
@@ -243,4 +247,100 @@
       opacity: 0;
       transform: translateX(-20px);
     }
-  }
+  } */
+
+
+  /* Modificações Lucas */
+
+.separation {
+  position: relative;
+  top: 0.5em
+}
+
+/* DARK MODE */
+
+#change-theme {
+display: none;
+}
+
+.bi {
+font-size: 1.4rem;
+cursor: pointer;
+}
+
+.bi-moon {
+  display: none;
+}
+
+.bi-sun{
+  color: #2F4F4F;
+}
+
+.dark .bi-moon {
+  display: block;
+}
+
+.dark .bi-sun {
+  display: none;
+}
+
+.dark .fixed-top{
+  background-color: #263238;
+    color: #fff;
+}
+
+.dark,
+.dark header,
+.dark main,
+.dark body{
+    background-color: #263238;
+    color: #fff;
+}
+
+.dark .login{
+  background-color:#37474f;
+}
+
+.dark h1, label{
+  color: #fff;
+}
+
+.dark 
+ul.list-group {
+  --bs-list-group-bg: #37474f;
+  --bs-list-group-color: #fff;
+}
+
+.dark
+.navbar-brand {
+  --bs-navbar-brand-color: #fff
+}
+
+.dark
+.separation{
+  color: #fff;
+}
+
+
+
+a.nav-link:hover {
+  --bs-navbar-active-color: black;
+}
+
+.dark
+.navbar {
+  --bs-navbar-color: #fff;
+}
+
+
+.dark .navbar 
+.dark .list-group
+.dark .input-group-text {
+  background-color: #37474f;
+  color: #fff;
+}
+
+.dark .navbar-toggler,
+.dark .btn-close {
+    background-color: #37474f;
+}
