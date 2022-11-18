@@ -41,4 +41,8 @@ INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (6,3);
 
 INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (7,4);
 INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (8,4);
-INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (9,4); */
+INSERT INTO TransportadoraTipoEncomenda(IdTipo, IdTransportadora) VALUES (9,4); 
+
+INSERT INTO RegiaoTransportadora(IdRegiao, IdTransportadora) Values (1,2);
+INSERT INTO RegiaoTransportadora(IdRegiao, IdTransportadora) Values (2,2);
+INSERT INTO RegiaoTransportadora(IdRegiao, IdTransportadora) Values (3,2);*/
