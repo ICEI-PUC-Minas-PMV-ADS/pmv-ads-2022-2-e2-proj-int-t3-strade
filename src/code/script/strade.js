@@ -135,7 +135,7 @@ function validarTodosOsCampos(){
   //telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
 
   if (!validacaoTel()) {
-    alert("Telefone inválido, digite os dados corretamente.");
+    alert("Telefone inválido, digite a quantidade de caracteres necessárias.");
       telInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
       return;
       } 
@@ -147,6 +147,12 @@ function validarTodosOsCampos(){
       return;
       } 
       //cepInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+
+  if (!validaQtdSenha()) {
+    alert("Senha inválida, deve conter no mínimo 8 algarismos.");
+    senhaInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
+    return;
+    }
 
   if(!validarCheckbox()){
     alert('Selecione ao menos um tipo de encomenda.');
@@ -164,6 +170,7 @@ const minimoAlgarismosNome = 2
 const minimoAlgarismosCnpj = 18
 const minimoAlgarismosTel = 15
 const minimoAlgarismosCep = 9
+const minimoAlgarismosSenha = 8
 
 /* Desativar inputs do form */
 document.addEventListener('DOMContentLoaded', function () {
@@ -250,6 +257,11 @@ function validarTel(){
 function validacaoCep(){
   const cepInput = document.getElementById("inputCep")
   return cepInput.value.length >= minimoAlgarismosCep;
+}
+
+function validaQtdSenha(){
+  const senhaInput = document.getElementById("inputSenha")
+  return senhaInput.value.length >= minimoAlgarismosSenha;
 }
 
 function validarCheckbox(){
