@@ -154,11 +154,16 @@ function validarTodosOsCampos(){
     return;
     }
 
-  if(!validarCheckbox()){
+  if(!validarCheckboxRegioes()){
+    alert('Selecione ao menos uma região.');
+    return;
+  }
+  
+  if(!validarCheckboxEncomendas()){
     alert('Selecione ao menos um tipo de encomenda.');
     return;
   }
-
+  
   const regioes = regioesValidas(norte.checked, sul.checked, leste.checked, oeste.checked)
   addTransportadora(nomeTransportadoraInput, cnjpInput, emailInput, telInput, cepInput, regioes);
   
@@ -264,7 +269,18 @@ function validaQtdSenha(){
   return senhaInput.value.length >= minimoAlgarismosSenha;
 }
 
-function validarCheckbox(){
+function validarCheckboxRegioes(){
+  var checkboxes = document.getElementsByName('checkboxRegioes')
+  console.log(checkboxes)
+  
+  for (let i=0; i<checkboxes.length; i++){
+    if (checkboxes[i].checked)
+      return true;
+  }
+  return false;
+}
+
+function validarCheckboxEncomendas(){
   var checkboxes = document.getElementsByName('checkboxEncomendas')
   console.log(checkboxes)
   
