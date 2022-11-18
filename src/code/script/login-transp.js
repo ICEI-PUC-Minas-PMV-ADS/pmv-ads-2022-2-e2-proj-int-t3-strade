@@ -1,4 +1,13 @@
-window.onload = function(){
+const ISDEVELOPMENTTEST = true;
+
+function GetCurrentApiUrl() {
+    if (ISDEVELOPMENTTEST)
+        return "https://localhost:7292/v1/controller/";
+
+    return "http://laborum-001-site1.btempurl.com/v1/controller/";
+}
+
+window.onload = function () {
   loadTheme();
   clickDarkBtn();
   clickLogar();
@@ -17,7 +26,7 @@ function validarTodosOsCampos(){
     alert("Email inválido, deve conter um @ e .com.");
     emailInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
-   }
+  }
 
    /* if (!validarSenha()) {
     alert("Senha inválida, deve conter no mínimo um caractere especial ex. !@#$%¨&*_+=");
@@ -26,13 +35,34 @@ function validarTodosOsCampos(){
    } */
 
    if (!validaQtdSenha()) {
-    alert("Senha inválida, deve conter no mínimo 8 algarismos.");
-    senhaInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
-    return;
+        alert("Senha inválida, deve conter no mínimo 8 algarismos.");
+        senhaInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
+        return;
    }
 
-  alert('Você logou!');
+    var data = { Email: emailInput, Senha: senhaInput };
+    var apiUrl = GetCurrentApiUrl() + "login/transportadora";
 
+    var requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    }
+
+    fetch(apiUrl, requestOptions)
+    .then(
+        response => response.json()
+    ).then(
+        function (response) {
+            alert(response.message);
+            console.log(response);
+
+            if (response.isSuccess) {
+                window.location.href = "index.html";
+            }
+        }
+    )
+        
 }
 
 
