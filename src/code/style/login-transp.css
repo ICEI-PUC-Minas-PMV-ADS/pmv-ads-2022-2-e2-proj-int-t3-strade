@@ -49,6 +49,7 @@
   p:first-child{
     margin: 0px;
   }
+
   label{
     color: #263238;
     position: relative;
@@ -301,7 +302,11 @@ cursor: pointer;
   background-color:#37474f;
 }
 
-.dark h1, label{
+.dark h1{
+  color: #fff;
+}
+
+.dark label{
   color: #fff;
 }
 
