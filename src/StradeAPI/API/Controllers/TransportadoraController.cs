@@ -3,6 +3,8 @@ using API.DTOs;
 using API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
+using System.Reflection;
 
 namespace API.Controllers {
 
@@ -10,12 +12,9 @@ namespace API.Controllers {
     [Route("v1/controller")]
     public class TransportadoraController : ControllerBase {
 
-        private RegiaoController _regiaoController;
+        private RegiaoController _regiaoController = new RegiaoController();
         private InformacaoController _informacaoController = new InformacaoController();
-
-        public TransportadoraController () {
-            _regiaoController = new RegiaoController();
-        }
+        private TipoEncomendaController _tipoEncomendaController = new TipoEncomendaController();
 
         [HttpGet]
         [Route("transportadora")]
@@ -38,12 +37,13 @@ namespace API.Controllers {
                                              MediaPreco = trans.MediaPreco,
                                              NotaMediaQualidade = trans.NotaMediaQualidade,
                                              
-                                             Regioes = context.RegiaoTransportadoras.Where(rt => rt.IdTransportadora == trans.IdTransportadora)
-                                                                .Select(s => new RegiaoDTO() {
-                                                                    IdTransportadora = s.IdTransportadora,
-                                                                    IdRegiao = (Regiao)s.IdRegiao,
-                                                                    IdRegiaoTransportadora = s.IdRegiaoTransportadora })
-                                                                .ToList()
+                                             RegioesDto = context.RegiaoTransportadoras.Where(rt => rt.IdTransportadora == trans.IdTransportadora)
+                                                                .Select(s => GetEnumDescription((Regiao)s.IdRegiao))
+                                                                .ToList(),
+
+                                            TipoEncomendasDto = context.TransportadoraTipoEncomenda.Where(rt => rt.IdTransportadora == trans.IdTransportadora)
+                                            .Select(s => GetEnumDescription((TipoEncomenda)s.IdTipo))
+                                            .ToList()
 
                                          }).ToListAsync();
                                          
@@ -120,11 +120,30 @@ namespace API.Controllers {
 
             var regioesIndex = new List<Regiao>();
             foreach(var regiao in transportadoraDto.Regioes)
-                regioesIndex.Add(regiao.IdRegiao);
+                regioesIndex.Add((Regiao)regiao);
+
+            var tipoEncomendasIndex = new List<TipoEncomenda>();
+            foreach(var tipoEncomenda in transportadoraDto.TipoEncomendas)
+                tipoEncomendasIndex.Add((TipoEncomenda)tipoEncomenda);
 
             await this._regiaoController.SaveRegioes(context, transportadora.IdTransportadora, regioesIndex.ToArray());
+            await this._tipoEncomendaController.SaveTipoEncomenda(context, tipoEncomendasIndex, idTransportadora.Value);
 
             return Ok(transportadora.IdTransportadora);
+        }
+
+        private static string GetEnumDescription(Enum value)
+        {
+            FieldInfo fi = value.GetType().GetField(value.ToString());
+
+            DescriptionAttribute[] attributes = fi.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
+
+            if (attributes != null && attributes.Any())
+            {
+                return attributes.First().Description;
+            }
+
+            return value.ToString();
         }
 
     }

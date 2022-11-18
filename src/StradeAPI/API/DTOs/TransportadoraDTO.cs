@@ -4,6 +4,10 @@
         public string Cnpj { get; set; } = null!;
         public int? NotaMediaQualidade { get; set; }
         public int? MediaPreco { get; set; }
-        public List<RegiaoDTO>? Regioes { get; set; }
+        public int[] Regioes { get; set; }
+        public int[] TipoEncomendas { get; set; }
+
+        public List<string> RegioesDto { get; set; }
+        public List<string> TipoEncomendasDto { get; set; }
     }
 }
