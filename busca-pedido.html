@@ -13,6 +13,7 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"></script>
     <script type="text/javascript" src="src/code/script/strade.js"></script>
+    
       
     </head>
     
@@ -47,14 +48,17 @@
     <div class="container" id="conteudo-principal">
       <div class="row g-3 align-items-center" id="search-field">
         <div class="col-auto">
-          <input id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+          
+          <input type="text" id="idPedido" class="form-control" placeholder="Número do pedido" aria-label="Número do pedido" aria-describedby="button-addon2">
         </div>
         <div class="col-auto">
-          <button class="btn btn-primary" type="submit">Buscar</button>
+          <button class="btn btn-primary" type="submit" id="btnBuscar">Buscar</button>
         </div>
       </div>
+      <div id="notes_container">
+        </div>
     </div>
-    
+        
         <!-- Footer -->
     <div class="container">
       <footer class="py-3 my-4 border-top">
@@ -70,4 +74,5 @@
       <!-- Footer termina -->
     </div>
   </body>
+  <script type="text/javascript" src="src/code/script/busca-pedido.js"></script>
 </html>

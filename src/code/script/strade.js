@@ -1,5 +1,14 @@
 let dddDatabaseJson;
 
+const ISDEVELOPMENTTEST = false;
+
+function GetCurrentApiUrl() {
+    if (ISDEVELOPMENTTEST)
+        return "https://localhost:7292/v1/controller/";
+
+    return "http://laborum-001-site1.btempurl.com/v1/controller/";
+}
+
 const nomeFantasiaInput = document.getElementById('inputNomeFantasia')
 const nomeTransportadoraInput = document.getElementById('inputNomeTransportadora')
 const cnjpInput = document.getElementById('inputCnpj')
@@ -13,13 +22,7 @@ const oeste = document.getElementById('oeste')
 const leste = document.getElementById('leste')
 
 window.onload = function () {
-  const telInput = document.getElementById('inputTel').getAttribute("value")
-  console.log(telInput);
   console.log("Chamou a função window.onload");
-  console.log(norte)
-  console.log(sul)
-  console.log(oeste)
-  console.log(leste)
   dddDatabaseJson =  getDddFromDatabase();
   configurarMascaraCnpj();
   configurarMascaraCep();
@@ -34,13 +37,6 @@ function clickCadastrar(){
   const Cadastrar = document.getElementById('botaoCadastrar')   
   Cadastrar.addEventListener('click', validarTodosOsCampos);
 }
-
-//const nomeTransportadoraInput = document.getElementById('inputNomeTransportadora')
-  //const cnjpInput = document.getElementById('inputCnpj')
-  //const emailInput = document.getElementById('inputEmail')
- // const telInput = document.getElementById('inputTel')
- // const endereco = "Endereço"
- // const bairros = []
 
 function addTransportadora(nome, cnpj, email, tel, cep, regioes){
   
@@ -59,8 +55,10 @@ function addTransportadora(nome, cnpj, email, tel, cep, regioes){
     ],
     "regioes": regioes
   }
+
+  var apiUrl = GetCurrentApiUrl();
   
-  fetch('https://localhost:7292/v1/controller/transportadora/', {
+  fetch(apiUrl + 'transportadora/', {
     method: 'POST',
     body: JSON.stringify(body),
     headers: {
