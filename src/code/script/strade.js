@@ -1,3 +1,12 @@
+const ISDEVELOPMENTTEST = true;
+
+function GetCurrentApiUrl() {
+  if (ISDEVELOPMENTTEST)
+      return "https://localhost:7292/v1/controller/";
+
+  return "http://laborum-001-site1.btempurl.com/v1/controller/";
+}
+
 let dddDatabaseJson;
 
 const nomeFantasiaInput = document.getElementById('inputNomeFantasia')
@@ -14,12 +23,12 @@ const leste = document.getElementById('leste')
 
 window.onload = function () {
   const telInput = document.getElementById('inputTel').getAttribute("value")
-  console.log(telInput);
+  /* console.log(telInput);
   console.log("Chamou a função window.onload");
   console.log(norte)
   console.log(sul)
   console.log(oeste)
-  console.log(leste)
+  console.log(leste) */
   dddDatabaseJson =  getDddFromDatabase();
   configurarMascaraCnpj();
   configurarMascaraCep();
@@ -167,7 +176,30 @@ function validarTodosOsCampos(){
   const regioes = regioesValidas(norte.checked, sul.checked, leste.checked, oeste.checked)
   addTransportadora(nomeTransportadoraInput, cnjpInput, emailInput, telInput, cepInput, regioes);
   
-  alert('Sua transportadora foi cadastrada.');
+  /* var data = { Nome: inputNomeTransportadora, Cnpj: inputCnpj, Email: inputEmail, NumeroContato: inputTel, Endereco: inputCep, Senha: senhaInput };
+   
+  var apiUrl = GetCurrentApiUrl() + "transportadora";
+
+    var requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    }
+
+    fetch(apiUrl, requestOptions)
+    .then(
+        response => response.json()
+    ).then(
+        function (response) {
+            alert(response.message);
+            console.log(response);
+
+            if (response.isSuccess) {
+                window.location.href = "login-transp.html";
+            }
+        }
+    ) */
+  /* alert('Sua transportadora foi cadastrada.'); */
 }
 
 /* Número de caracteres no  */
@@ -271,7 +303,7 @@ function validaQtdSenha(){
 
 function validarCheckboxRegioes(){
   var checkboxes = document.getElementsByName('checkboxRegioes')
-  console.log(checkboxes)
+  //console.log(checkboxes)
   
   for (let i=0; i<checkboxes.length; i++){
     if (checkboxes[i].checked)
@@ -282,7 +314,7 @@ function validarCheckboxRegioes(){
 
 function validarCheckboxEncomendas(){
   var checkboxes = document.getElementsByName('checkboxEncomendas')
-  console.log(checkboxes)
+  //console.log(checkboxes)
   
   for (let i=0; i<checkboxes.length; i++){
     if (checkboxes[i].checked)
@@ -293,10 +325,10 @@ function validarCheckboxEncomendas(){
 
 /* DDD Json */
 async function getDddFromDatabase() {
-  console.log("Chamou a função getDDDFromDatabase");
+  //console.log("Chamou a função getDDDFromDatabase");
   const response = await fetch("src/code/database/ddd.json");
   const dddDatabaseJson = await response.json();
-  console.log(dddDatabaseJson)
+  //console.log(dddDatabaseJson)
   return dddDatabaseJson.estadoPorDdd;
 }
 

@@ -1,4 +1,4 @@
-const ISDEVELOPMENTTEST = true;
+const ISDEVELOPMENTTEST = false;
 
 function GetCurrentApiUrl() {
     if (ISDEVELOPMENTTEST)
@@ -49,6 +49,7 @@ function validarTodosOsCampos(){
         body: JSON.stringify(data)
     }
 
+    console.log(apiUrl)
     fetch(apiUrl, requestOptions)
     .then(
         response => response.json()
@@ -56,6 +57,11 @@ function validarTodosOsCampos(){
         function (response) {
             alert(response.message);
             console.log(response);
+
+            let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
+            localStorage.setItem("token", token)
+            console.log(token)
+            
 
             if (response.isSuccess) {
                 window.location.href = "index.html";
