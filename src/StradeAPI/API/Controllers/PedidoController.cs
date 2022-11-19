@@ -62,7 +62,7 @@ namespace API.Controllers {
                     IdCliente = pedido.IdCliente,
                     IdPedido = pedido.IdPedido,
                     IdTransportadora = pedido.IdTransportadora,
-                    Status = (int)Status.PedidoRealizado
+                    Status = pedido.Status
                 });
 
             return NotFound("Pedido inexistente.");
