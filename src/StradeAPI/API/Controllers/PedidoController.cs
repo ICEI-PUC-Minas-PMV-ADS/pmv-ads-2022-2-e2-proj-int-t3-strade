@@ -109,7 +109,7 @@ namespace API.Controllers {
 
         [HttpPut]
         [Route("pedido/status")]
-        public async Task<ActionResult<bool>> SavePedido([FromServices] DataContext context, [FromBody] StatusDTO status){
+        public async Task<ActionResult<bool>> UpdateStatusPedido([FromServices] DataContext context, [FromBody] StatusDTO status){
 
             if(status is null)
                 return NotFound("Status não pode vim nulo.");
