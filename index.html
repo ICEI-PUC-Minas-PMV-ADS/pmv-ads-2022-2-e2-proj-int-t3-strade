@@ -5,294 +5,294 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Strade</title>
-    <link rel="stylesheet" href="wwwroot/css/style.css">
+    <link rel="stylesheet" href="src/code/style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script type="text/javascript" src="wwwroot/js/darkmode.js"></script>
-      
-      
-    </head>
+    <script type="text/javascript" src="src/code/script/darkmode.js"></script>
+  </head>
     
-    <body>
-    <main>
-      <nav class="navbar navbar-expand-lg fixed-top" aria-label="Light offcanvas navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Strade</a>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" href="#carouselExampleFade">Início</a>
-              <span class="separation nav-item av-link px-2 text-muted">•</span>
-              <a class="nav-link" href="#sobre-nos">Sobre Nós</a>
-              <span class="separation nav-item av-link px-2 text-muted">•</span>
-              <a class="nav-link" href="#menu-cadastro">Cadastrar Transportadora</a>
-              <span class="separation nav-item av-link px-2 text-muted">•</span>
-              <a class="nav-link" href="#">Consultar Pedido</a>
-            </div>
-          </div>
-          <div>
-            <input type="checkbox" name="change-theme" id="change-theme" />
-            <label for="change-theme">
-                <i class="bi bi-sun"></i>
-                <i class="bi bi-moon"></i>
-            </label>
-          </div>
-          <!-- Collapse termina -->
-        </div>
-      </nav>
-    </main>
-    <!-- Carrossel -->
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="wwwroot/img/log.png" class="d-block w-100 h-50" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Melhor prazo</h1>
-            <p class="paragraph-carousel">Entendemos sua necessidade. Nos encaixamos a sua urgência.</p>
+  <body>
+  <main>
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Light offcanvas navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Strade</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#carouselExampleFade">Início</a>
+            <span class="separation nav-item av-link px-2 text-muted">•</span>
+            <a class="nav-link" href="#sobre-nos">Sobre Nós</a>
+            <span class="separation nav-item av-link px-2 text-muted">•</span>
+            <a class="nav-link" href="#menu-cadastro">Cadastrar Transportadora</a>
+            <span class="separation nav-item av-link px-2 text-muted">•</span>
+            <a class="nav-link" href="login-transp.html">Login</a>
+            <span class="separation nav-item av-link px-2 text-muted">•</span>
+            <a class="nav-link" href="busca-pedido.html">Consultar Pedido</a>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="wwwroot/img/seg.png" class="d-block w-100 h-50" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Segurança e praticidade</h1>
-            <p class="paragraph-carousel">Prezamos pelo cuidado e otimização no processo de entrega.</p>
-          </div>
+        <div>
+          <input type="checkbox" name="change-theme" id="change-theme" />
+          <label for="change-theme">
+              <i class="bi bi-sun"></i>
+              <i class="bi bi-moon"></i>
+          </label>
         </div>
-        <div class="carousel-item">
-          <img src="wwwroot/img/prazo.jpg" class="d-block w-100 h-50" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Logística</h1>
-            <p class="paragraph-carousel">Simplificamos a entrega para você focar no produto.</p>
+        <!-- Collapse termina -->
+      </div>
+    </nav>
+  </main>
+  <!-- Carrossel -->
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="src/code/img/log.png" class="d-block w-100 h-50" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Melhor prazo</h1>
+          <p class="paragraph-carousel">Entendemos sua necessidade. Nos encaixamos a sua urgência.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="src/code/img/seg.png" class="d-block w-100 h-50" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Segurança e praticidade</h1>
+          <p class="paragraph-carousel">Prezamos pelo cuidado e otimização no processo de entrega.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="src/code/img/prazo.jpg" class="d-block w-100 h-50" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Logística</h1>
+          <p class="paragraph-carousel">Simplificamos a entrega para você focar no produto.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Carrossel termina -->
+  <div class="container marketing">
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+    <!-- Texto e Vídeo -->
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading fw-normal lh-1">Venha conosco<span class="text-muted"> fazer
+            mais.</span></h2>
+        <p class="plead">Fuja da burocracia e do cansaço causado pelas horas a procura de quem atenda suas necessidades. <br>
+          Em parceria com as melhores empresas do ramo logístico, a <span class="text-muted">Strade</span> lhe oferece praticidade, agilidade e seguranca a cada passo.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 ">
+          <iframe src="https://www.youtube.com/embed/jcNPQSsd51k" title="Video - Strade" frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Texto e Vídeo termina-->
+    <hr class="featurette-divider">
+
+    <div id='sobre-nos' class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div id= "fundo-img" class="card">
+          <img  src="src/code/img/strade-img-avaliacao.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Feedback eficiente</h5>
+            <p class="card-text">Os clientes poderão avaliar cada entrega e fazer comentários que ajudem em nossa evolução diária.</p>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- Carrossel termina -->
-    <div class="container marketing">
-      <!-- START THE FEATURETTES -->
-      <hr class="featurette-divider">
-      <!-- Texto e Vídeo -->
-      <div class="row featurette">
-        <div class="col-md-6">
-          <h2 class="featurette-heading fw-normal lh-1">Venha conosco<span class="text-muted"> fazer
-              mais.</span></h2>
-          <p class="plead">Fuja da burocracia e do cansaço causado pelas horas a procura de quem atenda suas necessidades. <br>
-            Em parceria com as melhores empresas do ramo logístico, a <span class="text-muted">Strade</span> lhe oferece praticidade, agilidade e seguranca a cada passo.</p>
-        </div>
-        <div class="col-md-6">
-          <div class="ratio ratio-16x9 ">
-            <iframe src="https://www.youtube.com/embed/jcNPQSsd51k" title="Video - Strade" frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+      <div class="col">
+        <div id= "fundo-img" class="card">
+          <img  src="src/code/img/strade-img-envio.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Encaixamos a sua necessidade</h5>
+            <p class="card-text">Com meios de transportes variados, simplificamos a logística para que seu produto seja entregue ao cliente da maneira mais adequada.</p>
           </div>
         </div>
       </div>
-      <!-- Texto e Vídeo termina-->
-      <hr class="featurette-divider">
+      <div class="col">
+        <div id= "fundo-img" class="card">
+          <img  src="src/code/img/strade-img-local.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Abrangência</h5>
+            <p class="card-text">Atuamos ativamente em toda Grande Belo Horizonte com especialistas em entregas na região.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div id= "fundo-img" class="card">
+          <img  src="src/code/img/strade-img-text.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Onde estiver</h5>
+            <p class="card-text">Compatível com todos seus aparelhos. Estamos na palma da sua mão sempre que precisar de nós.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <div id='sobre-nos' class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-          <div id= "fundo-img" class="card">
-            <img  src="wwwroot/img/strade-img-avaliacao.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Feedback eficiente</h5>
-              <p class="card-text">Os clientes poderão avaliar cada entrega e fazer comentários que ajudem em nossa evolução diária.</p>
-            </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading fw-normal lh-1">Agora que conheceu a nossa ideia, <br><span
+            class="text-muted">cadastre-se.</span></h2>
+        <p class="lead">Mas para se cadastrar, saiba que:</p>
+        <p class="lead">Regras de negócio</p>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="inputConcordo">
+          <label class="form-check-label" for="inputConcordo">Concorda com as regras de negócio?</label>
+        </div>
+        
+      </div>
+
+
+      <div id='itensForm'class="col-md-6">
+        <p id='menu-cadastro' class="lead">Insira todos os dados abaixo:</p>
+        <!-- Inputs -->
+        <div class="input-group mb-3">
+          <span class="dark input-group-text" id="inputGroup-sizing-default">Nome Fantasia</span>
+          <input id='inputNomeFantasia' type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+          <span class="dark input-group-text" id="inputGroup-sizing-default">Nome da Transportadora</span>
+          <input id='inputNomeTransportadora' type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+          <span class="dark input-group-text" id="inputGroup-sizing-default">CNPJ</span>
+          <input id="inputCnpj" type="text" maxlength="18" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
+        </div>
+        <div class="input-group mb-3">
+          <span class="dark input-group-text" id="inputGroup-sizing-default">E-mail</span>
+          <input id="inputEmail" type="email" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+          <span class="dark input-group-text" id="inputGroup-sizing-default">Telefone</span>
+          <input id="inputTel" type="text" maxlength="15" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
+        </div>
+        <div class="input-group mb-3">
+          <span class="dark input-group-text" id="inputGroup-sizing-default">CEP</span>
+          <input id="inputCep" type="text" maxlength="9" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
+        </div>
+        <div class="input-group mb-3">
+          <span class="dark input-group-text" id="inputGroup-sizing-default">Senha</span>
+          <input id="inputSenha" type="password" maxlength="20" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+        <!-- Inputs termina -->
+        <!-- Regiões atendidas pela transportadora -->
+        <p class="lead">Selecione as regiões que a transportadora irá atender:</p>
+        <div class="items-checkbox">
+          <div class="flex-container checkbox-l">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxRegioes" value="true" id="norte">
+                <label class="form-check-label stretched-link" for="norte">Região Norte</label>
+              </li>
+              <li class="list-group-item">
+                <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxRegioes" value="true" id="sul">
+                <label class="form-check-label stretched-link" for="sul">Região Sul</label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-container2 checkbox-r">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxRegioes" value="true" id="oeste">
+                <label class="form-check-label stretched-link" for="oeste">Região Oeste</label>
+              </li>
+              <li class="list-group-item">
+                <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxRegioes" value="true" id="leste">
+                <label class="form-check-label stretched-link" for="leste">Região Leste</label>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="col">
-          <div id= "fundo-img" class="card">
-            <img  src="wwwroot/img/strade-img-envio.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Encaixamos a sua necessidade</h5>
-              <p class="card-text">Com meios de transportes variados, simplificamos a logística para que seu produto seja entregue ao cliente da maneira mais adequada.</p>
-            </div>
+        
+        <!-- Checkboxes -->
+        <p class="lead">Selecione os tipos de encomendas que sua transportadora irá transportar:</p>
+        <div class="items-checkbox">
+          <div class="flex-container checkbox-l">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="primeiraCheckboxStretched">
+                <label class="form-check-label stretched-link" for="primeiraCheckboxStretched">Frágil</label>
+              </li>
+              <li class="list-group-item">
+                <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="segundaCheckboxStretched">
+                <label class="form-check-label stretched-link" for="segundaCheckboxStretched">Pequeno porte</label>
+              </li>
+              <li class="list-group-item">
+                <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="terceiraCheckboxStretched">
+                <label class="form-check-label stretched-link" for="terceiraCheckboxStretched">Médio porte</label>
+              </li>
+              <li class="list-group-item">
+                <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="quartaCheckboxStretched">
+                <label class="form-check-label stretched-link" for="quartaCheckboxStretched">Grande porte</label>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="col">
-          <div id= "fundo-img" class="card">
-            <img  src="wwwroot/img/strade-img-local.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Abrangência</h5>
-              <p class="card-text">Atuamos ativamente em toda Grande Belo Horizonte com especialistas em entregas na região.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div id= "fundo-img" class="card">
-            <img  src="wwwroot/img/strade-img-text.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Onde estiver</h5>
-              <p class="card-text">Compatível com todos seus aparelhos. Estamos na palma da sua mão sempre que precisar de nós.</p>
+
+          <div class="flex-container2 checkbox-r">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="quintaCheckboxStretched">
+                <label class="form-check-label stretched-link" for="quintaCheckboxStretched">Vivo</label>
+              </li>
+              <li class="list-group-item">
+                <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="sextaCheckboxStretched">
+                <label class="form-check-label stretched-link" for="sextaCheckboxStretched">Pesado</label>
+              </li>
+              <li class="list-group-item">
+                <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="sétimaCheckboxStretched">
+                <label class="form-check-label stretched-link" for="sétimaCheckboxStretched">Perigoso</label>
+              </li>
+              <li class="list-group-item">
+                <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="oitavaCheckboxStretched">
+                <label class="form-check-label stretched-link" for="oitavaCheckboxStretched">Inflamável</label>
+              </li>
+            </ul>
+            <div class="container-button">
+              <button id="botaoCadastrar" type="button" class="btn btn-outline-success">Cadastrar</button>
             </div>
           </div>
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-6">
-          <h2 class="featurette-heading fw-normal lh-1">Agora que conheceu a nossa ideia, <br><span
-              class="text-muted">cadastre-se.</span></h2>
-          <p class="lead">Mas para se cadastrar, saiba que:</p>
-          <p class="lead">Regras de negócio</p>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="inputConcordo">
-            <label class="form-check-label" for="inputConcordo">Concorda com as regras de negócio?</label>
-          </div>
-          
-        </div>
-
-
-        <div id='itensForm'class="col-md-6">
-          <p id='menu-cadastro' class="lead">Insira todos os dados abaixo:</p>
-          <!-- Inputs -->
-          <div class="input-group mb-3">
-            <span class="dark input-group-text" id="inputGroup-sizing-default">Nome Fantasia</span>
-            <input id='inputNomeFantasia' type="text" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default">
-          </div>
-          <div class="input-group mb-3">
-            <span class="dark input-group-text" id="inputGroup-sizing-default">Nome da Transportadora</span>
-            <input id='inputNomeTransportadora' type="text" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default">
-          </div>
-          <div class="input-group mb-3">
-            <span class="dark input-group-text" id="inputGroup-sizing-default">CNPJ</span>
-            <input id="inputCnpj" type="text" maxlength="18" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
-          </div>
-          <div class="input-group mb-3">
-            <span class="dark input-group-text" id="inputGroup-sizing-default">E-mail</span>
-            <input id="inputEmail" type="email" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default">
-          </div>
-          <div class="input-group mb-3">
-            <span class="dark input-group-text" id="inputGroup-sizing-default">Telefone</span>
-            <input id="inputTel" type="text" maxlength="15" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
-          </div>
-          <div class="input-group mb-3">
-            <span class="dark input-group-text" id="inputGroup-sizing-default">CEP</span>
-            <input id="inputCep" type="text" maxlength="9" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default" onkeypress="return somenteNumeros(event)">
-          </div>
-          <div class="input-group mb-3">
-            <span class="dark input-group-text" id="inputGroup-sizing-default">Senha</span>
-            <input id="inputSenha" type="password" maxlength="20" class="form-control" aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default">
-          </div>
-          <!-- Inputs termina -->
-          <!-- Regiões atendidas pela transportadora -->
-          <p class="lead">Selecione as regiões que a transportadora irá atender:</p>
-          <div class="items-checkbox">
-            <div class="flex-container checkbox-l">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxRegioes" value="true" id="norte">
-                  <label class="form-check-label stretched-link" for="norte">Região Norte</label>
-                </li>
-                <li class="list-group-item">
-                  <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxRegioes" value="true" id="sul">
-                  <label class="form-check-label stretched-link" for="sul">Região Sul</label>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex-container2 checkbox-r">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxRegioes" value="true" id="oeste">
-                  <label class="form-check-label stretched-link" for="oeste">Região Oeste</label>
-                </li>
-                <li class="list-group-item">
-                  <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxRegioes" value="true" id="leste">
-                  <label class="form-check-label stretched-link" for="leste">Região Leste</label>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <!-- Checkboxes -->
-          <p class="lead">Selecione os tipos de encomendas que sua transportadora irá transportar:</p>
-          <div class="items-checkbox">
-            <div class="flex-container checkbox-l">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="primeiraCheckboxStretched">
-                  <label class="form-check-label stretched-link" for="primeiraCheckboxStretched">Frágil</label>
-                </li>
-                <li class="list-group-item">
-                  <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="segundaCheckboxStretched">
-                  <label class="form-check-label stretched-link" for="segundaCheckboxStretched">Pequeno porte</label>
-                </li>
-                <li class="list-group-item">
-                  <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="terceiraCheckboxStretched">
-                  <label class="form-check-label stretched-link" for="terceiraCheckboxStretched">Médio porte</label>
-                </li>
-                <li class="list-group-item">
-                  <input class="dark checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="quartaCheckboxStretched">
-                  <label class="form-check-label stretched-link" for="quartaCheckboxStretched">Grande porte</label>
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex-container2 checkbox-r">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="quintaCheckboxStretched">
-                  <label class="form-check-label stretched-link" for="quintaCheckboxStretched">Vivo</label>
-                </li>
-                <li class="list-group-item">
-                  <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="sextaCheckboxStretched">
-                  <label class="form-check-label stretched-link" for="sextaCheckboxStretched">Pesado</label>
-                </li>
-                <li class="list-group-item">
-                  <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="sétimaCheckboxStretched">
-                  <label class="form-check-label stretched-link" for="sétimaCheckboxStretched">Perigoso</label>
-                </li>
-                <li class="list-group-item">
-                  <input class="checkboxes form-check-input me-1" type="checkbox" name="checkboxEncomendas" value="true" id="oitavaCheckboxStretched">
-                  <label class="form-check-label stretched-link" for="oitavaCheckboxStretched">Inflamável</label>
-                </li>
-              </ul>
-              <div class="container-button">
-                <button id="botaoCadastrar" type="button" class="btn btn-outline-success">Cadastrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Checkboxes termina -->
-      </div>
+      <!-- Checkboxes termina -->
     </div>
-    <!-- /END THE FEATURETTES -->
-    </div>
-    <!-- Footer -->
-    <div class="container">
-      <footer class="py-3 my-4 border-top">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Início</a></li>
-          <span class="separation nav-item av-link px-2 text-muted">•</span>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Perguntas frequentes</a></li>
-          <span class="separation nav-item av-link px-2 text-muted">•</span>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sobre nós</a></li>
-        </ul>
-        <p class="text-center text-muted">© 2022 Company, Inc</p>
-      </footer>
-      <!-- Footer termina -->
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"></script>
-    <script type="text/javascript" src="wwwroot/js/strade.js"></script>
-  </body>
+  </div>
+  <!-- /END THE FEATURETTES -->
+  </div>
+  <!-- Footer -->
+  <div class="container">
+    <footer class="py-3 my-4 border-top">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Início</a></li>
+        <span class="separation nav-item av-link px-2 text-muted">•</span>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Perguntas frequentes</a></li>
+        <span class="separation nav-item av-link px-2 text-muted">•</span>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sobre nós</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2022 Company, Inc</p>
+    </footer>
+    <!-- Footer termina -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="src/code/script/strade.js"></script>
+</body>
 </html>

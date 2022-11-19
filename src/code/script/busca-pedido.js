@@ -1,3 +1,9 @@
+if(localStorage.getItem("token") == null){
+	alert("Para acessar esta página, você precisa entrar em uma conta.")
+	window.location.href = "./login-transp.html"
+	document.getElementById("abaCadastrar").click();
+}
+
 const btnBuscar = document.getElementById("btnBuscar");
 const idPedido = document.querySelector("#idPedido");
 const notesContainer = document.querySelector("#notes_container")
