@@ -3,11 +3,10 @@ let dddDatabaseJson;
 const ISDEVELOPMENTTEST = false;
 
 function GetCurrentApiUrl() {
-    if (ISDEVELOPMENTTEST) {
+    if (ISDEVELOPMENTTEST)
         return "https://localhost:7292/v1/controller/";
-    } else {
+
     return "http://laborum-001-site1.btempurl.com/v1/controller/";
-    }
 }
 
 const nomeFantasiaInput = document.getElementById('inputNomeFantasia')
@@ -16,8 +15,7 @@ const cnjpInput = document.getElementById('inputCnpj')
 const emailInput = document.getElementById('inputEmail')
 const telInput = document.getElementById('inputTel')
 const cepInput = document.getElementById("inputCep")
-const senhaInput = document.getElementById("inputSenha")
-
+  
 const norte = document.getElementById('norte')
 const sul = document.getElementById('sul')
 const oeste = document.getElementById('oeste')
@@ -40,29 +38,27 @@ function clickCadastrar(){
   Cadastrar.addEventListener('click', validarTodosOsCampos);
 }
 
-function addTransportadora(nome, cnpj, email, tel, cep, regioes, senha){
+function addTransportadora(nome, cnpj, email, tel, cep, regioes){
   
   var body = {
     "nome": nome,
     "endereco": cep,
-    "numeroContato": tel,
-    "email": email,
     "cnpj": cnpj,
-    "regioes": regioes,
-    "senha" : senha,
-    "tipoEncomendas" : [1], // passando o valor 1 só pra salvar (para ver depois)
-    // gambiarra total - nem sei porque esses campos precisam ser usados
-    "regioesDto": [
-      "string"
+    "email": email,
+    "numeroContato": tel,
+    "bairros": [
+      {
+        "idBairro": 0,
+        "nome": "bairro novo",
+        "cep": "12345-678"
+      }
     ],
-    "tipoEncomendasDto": [
-      "string"
-    ]
+    "regioes": regioes
   }
 
   var apiUrl = GetCurrentApiUrl();
   
-  fetch(apiUrl + 'transportadora', {
+  fetch(apiUrl + 'transportadora/', {
     method: 'POST',
     body: JSON.stringify(body),
     headers: {
@@ -100,7 +96,6 @@ function validarTodosOsCampos(){
   const emailInput = document.getElementById('inputEmail').value
   const telInput = document.getElementById('inputTel').value
   const cepInput = document.getElementById("inputCep").value
-  const senhaInput = document.getElementById("inputSenha").value
 
   if (!validarNomeFantasia()) {
     alert("Nome Fantasia inválido, mínimo 2 caracteres.");
@@ -120,13 +115,13 @@ function validarTodosOsCampos(){
     alert("CNPJ inválido, insira os dados corretos.");
     cnjpInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
-  } 
+   } 
    //cnjpInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
   
   if (!validarEmail()) {
-    alert("Email inválido, deve conter um @ e .com.");
-    emailInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
-    return;
+   alert("Email inválido, deve conter um @ e .com.");
+   emailInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
+   return;
   } 
   //inputEmail.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
   
@@ -134,7 +129,7 @@ function validarTodosOsCampos(){
   alert("Telefone inválido, digite os dados corretamente.");
     telInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
-  } 
+   } 
   //telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
 
   if (!validacaoTel()) {
@@ -168,7 +163,7 @@ function validarTodosOsCampos(){
   }
   
   const regioes = regioesValidas(norte.checked, sul.checked, leste.checked, oeste.checked)
-  addTransportadora(nomeTransportadoraInput, cnjpInput, emailInput, telInput, cepInput, regioes, senhaInput);
+  addTransportadora(nomeTransportadoraInput, cnjpInput, emailInput, telInput, cepInput, regioes);
   
   alert('Sua transportadora foi cadastrada.');
 }

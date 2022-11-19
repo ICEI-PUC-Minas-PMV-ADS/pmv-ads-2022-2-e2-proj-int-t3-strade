@@ -33,3 +33,12 @@ Regional de Informatica de Mato Grosso ´ , pages 25–30. SBC.
 > **Links Úteis**:
 > - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
 > - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+
+## Credenciais de Acesso
+servidor STRADEAPI 
+> - laborum-001
+> - strade135Bb@
+
+Servidor FRONT
+> - brunoruas
+> - strade135Bb@
