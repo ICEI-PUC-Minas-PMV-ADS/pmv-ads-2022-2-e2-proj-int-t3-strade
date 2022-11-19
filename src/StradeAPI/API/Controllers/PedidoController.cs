@@ -62,7 +62,7 @@ namespace API.Controllers {
                     IdCliente = pedido.IdCliente,
                     IdPedido = pedido.IdPedido,
                     IdTransportadora = pedido.IdTransportadora,
-                    Status = (int)Status.PedidoRealizado
+                    Status = pedido.Status
                 });
 
             return NotFound("Pedido inexistente.");
@@ -84,6 +84,27 @@ namespace API.Controllers {
             }     
 
             return NotFound("Pedido inexistente.");
+        }
+
+        [HttpGet]
+        [Route("pedido/{idPedido}/cliente")]
+        public async Task<ActionResult<string>> GetNomeClienteByIdPedido([FromServices] DataContext context, [FromRoute] int idPedido){
+
+            if(idPedido == 0)
+                return NotFound("Id do pedido inválido.");
+
+            var nomeCliente = await (from p in context.Pedidos
+                                join c in context.Clientes on p.IdCliente equals c.IdCliente
+                                join i in context.Informacaos on c.IdInformacao equals i.IdInformacao
+                                where p.IdPedido == idPedido
+                                select i.Nome).FirstOrDefaultAsync(); 
+
+            if(!string.IsNullOrEmpty(nomeCliente)) {
+                return Ok(nomeCliente);
+            }
+                
+
+            return NotFound("Pedido/Cliente não encontrado");
         }
 
     }
