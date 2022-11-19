@@ -107,5 +107,27 @@ namespace API.Controllers {
             return NotFound("Pedido/Cliente não encontrado");
         }
 
+        [HttpPut]
+        [Route("pedido/status")]
+        public async Task<ActionResult<bool>> SavePedido([FromServices] DataContext context, [FromBody] StatusDTO status){
+
+            if(status is null)
+                return NotFound("Status não pode vim nulo.");
+
+            if(status.IdPedido <= 0)
+                return NotFound("Id do pedido deve ser válido (> que 0).");
+
+            var pedido = await context.Pedidos.FirstOrDefaultAsync(p => p.IdPedido == status.IdPedido);
+
+            if(pedido != null) {
+                pedido.Status = status.Status;
+                await context.SaveChangesAsync();
+
+                return Ok(true);
+            }
+
+            return NotFound("Pedido não encontrado.");
+        }
+
     }
 }
