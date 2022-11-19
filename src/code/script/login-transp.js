@@ -49,6 +49,9 @@ function validarTodosOsCampos(){
         body: JSON.stringify(data)
     }
 
+    let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
+		localStorage.setItem("token", token)
+
     fetch(apiUrl, requestOptions)
     .then(
         response => response.json()
@@ -58,7 +61,7 @@ function validarTodosOsCampos(){
             console.log(response);
 
             if (response.isSuccess) {
-                window.location.href = "index.html";
+                window.location.href = "busca-pedido.html";
             }
         }
     )
