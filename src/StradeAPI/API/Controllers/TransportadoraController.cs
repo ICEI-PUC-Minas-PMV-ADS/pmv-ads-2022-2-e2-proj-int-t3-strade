@@ -55,8 +55,8 @@ namespace API.Controllers {
         }
 
         [HttpGet]
-        [Route("transportadora/cep/{cep}")]
-        public async Task<ActionResult<List<TransportadoraDTO>>> GetTransportadorasByCEP([FromServices] DataContext context, [FromRoute] Regiao regiao){
+        [Route("transportadora/regiao/{regiao}")]
+        public async Task<ActionResult<List<TransportadoraDTO>>> GetTransportadorasByRegiao([FromServices] DataContext context, [FromRoute] Regiao regiao){
 
                 var transportadoras = await (from trans in context.Transportadoras
 
