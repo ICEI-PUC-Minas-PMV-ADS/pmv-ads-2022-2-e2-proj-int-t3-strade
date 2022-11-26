@@ -1,4 +1,4 @@
-const ISDEVELOPMENTTEST = true;
+const ISDEVELOPMENTTEST = false;
 
 function GetCurrentApiUrl() {
     if (ISDEVELOPMENTTEST)
@@ -28,17 +28,17 @@ function validarTodosOsCampos(){
     return;
   }
 
-   /* if (!validarSenha()) {
+  /* if (!validarSenha()) {
     alert("Senha inválida, deve conter no mínimo um caractere especial ex. !@#$%¨&*_+=");
     senhaInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
    } */
 
-   if (!validaQtdSenha()) {
+  if (!validaQtdSenha()) {
         alert("Senha inválida, deve conter no mínimo 8 algarismos.");
         senhaInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
         return;
-   }
+  }
 
     var data = { Email: emailInput, Senha: senhaInput };
     var apiUrl = GetCurrentApiUrl() + "login/transportadora";
@@ -49,9 +49,6 @@ function validarTodosOsCampos(){
         body: JSON.stringify(data)
     }
 
-    let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
-		localStorage.setItem("token", token)
-
     fetch(apiUrl, requestOptions)
     .then(
         response => response.json()
@@ -61,11 +58,12 @@ function validarTodosOsCampos(){
             console.log(response);
 
             if (response.isSuccess) {
+                let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
+                localStorage.setItem("token", token)
                 window.location.href = "busca-pedido.html";
             }
         }
-    )
-        
+    )       
 }
 
 
