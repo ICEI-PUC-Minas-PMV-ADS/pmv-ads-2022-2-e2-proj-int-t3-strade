@@ -16,10 +16,7 @@ namespace API.Controllers {
 
             var regioesModel = new List<RegiaoTransportadora>();
             foreach(var regiao in regioes) {
-                var regiaoModel = await context.RegiaoTransportadoras.FirstOrDefaultAsync(r => r.IdTransportadora == idTransportadora && r.IdRegiao == (int)regiao);
-                if(regiaoModel != null) {
-                    regioesModel.Add(new RegiaoTransportadora() { IdRegiao = (int)regiao, IdTransportadora = idTransportadora });
-                }
+                regioesModel.Add(new RegiaoTransportadora() { IdRegiao = (int)regiao, IdTransportadora = idTransportadora });
             }
 
             context.AddRange(regioesModel);

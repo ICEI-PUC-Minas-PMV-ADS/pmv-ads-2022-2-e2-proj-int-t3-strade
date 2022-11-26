@@ -139,17 +139,25 @@ namespace API.Controllers {
         }
 
         private static string GetEnumDescription(Enum value)
-        {
-            FieldInfo fi = value.GetType().GetField(value.ToString());
+        {    
+            try {
 
-            DescriptionAttribute[] attributes = fi.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
+                FieldInfo fi = value.GetType().GetField(value.ToString());
 
-            if (attributes != null && attributes.Any())
-            {
-                return attributes.First().Description;
+                DescriptionAttribute[] attributes = fi.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
+
+                if (attributes != null && attributes.Any())
+                {
+                    return attributes.First().Description;
+                }
+
+                return value.ToString();
+
+            } catch(Exception ex) {
+                Console.WriteLine(ex.Message);
             }
 
-            return value.ToString();
+            return String.Empty;
         }
 
     }
