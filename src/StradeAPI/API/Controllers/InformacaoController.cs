@@ -17,16 +17,18 @@ namespace API.Controllers {
             if(informacaoDto is null)
                 return NotFound("Informacao inválida.");
 
-            var informacao = new Informacao() {
+			var senhaHash = BCrypt.Net.BCrypt.HashPassword(informacaoDto.Senha);
+
+			var informacao = new Informacao() {
                 Nome = informacaoDto.Nome,
                 IdInformacao = informacaoDto.IdInformacao,
                 Aniversario = informacaoDto.Aniversario,
                 Email = informacaoDto.Email,
                 Endereco = informacaoDto.Endereco,
                 NumeroContato = informacaoDto.NumeroContato,
-                Senha =informacaoDto.Senha
+                Senha = senhaHash
 
-            };
+			};
 
             context.Informacaos.Add(informacao);
             await context.SaveChangesAsync();

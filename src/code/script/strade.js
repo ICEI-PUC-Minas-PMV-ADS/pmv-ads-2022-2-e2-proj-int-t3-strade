@@ -107,49 +107,43 @@ function validarTodosOsCampos(){
     nomeFantasiaInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
   }
-  //nomeFantasiaInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
   
   if (!validarNomeTransportadora()) {
     alert("Nome da Transportadora inválido, mínimo 2 caracteres.");
     nomeTransportadoraInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
   }
-  //nomeTransportadoraInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
   
   if (!validarCnpj()) {
     alert("CNPJ inválido, insira os dados corretos.");
     cnjpInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
-  } 
-   //cnjpInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+  }
   
   if (!validarEmail()) {
     alert("Email inválido, deve conter um @ e .com.");
     emailInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
-  } 
-  //inputEmail.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+  }
   
   if (!validarTel()) {
   alert("Telefone inválido, digite os dados corretamente.");
     telInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
     return;
-  } 
-  //telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+  }
 
   if (!validacaoTel()) {
     alert("Telefone inválido, digite a quantidade de caracteres necessárias.");
       telInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
       return;
       } 
-    //telInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+    
     
   if (!validacaoCep()) {
     alert("CEP inválido, digite os dados corretamente.");
       cepInput.setAttribute("style", "box-shadow: 0px 0px 3px crimson; border-color: crimson");
       return;
-      } 
-      //cepInput.setAttribute("style", "box-shadow: 0px 0px 3px green; border-color: green");
+      }
 
   if (!validaQtdSenha()) {
     alert("Senha inválida, deve conter no mínimo 8 algarismos.");

@@ -34,18 +34,21 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatibus placeat eius esse, deleniti sunt? Hic unde excepturi odit consequatur eveniet labore neque itaque architecto similique, reiciendis dolore enim iure.
                 </p>
                 <form id="form" class="form">
+                    <h4>Escolha a sua região:</h4>
                     <div class="form-control">
-                        <input
-                          type="text"
-                          id="cep"
-                          maxlength="9"
-                          placeholder="Calcular CEP"
-                          onkeypress="return somenteNumeros(event)"
-                        />
-                        <i class="fas fa-exclamation-circle"></i>
-                        <i class="fas fa-check-circle"></i>
-                        <small>Mensagem de erro</small>
-                        <button class="btn" id="getTransportadora" type="submit" onclick="enviarMensagem()">Buscar</button>
+                        <div>
+                            <input id="norte"  name="radioButtom" type="radio" value="regiao-norte" checked>Norte</input>
+                        </div>
+                        <div>
+                            <input id="sul"  name="radioButtom" type="radio" value="regiao-sul">Sul</input>
+                        </div>
+                        <div>
+                            <input id="oeste"  name="radioButtom" type="radio" value="regiao-oeste">Oeste</input>
+                        </div>
+                        <div>
+                            <input id="leste"  name="radioButtom" type="radio" value="regiao-leste">Leste</input>
+                        </div>
+                        <button class="btn" id="getTransportadora" type="button" onclick="carregarLista()">Buscar</button>
                         
                       </div>
                       
@@ -53,7 +56,7 @@
                 
                 <div class="price-container">
                     <span class="price">R$299,99</span>
-                    <button class="btn">Comprar</button>
+                    <button id="comprar" class="btn">Comprar</button>
                 </div>
             </div>
         </div>
@@ -61,6 +64,7 @@
     <dialog>
         <div id="notes_container">
         </div>
+        <button id="selecionar" type="button">Selecionar</button>
         <button>X</button>
     </dialog>
     </body>

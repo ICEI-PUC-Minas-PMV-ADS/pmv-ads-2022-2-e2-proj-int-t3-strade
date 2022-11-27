@@ -15,7 +15,7 @@ namespace API.Controllers {
         public async Task<ActionResult<bool>> SavePedido([FromServices] DataContext context, PedidoDTO pedido){
 
             if(pedido is null)
-                return NotFound("Pedido não pode vim nulo.");
+                return NotFound("Pedido não pode vir nulo.");
 
             if(pedido.IdCliente <= 0)
                 return NotFound("Pedido deve conter um cliente.");
