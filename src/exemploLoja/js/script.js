@@ -92,7 +92,7 @@ function setSuccessFor(input) {
 // HTTP
 //const getBtn = document.querySelector("#getTransportadora");
 const modal = document.querySelector("#dialog-selecionar");
-const closeModal = document.querySelector("dialog button");
+const closeModal = document.querySelector("#fechar-selecionar");
 const notesContainer = document.querySelector("#notes_container");
 
 function displayTransportadoras(notes){
@@ -116,18 +116,18 @@ function displayTransportadoras(notes){
   notesContainer.innerHTML = allNotes;
 }
 
-function fechaPopup(){
+/* function fechaPopup(){
   const popupSelecionar = document.getElementById('dialog-selecionar')
   popupSelecionar.setAttribute('style', 'display: none');
-}
+} */
 
 /* function fechaPopup() {
   modal.close();
 } */
 
-/* closeModal.onclick = function(){
+closeModal.onclick = function(){
   modal.close();
-} */
+}
 
 //Mostra ID Pedido
 const modalId = document.querySelector("#dialog-comprar");
@@ -163,6 +163,7 @@ function SelecionaTransp(){
     if (node === true) {
       localStorage.removeItem("idTransportadora")
       localStorage.setItem("idTransportadora", lista[i].id)
+      modal.close();
     }
   }
 }
@@ -222,5 +223,12 @@ function fecha(){
       localStorage.setItem("idTransportadora", lista[i].id)
     }
   }
+}
+
+
+const closeModalId = document.querySelector("#fechar-id");
+
+closeModalId.onclick = function(){
+  modalId.close();
 }
 
