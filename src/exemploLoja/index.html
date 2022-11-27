@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <title>Dark Mode</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer ></script>
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
     <header>
         <h2>Light and Dark</h2>
@@ -25,32 +27,30 @@
             <div class="card-image">
                 <span>Nike</span>
                 <img src="img/tenis.png" alt="Tênis Nike" />
-                
+
             </div>
             <div class="card-details">
                 <h2>Tênis Nike</h2>
                 <p class="subtitle">Excelente para corrida</p>
                 <p class="description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatibus placeat eius esse, deleniti sunt? Hic unde excepturi odit consequatur eveniet labore neque itaque architecto similique, reiciendis dolore enim iure.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatibus placeat eius esse,
+                    deleniti sunt? Hic unde excepturi odit consequatur eveniet labore neque itaque architecto similique,
+                    reiciendis dolore enim iure.
                 </p>
                 <form id="form" class="form">
                     <div class="form-control">
-                        <input
-                          type="text"
-                          id="cep"
-                          maxlength="9"
-                          placeholder="Calcular CEP"
-                          onkeypress="return somenteNumeros(event)"
-                        />
+                        <input type="text" id="cep" maxlength="9" placeholder="Calcular CEP"
+                            onkeypress="return somenteNumeros(event)" />
                         <i class="fas fa-exclamation-circle"></i>
                         <i class="fas fa-check-circle"></i>
                         <small>Mensagem de erro</small>
-                        <button class="btn" id="getTransportadora" type="submit" onclick="enviarMensagem()">Buscar</button>
-                        
-                      </div>
-                      
+                        <button class="btn" id="getTransportadora" type="submit"
+                            onclick="enviarMensagem()">Buscar</button>
+
+                    </div>
+
                 </form>
-                
+
                 <div class="price-container">
                     <span class="price">R$299,99</span>
                     <button class="btn">Comprar</button>
@@ -63,5 +63,6 @@
         </div>
         <button>X</button>
     </dialog>
-    </body>
+</body>
+
 </html>

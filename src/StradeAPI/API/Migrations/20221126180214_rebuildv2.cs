@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace API.Migrations
 {
-    public partial class CloudDataBase : Migration
+    public partial class rebuildv2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,7 +19,8 @@ namespace API.Migrations
                     Endereco = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: false),
                     Aniversario = table.Column<DateTime>(type: "datetime", nullable: true),
                     NumeroContato = table.Column<string>(type: "varchar(15)", unicode: false, maxLength: 15, nullable: false),
-                    Email = table.Column<string>(type: "varchar(30)", unicode: false, maxLength: 30, nullable: false)
+                    Email = table.Column<string>(type: "varchar(30)", unicode: false, maxLength: 30, nullable: false),
+                    Senha = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

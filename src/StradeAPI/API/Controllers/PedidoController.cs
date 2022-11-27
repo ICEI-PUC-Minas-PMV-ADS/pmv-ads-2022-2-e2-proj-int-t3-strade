@@ -32,7 +32,7 @@ namespace API.Controllers {
             context.Add(pedidoModel);
             await context.SaveChangesAsync();
 
-            return Ok(true);
+            return Ok(pedidoModel.IdPedido);
         }
 
         [HttpGet]
