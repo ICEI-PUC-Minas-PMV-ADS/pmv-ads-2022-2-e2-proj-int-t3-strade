@@ -24,8 +24,6 @@
 
  ●  Acesso ao status de entrega do pedido.  
 
- ●  Classificação  da  empresa  que  lhe  atendeu  pelo  email  recebido,  após  a  entrega  do produto.  
-
 ### Tarefas a serem executadas pela empresa:  
 
  ●  Acesso aos relatórios dos pedidos feitos pelos usuários.  
