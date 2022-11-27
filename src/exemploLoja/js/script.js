@@ -120,6 +120,14 @@ closeModal.onclick = function(){
   modal.close();
 }
 
+//Mostra ID Pedido
+/* const modalId = document.querySelector("dialog");
+const notesContainer = document.querySelector("#notes_container_id");
+
+function displayIdPedido
+let allNotes = '';
+ */
+
 const btnSelecionar = document.getElementById('selecionar')
 btnSelecionar.addEventListener("click", SelecionaTransp);
 
@@ -143,7 +151,6 @@ function addPedido(detalhes,idCliente){
   
 
   var body = {
-    "idPedido": 0,
     "detalhes": detalhes,
     "idTransportadora": idTransportadora,
     "idCliente": idCliente,
@@ -160,7 +167,7 @@ function addPedido(detalhes,idCliente){
     }
   })
   .then(data => data.json())
-  .then(response => console.log(response));
+  .then(response => localStorage.setItem("response", response));
 }
 
 const detalhesPedido = "Pedido de um par de tênis da marca Nike valor de R$ 299,99."
