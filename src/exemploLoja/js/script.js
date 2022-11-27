@@ -110,10 +110,6 @@ function displayMsgErro(){
 const btnSelecionar = document.getElementById('selecionar')
 btnSelecionar.addEventListener("click", SelecionaTransp);
 
-//Botão fecha menu selecionar transportadora
-const fechaPopupComprar = document.getElementById('fechar-selecionar')
-fechaPopupComprar.addEventListener("click", fecha);
-
 function SelecionaTransp(){
   console.log("ta na hora!")
   var lista = document.getElementsByName("transp")
@@ -129,24 +125,12 @@ function SelecionaTransp(){
   }
 }
 
-//Função do botão fecha menu selecionar
-function fecha(){
-  console.log("ta na hora!")
-  var lista = document.getElementsByName("transp")
-  var nTransp = lista.length
-
-  for (var i = 0; i < nTransp; i++) {
-    var node = lista[i].checked
-    if (node === true) {
-      localStorage.removeItem("idTransportadora")
-      localStorage.setItem("idTransportadora", lista[i].id)
-    }
-  }
-}
-
 const closeModalId = document.querySelector("#fechar-id");
 
 closeModalId.onclick = function(){
+  setTimeout(()=>{
+    window.location.href = "./index.html"
+  }, 500)
   modalId.close();
 }
 
@@ -213,27 +197,3 @@ changeThemeBtn.addEventListener("change", function () {
         localStorage.setItem("dark", 1);
     }
 });
-
-
-//COISAS QUE EU ACHO QUE NÃO ESTAMOS USANDO
-
-/* // botão buscar
-const form = document.getElementById("form"); */
-
-/* function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
-
-  // Adiciona a mensagem de erro
-  small.innerText = message;
-
-  // Adiciona a classe de erro
-  formControl.className = "form-control error";
-}
-
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-
-  // Adicionar a classe de sucesso
-  formControl.className = "form-control success";
-} */
