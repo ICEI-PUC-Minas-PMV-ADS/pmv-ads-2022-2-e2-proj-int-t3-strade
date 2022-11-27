@@ -40,9 +40,13 @@ main {
     justify-content: center;
 }
 
+#card-flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
 .card {
     margin-top: 4rem;
-    display: flex;
     width: 60%;
     background-color: #fff;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
@@ -99,15 +103,24 @@ main {
     font-size: 2rem;
 }
 
-.btn {
-    background-color: #444;
-    width: 7rem;
-    height: 2.5rem;
-    border: none;
-    border-radius: 3rem;
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
+.position-form{
+    display: grid;
+    grid-template-areas: "l r";
+    margin-bottom: 0.7em;
+}
+
+.form-l{
+    grid-area: l;
+}
+
+.form-r{
+    grid-area: r;
+}
+
+.radio-popup {
+    position: relative;
+    right: 1.85em;
+    top: 1.7em;
 }
 
 /* Dark Theme */
@@ -134,15 +147,30 @@ main {
 }
 
 .dark .subtitle {
-    color: #67b4f3;
+    color: #fff;
 }
 
 .dark .description {
-    color: #2196f3;
+    color: #fff;
 }
 
 .dark .btn {
-    background-color: #67b4f3;
+    background-color: #05543e00;
+    --bs-btn-hover-bg: #05543E;
+    border-color: #198754;
+    color: #fff;
+}
+
+.dark dialog {
+    color: #fff;
+    border-color:#4c616c;
+    background-color: #37474f;
+}
+
+.dark .list-group-item{
+    color: #fff;
+    border-color:#4c616c;
+    background-color: #37474f;
 }
 
 /* botão cep */
@@ -187,14 +215,6 @@ main {
     visibility: hidden;
   }
   
-  .form button {
-    background-color: #444;
-    color: #fff;
-    font-size: 14px;
-    width: 20%;
-    border-radius: 10px;
-    padding: 10px;
-  }
   
   /* Error and Success */
   .form-control.success input {

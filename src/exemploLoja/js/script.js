@@ -54,7 +54,7 @@ function displayTransportadoras(notes){
     const noteElement = 
     `<ul class="note">
       <li class="list-group-item">
-      <input type="radio" name="transp" id="${note.idTransportadora}">
+      <input type="radio" name="transp" class="radio-popup" id="${note.idTransportadora}">
         <h3>Transportadora: ${note.nome}</h3>
         <p>Preço: ${note.mediaPreco}</p>
         <p>Nota: ${note.notaMediaQualidade}</p>
