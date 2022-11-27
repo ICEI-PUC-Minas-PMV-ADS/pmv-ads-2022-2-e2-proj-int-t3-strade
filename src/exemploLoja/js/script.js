@@ -91,7 +91,7 @@ function setSuccessFor(input) {
 
 // HTTP
 //const getBtn = document.querySelector("#getTransportadora");
-const modal = document.querySelector("dialog");
+const modal = document.querySelector("#dialog-selecionar");
 const closeModal = document.querySelector("dialog button");
 const notesContainer = document.querySelector("#notes_container");
 
@@ -116,17 +116,39 @@ function displayTransportadoras(notes){
   notesContainer.innerHTML = allNotes;
 }
 
-closeModal.onclick = function(){
-  modal.close();
+function fechaPopup(){
+  const popupSelecionar = document.getElementById('dialog-selecionar')
+  popupSelecionar.setAttribute('style', 'display: none');
 }
 
-//Mostra ID Pedido
-/* const modalId = document.querySelector("dialog");
-const notesContainer = document.querySelector("#notes_container_id");
+/* function fechaPopup() {
+  modal.close();
+} */
 
-function displayIdPedido
-let allNotes = '';
- */
+/* closeModal.onclick = function(){
+  modal.close();
+} */
+
+//Mostra ID Pedido
+const modalId = document.querySelector("#dialog-comprar");
+const notesContainerId = document.querySelector("#notes_container_id");
+
+function displayIdPedido(response){
+
+  const noteElement = 
+    `<div class="note">
+      <h3>: O número do seu pedido é: ${response}</h3>
+    </div>`;
+
+    notesContainerId.innerHTML = noteElement;
+
+}
+
+function popupIdPedido(){
+  
+  addPedido(detalhesPedido,idCliente);
+
+}
 
 const btnSelecionar = document.getElementById('selecionar')
 btnSelecionar.addEventListener("click", SelecionaTransp);
@@ -145,11 +167,10 @@ function SelecionaTransp(){
   }
 }
 
-function addPedido(detalhes,idCliente){
+async function addPedido(detalhes,idCliente){
   
   idTransportadora = parseInt(localStorage.getItem("idTransportadora"));
   
-
   var body = {
     "detalhes": detalhes,
     "idTransportadora": idTransportadora,
@@ -159,19 +180,47 @@ function addPedido(detalhes,idCliente){
 
   var apiUrl = 'http://laborum-001-site1.btempurl.com/v1/controller/';
   
-  fetch(apiUrl + 'pedido', {
+  const res = await fetch(apiUrl + 'pedido', {
     method: 'POST',
     body: JSON.stringify(body),
     headers: {
       "content-type": "application/json"
     }
-  })
-  .then(data => data.json())
-  .then(response => localStorage.setItem("response", response));
+  });
+
+  const data = await res.json();
+
+  modalId.showModal();
+  displayIdPedido(data);
 }
+
+/* (async () => {
+  const res = await fetch(`https://api.github.com/users/jameshibbard`);
+  const json = await res.json();
+  console.log(json.public_repos);
+  console.log("Hello!");
+})(); */
 
 const detalhesPedido = "Pedido de um par de tênis da marca Nike valor de R$ 299,99."
 const idCliente = 2 // Sr Barriga
 
 const btnComprar = document.getElementById('comprar')
-btnComprar.addEventListener("click", addPedido(detalhesPedido,idCliente));
+btnComprar.addEventListener("click", popupIdPedido);
+
+const fechaPopupComprar = document.getElementById('fechar-selecionar')
+fechaPopupComprar.addEventListener("click", fecha);
+
+function fecha(){
+  console.log("ta na hora!")
+  var lista = document.getElementsByName("transp")
+  var nTransp = lista.length
+
+  for (var i = 0; i < nTransp; i++) {
+    var node = lista[i].checked
+    if (node === true) {
+      localStorage.removeItem("idTransportadora")
+      localStorage.setItem("idTransportadora", lista[i].id)
+    }
+  }
+}
+

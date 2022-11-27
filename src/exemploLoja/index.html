@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Mode</title>
+    <title>Loja Nike</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js" defer ></script>
 </head>
-
 <body>
     <header>
         <h2>Light and Dark</h2>
@@ -27,46 +25,52 @@
             <div class="card-image">
                 <span>Nike</span>
                 <img src="img/tenis.png" alt="Tênis Nike" />
-
+                
             </div>
             <div class="card-details">
                 <h2>Tênis Nike</h2>
                 <p class="subtitle">Excelente para corrida</p>
                 <p class="description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatibus placeat eius esse,
-                    deleniti sunt? Hic unde excepturi odit consequatur eveniet labore neque itaque architecto similique,
-                    reiciendis dolore enim iure.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatibus placeat eius esse, deleniti sunt? Hic unde excepturi odit consequatur eveniet labore neque itaque architecto similique, reiciendis dolore enim iure.
                 </p>
                 <form id="form" class="form">
+                    <h4>Escolha a sua região:</h4>
                     <div class="form-control">
-                        <input type="text" id="cep" maxlength="9" placeholder="Calcular CEP"
-                            onkeypress="return somenteNumeros(event)" />
-                        <i class="fas fa-exclamation-circle"></i>
-                        <i class="fas fa-check-circle"></i>
-                        <small>Mensagem de erro</small>
-                        <button class="btn" id="getTransportadora" type="submit"
-                            onclick="enviarMensagem()">Buscar</button>
-
-                    </div>
-
+                        <div>
+                            <input id="norte"  name="radioButtom" type="radio" value="regiao-norte" checked>Norte</input>
+                        </div>
+                        <div>
+                            <input id="sul"  name="radioButtom" type="radio" value="regiao-sul">Sul</input>
+                        </div>
+                        <div>
+                            <input id="oeste"  name="radioButtom" type="radio" value="regiao-oeste">Oeste</input>
+                        </div>
+                        <div>
+                            <input id="leste"  name="radioButtom" type="radio" value="regiao-leste">Leste</input>
+                        </div>
+                        <button class="btn" id="getTransportadora" type="button" onclick="carregarLista()">Buscar</button>
+                        
+                      </div>
+                      
                 </form>
-
+                
                 <div class="price-container">
                     <span class="price">R$299,99</span>
-                    <button class="btn">Comprar</button>
+                    <button id="comprar" class="btn">Comprar</button>
                 </div>
             </div>
         </div>
     </main>
-    <dialog>
+    <dialog id="dialog-selecionar">
         <div id="notes_container">
         </div>
-        <button>X</button>
+        <button id="selecionar">Selecionar</button>
+        <button id="fechar-selecionar" onclick="fechaPopup()">X</button>
     </dialog>
-    <dialog id="mostraId">
+    <dialog id="dialog-comprar">
         <div id="notes_container_id">
         </div>
-        <button>X</button>
+        <button id="fechar-selecionar">X</button>
     </dialog>
     </body>
 </html>
