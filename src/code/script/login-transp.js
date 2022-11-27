@@ -41,7 +41,7 @@ function validarTodosOsCampos(){
   }
 
     var data = { Email: emailInput, Senha: senhaInput };
-    var apiUrl = GetCurrentApiUrl() + "login/transportadora";
+    var apiUrl = GetCurrentApiUrl() + "login/cliente";
 
     var requestOptions = {
         method: "POST",

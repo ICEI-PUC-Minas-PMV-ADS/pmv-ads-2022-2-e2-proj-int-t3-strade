@@ -42,6 +42,41 @@ namespace API.Controllers {
             return Ok(new ResponseError() { IsSuccess = true, Message = "Credenciais corretas."});
         }
 
+        [HttpPost]
+        [Route("login/cliente")]
+        public async Task<ActionResult<bool>> ValidarLoginCliente([FromServices] DataContext context, LoginDTO login)
+        {
+
+            if (login is null)
+                return Unauthorized(new ResponseError() { IsSuccess = false, Message = "O objeto do login não pode ser nulo" });
+
+
+            if (string.IsNullOrEmpty(login.Email))
+                return Unauthorized(new ResponseError() { IsSuccess = false, Message = "O email não pode ser vazio ou nulo." });
+
+
+            if (string.IsNullOrEmpty(login.Senha))
+                return Unauthorized(new ResponseError() { IsSuccess = false, Message = "A senha não pode ser vazia ou nula." });
+
+            if (login.Senha.Length < 8)
+                return Unauthorized(new ResponseError() { IsSuccess = false, Message = "A senha deve conter pelo menos 8 caracteres." });
+
+            var cliente = await (from t in context.Clientes
+                                        join i in context.Informacaos on t.IdInformacao equals i.IdInformacao
+                                        where login.Email.Equals(i.Email)
+                                        select new
+                                        {
+                                            IdInformacao = i.IdInformacao,
+                                            Email = i.Email,
+                                            Senha = i.Senha
+                                        }).FirstOrDefaultAsync();
+
+            if (cliente == null || !CompararSenhaHash(login.Senha, cliente.Senha))
+                return Unauthorized(new ResponseError() { IsSuccess = false, Message = "Email ou senha incorretos." });
+
+            return Ok(new ResponseError() { IsSuccess = true, Message = "Credenciais corretas." });
+        }
+
         private static bool CompararSenhaHash(string senha, string hash) {
             return BCrypt.Net.BCrypt.Verify(senha, hash);
         }
