@@ -1,7 +1,8 @@
-loadTheme();
-validacaoCep();
-configurarMascaraCep();
-
+window.onload = function () {
+  loadTheme();
+  localStorage.clear();
+  console.log("Carreguei!")
+}
 
 const changeThemeBtn = document.querySelector("#change-theme");
 
@@ -30,35 +31,44 @@ changeThemeBtn.addEventListener("change", function () {
     }
 });
 
+function getRegiao(){
+  // criando variaveis de selecao
+  var norte = document.getElementById("norte").checked
+  var sul = document.getElementById("sul").checked
+  var leste = document.getElementById("leste").checked
+  var oeste = document.getElementById("oeste").checked
 
-// botão cep
+  let regiao = 0
+
+  if (norte) {
+    regiao += 1
+  } else if (sul) {
+    regiao += 2
+  } else if (leste) {
+    regiao += 3
+  } else if (oeste) {
+    regiao += 4
+  }
+
+  return regiao
+}
+
+// botão buscar
 const form = document.getElementById("form");
-const cep = document.getElementById("cep");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+function carregarLista() {
+  var regiao = getRegiao()
 
-  checkInputs();
-});
-
-function checkInputs() {
-  const cepValue = cep.value;
-
-  if (cepValue === "") {
-    setErrorFor(cep, "Número cep obrigatório.");
-  } else {
-    setSuccessFor(cep);
-  }
-
-  const formControls = form.querySelectorAll(".form-control");
-
-  const formIsValid = [...formControls].every((formControl) => {
-    return formControl.className === "form-control success";
-  });
-
-  if (formIsValid) {
-    console.log("O formulário está 100% válido!");
-  }
+  modal.showModal();
+  fetch('http://laborum-001-site1.btempurl.com/v1/controller/transportadora/regiao/' + regiao)
+    .then(function(response) {
+      var contentType = response.headers.get("content-type");
+      if(contentType && contentType.indexOf("application/json") !== -1) {
+        return response.json().then(function(json) {
+          displayTransportadoras(json);
+        });
+      } 
+    }); 
 }
 
 function setErrorFor(input, message) {
@@ -80,58 +90,29 @@ function setSuccessFor(input) {
 }
 
 // HTTP
-const getBtn = document.querySelector("#getTransportadora");
+//const getBtn = document.querySelector("#getTransportadora");
 const modal = document.querySelector("dialog");
 const closeModal = document.querySelector("dialog button");
 const notesContainer = document.querySelector("#notes_container");
 
-var consoleStorage = [];
-
-function getTransportadora(){
-  const cepValue = cep.value;
-
-  if (cepValue === "") {
-    setErrorFor(cep, "Número cep obrigatório.");
-  } else {
-    modal.showModal();
-    fetch('https://localhost:7292/v1/controller/transportadora/cep/' + cepValue).then(function(response) {
-      var contentType = response.headers.get("content-type");
-      if(contentType && contentType.indexOf("application/json") !== -1) {
-        return response.json().then(function(json) {
-          displayNotes(json);
-        });
-      } else {
-        cepNotFound();
-      }
-    }); 
-  }
-}
-
-function cepNotFound(){
-  const noteElement = 
-    `<div class="note">
-      <h3>Nenhuma transportadora disponível para a região buscada.</h3>
-      </div>`;
-  
-  notesContainer.innerHTML = noteElement;
-}
-
-function displayNotes(notes){
+function displayTransportadoras(notes){
   let allNotes = '';
 
   notes.forEach(note => {
     const noteElement = 
-    `<div class="note">
-      <h3>Transportadora: ${note.nome}</h3>
-      <p>Preço: ${note.mediaPreco}</p>
-      <p>Nota: ${note.notaMediaQualidade}</p>
-      </div>`;
+    `<ul class="note">
+      <li class="list-group-item">
+      <input type="radio" name="transp" id="${note.idTransportadora}">
+        <h3>Transportadora: ${note.nome}</h3>
+        <p>Preço: ${note.mediaPreco}</p>
+        <p>Nota: ${note.notaMediaQualidade}</p>
+      </li>
+    </ul>`;
 
     allNotes += noteElement;
-    console.log(notes);
-
   })
 
+  //console.log(allNotes);
   notesContainer.innerHTML = allNotes;
 }
 
@@ -139,47 +120,51 @@ closeModal.onclick = function(){
   modal.close();
 }
 
-getBtn.addEventListener('click', function() {
-    getTransportadora();
-})
+const btnSelecionar = document.getElementById('selecionar')
+btnSelecionar.addEventListener("click", SelecionaTransp);
 
-//Envia MSG Validação
-function enviarMensagem(){
-  if (!validacaoCep()) {
-    alert("CEP inválido, digite os dados corretamente.");
-      return;
-      }
-}
+function SelecionaTransp(){
+  console.log("ta na hora!")
+  var lista = document.getElementsByName("transp")
+  var nTransp = lista.length
 
-//Valida CEP
-function validacaoCep(){
-  const minimoAlgarismosCep = 9
-  const cepInput = document.getElementById("cep")
-  return cepInput.value.length >= minimoAlgarismosCep;
-}
-
-//Máscara CEP
-function configurarMascaraCep() {
-  const cep = document.getElementById("cep")
-  cep.addEventListener('keypress', () => {
-    let inputlength = cep.value.length
-
-    if (inputlength === 5) {
-      cep.value += '-'
+  for (var i = 0; i < nTransp; i++) {
+    var node = lista[i].checked
+    if (node === true) {
+      localStorage.removeItem("idTransportadora")
+      localStorage.setItem("idTransportadora", lista[i].id)
     }
-  })
-}
-
-//Somente números no input type='text'
-function somenteNumeros(e) {
-  var charCode = e.charCode ? e.charCode : e.keyCode;
-  // charCode 8 = backspace   
-  // charCode 9 = tab
-  if (charCode != 8 && charCode != 9) {
-      // charCode 48 equivale a 0   
-      // charCode 57 equivale a 9
-      if (charCode < 48 || charCode > 57) {
-          return false;
-      }
   }
 }
+
+function addPedido(detalhes,idCliente){
+  
+  idTransportadora = parseInt(localStorage.getItem("idTransportadora"));
+  
+
+  var body = {
+    "idPedido": 0,
+    "detalhes": detalhes,
+    "idTransportadora": idTransportadora,
+    "idCliente": idCliente,
+    "status": 0
+  }
+
+  var apiUrl = 'http://laborum-001-site1.btempurl.com/v1/controller/';
+  
+  fetch(apiUrl + 'pedido', {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers: {
+      "content-type": "application/json"
+    }
+  })
+  .then(data => data.json())
+  .then(response => console.log(response));
+}
+
+const detalhesPedido = "Pedido de um par de tênis da marca Nike valor de R$ 299,99."
+const idCliente = 2 // Sr Barriga
+
+const btnComprar = document.getElementById('comprar')
+btnComprar.addEventListener("click", addPedido(detalhesPedido,idCliente));
