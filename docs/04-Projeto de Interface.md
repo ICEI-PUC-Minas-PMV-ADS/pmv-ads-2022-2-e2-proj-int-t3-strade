@@ -65,12 +65,3 @@ Empresas que querem ser parceiras da Strade e serem clientes, poderão cadastrar
 Após cadastrar a transportadora, ela será analisada e o usuário receberá essa mensagem.
 
 ![Página Transportadora em Análise](img/Transportadora_em_Análise.png)
-
-
-### Avaliação de Entrega da Encomenda
-
-O usuário virá para essa tela após receber um link no seu e-mail constando a identificação do seu pedido e poderá avaliar a empresa que foi responsável pela entrega da encomenda.
-
-![Página de Avaliação de Entrega da Encomenda](img/Avaliação.png)
-
-### Meios de Contato
