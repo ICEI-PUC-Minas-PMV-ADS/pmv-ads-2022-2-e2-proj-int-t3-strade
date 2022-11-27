@@ -8,8 +8,6 @@
     justify-content: center;
   }
   
-  
-  
   /* Header e Footer */
   .paragraph-carousel {
     font-size: 1.2em;
@@ -76,16 +74,32 @@
     position: relative;
     left: 2em;
   }
+
+  #conteudo-principal{
+    position: relative;
+    top: 10em;
+  }
+
+  #notes_container{
+    position: relative;
+    margin-top: 8em;
+    text-align: center;
+  }
+
+  #container-footer{
+    position: relative;
+    top: 9em;
+  }
   
    /* Media Query */
   
-   @media (max-width: 768px)
+   /* @media (max-width: 768px)
    {
     .items-checkbox {
       grid-template-areas: 
       "l" 
       "r"}
-   }
+   } */
   
    /* DARK MODE */
   

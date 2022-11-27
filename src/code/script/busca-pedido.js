@@ -31,43 +31,43 @@ function retornoMensagem(status){
     if (status == 0){
         const noteElement = 
         `<div class="note">
-            <h3>"A encomenda já foi separada, aguardando ser enviada"</h3>
-            </div>`;
+            <h3>A encomenda já foi separada, aguardando ser enviada</h3>
+        </div>`;
     
         notesContainer.innerHTML = noteElement;
     }else if (status == 1){
         const noteElement = 
         `<div class="note">
-            <h3>"O pedido foi enviado pela transportadora"</h3>
-            </div>`;
+            <h3>O pedido foi enviado pela transportadora</h3>
+        </div>`;
     
         notesContainer.innerHTML = noteElement;
     }else if (status == 2){
         const noteElement = 
         `<div class="note">
-            <h3>"O pedido está a caminho de sua residência. Logo estará em suas mãos"</h3>
-            </div>`;
+            <h3>O pedido está a caminho de sua residência. Logo estará em suas mãos</h3>
+        </div>`;
     
         notesContainer.innerHTML = noteElement;
     }else if (status == 3){
         const noteElement = 
         `<div class="note">
-            <h3>"Pedido entregue"</h3>
-            </div>`;
+            <h3>Pedido entregue</h3>
+        </div>`;
     
         notesContainer.innerHTML = noteElement;
     }else if (status == 4){
         const noteElement = 
         `<div class="note">
-            <h3>"Pedido cancelado. Contate a loja ou a transportadora para mais informações"</h3>
-            </div>`;
+            <h3>Pedido cancelado. Contate a loja ou a transportadora para mais informações</h3>
+        </div>`;
     
         notesContainer.innerHTML = noteElement;
     } else {
         const noteElement = 
         `<div class="note">
-            <h3>"Status do pedido inválido. Contate o administrador do Strade."</h3>
-            </div>`;
+            <h3>Status do pedido inválido. Contate o administrador do Strade.</h3>
+        </div>`;
     
         notesContainer.innerHTML = noteElement;
     }
@@ -76,8 +76,8 @@ function retornoMensagem(status){
   function retornoNaoEncontrado(){
     const noteElement = 
         `<div class="note">
-            <h3>"Pedido não encontrado."</h3>
-            </div>`;
+            <h3>Pedido não encontrado.</h3>
+        </div>`;
     
         notesContainer.innerHTML = noteElement;
   }
