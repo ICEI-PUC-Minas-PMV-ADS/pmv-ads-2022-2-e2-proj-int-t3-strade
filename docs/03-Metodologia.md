@@ -36,16 +36,6 @@ etiquetas:
 
 Cada desenvolvedor terá sua resposabilidade recebida em cada sprint.
 
-> <h4><b>Sprint 1</b></h4>
-- 01 Documentação de contexto: Bruno, Diego, Gabriel, Lucas, Marina, Mikaelly e Thassia
-- 02 Especificação do projeto: Gabriel e Mikaelly
-- 12 Apresentação(Video): Lucas e Thassia
-
-> <h4><b>Sprint 2</b></h4>
-- 03 Metodologia: Gabriel e Mikaelly
-- 05 Arquitetura de solução (Diagrama de Classes): Diego
-
-
 ### Processo
 
 Todo o processo do trabalho está documentado na forma de Kanban pela aba de projects do GitHub. Nessa aba temos toda organização das atribuições de tarefas, etapas de cada processo e tarefas concluídas.
