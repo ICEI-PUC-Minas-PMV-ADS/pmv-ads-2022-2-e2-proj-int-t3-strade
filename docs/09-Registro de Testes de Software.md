@@ -33,6 +33,8 @@ Todos os campos de cadastro são validados e geram alerta de erro caso preenchid
 
 ><img src="./img/Busca-CEP.png" height="100%" width="100%">
 
+A referida funcionalidade foi substrituída por uma simplificação de busca por regiões ao invés de ceps.
+
 ### Listagem Trasnportadoras
 
 ><img src="./img/Lista-Transportadora.png" height="100%" width="100%">
