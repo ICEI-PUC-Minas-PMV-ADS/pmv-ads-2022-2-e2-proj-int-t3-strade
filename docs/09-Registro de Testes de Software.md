@@ -42,14 +42,13 @@ Todos os campos de cadastro são validados e geram alerta de erro caso preenchid
 ### CT-06 Verificar a função de Hipersensibilidade -Dark Mode
  
  O site Strade possui o recurso de Dark Mode e de acordo com os testes executados o site atualizou corretamente com as cores alteradas.
+ 
+ ![image](https://user-images.githubusercontent.com/16859514/204166959-98cb0c21-4458-4d33-a3a2-9341d32da9a3.png)
 
  ### CT-01 Verificar listagem das trasportadoras
 
  O sistema lista as transportadoras disponíveis para entrega no endereço indicado. Porém ainda não conseguimos listar mais que uma trasportadora e ao cadastrar nova, só aparece a primeira cadastrada.
  #### Plano de correção 
 Atualização no Front-end para processamento de um Array de tamanho *n*.
- ### CT-2 Cadastrar Trasportadora
 
- O site cadastra a trasportadora, mas nem todos os dados (Nome fantasia e tipos de encomenda) estão sendo anexados ao banco de dados.
-#### Plano de correção 
- Serão feitas atualizações no Back-end para o processamento e devido armazenamento desses Dados. 
+![image](https://user-images.githubusercontent.com/16859514/204167014-f7405628-3754-40e8-b304-8b59acbd5912.png)
