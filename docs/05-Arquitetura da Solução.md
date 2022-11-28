@@ -37,13 +37,14 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+* Ambiente .NET com foco em ASP.NET Core MVC
+* Visual Studio Community
+* SMARTER ASPNET para hospedagem
+* Git e Github para versionamento de código
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+A hospedagem do banco de dados e da aplicação foi realizada na plataforma smarter aspnet https://www.smarterasp.net/index que possui um plano de 60 dias gratuitos.
 
 > **Links Úteis**:
 >
