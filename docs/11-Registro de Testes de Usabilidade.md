@@ -1,6 +1,6 @@
 # Registro de Testes de Usabilidade
 
-## Resultado Piloto teste de usabilidade
+## Resultado teste de usabilidade
 
  Em primeiro momento, foi realizado o teste para avaliação da usabilidade do sistema pelo Google Forms com endereço https://forms.gle/VcUBL8WgG7cDfVTq8 . A aplicação depende da integração com os sistemas de lojas, para seu funcionamento, foi feito então um exemplo de Front-end para que o teste fosse realizado. Baseado no Plano de Testes de Usabilidade desenvolvido para os casos de uso, ele foi aplicado para facilitar a intervenção e correção pelos desenvolvedores em caso de dificuldade e falta de clareza na utilização do aplicação pelo usuário.
   
