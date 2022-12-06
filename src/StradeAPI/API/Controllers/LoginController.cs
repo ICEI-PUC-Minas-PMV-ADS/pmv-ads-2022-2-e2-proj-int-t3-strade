@@ -62,14 +62,14 @@ namespace API.Controllers {
                 return Unauthorized(new ResponseError() { IsSuccess = false, Message = "A senha deve conter pelo menos 8 caracteres." });
 
             var cliente = await (from t in context.Clientes
-                                        join i in context.Informacaos on t.IdInformacao equals i.IdInformacao
-                                        where login.Email.Equals(i.Email)
-                                        select new
-                                        {
-                                            IdInformacao = i.IdInformacao,
-                                            Email = i.Email,
-                                            Senha = i.Senha
-                                        }).FirstOrDefaultAsync();
+                                 join i in context.Informacaos on t.IdInformacao equals i.IdInformacao
+                                 where login.Email.Equals(i.Email)
+                                 select new
+                                 {
+                                     IdInformacao = i.IdInformacao,
+                                     Email = i.Email,
+                                     Senha = i.Senha
+                                 }).FirstOrDefaultAsync();
 
             if (cliente == null || !CompararSenhaHash(login.Senha, cliente.Senha))
                 return Unauthorized(new ResponseError() { IsSuccess = false, Message = "Email ou senha incorretos." });

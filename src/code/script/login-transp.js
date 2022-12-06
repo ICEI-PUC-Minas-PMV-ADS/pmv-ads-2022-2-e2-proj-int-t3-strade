@@ -1,4 +1,4 @@
-const ISDEVELOPMENTTEST = false;
+const ISDEVELOPMENTTEST = true;
 
 function GetCurrentApiUrl() {
     if (ISDEVELOPMENTTEST)
@@ -41,7 +41,7 @@ function validarTodosOsCampos(){
   }
 
     var data = { Email: emailInput, Senha: senhaInput };
-    var apiUrl = GetCurrentApiUrl() + "login/cliente";
+    var apiUrl = GetCurrentApiUrl() + "login/transportadora";
 
     var requestOptions = {
         method: "POST",
