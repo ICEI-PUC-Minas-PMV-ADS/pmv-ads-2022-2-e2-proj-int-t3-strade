@@ -51,9 +51,25 @@
       font-weight: bold;
   }
   
-  #botaoCadastrar {
-    --bs-btn-border-color: #05543E;
-    --bs-btn-hover-bg: #05543E;
+  #btnBuscar {
+    border-color: #05543E;
+    background-color: #05543E;
+  }
+  
+  #btnBuscar:hover {
+    border-color: #198754;
+    background-color: #198754;
+  }
+  
+  .dark #btnBuscar {
+    color: #198754;
+    background-color: transparent;
+    border-color: #05543E;
+  }
+  
+  .dark #btnBuscar:hover{
+    color: #fff;
+    background-color: #05543E;
   }
   
   .nav-link{

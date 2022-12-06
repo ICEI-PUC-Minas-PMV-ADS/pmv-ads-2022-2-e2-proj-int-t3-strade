@@ -1,5 +1,5 @@
 window.onload = function () {
-    clickDarkBtn();
+  clickDarkBtn(); 
 }
 
 const btnBuscar = document.getElementById("btnBuscar");
@@ -64,7 +64,7 @@ function retornoMensagem(status){
     } else {
         const noteElement = 
         `<div class="note">
-            <h3>Status do pedido inválido. Contate o administrador do Strade.</h3>
+            <h3>Status do pedido inválido.</h3>
         </div>`;
     
         notesContainer.innerHTML = noteElement;
