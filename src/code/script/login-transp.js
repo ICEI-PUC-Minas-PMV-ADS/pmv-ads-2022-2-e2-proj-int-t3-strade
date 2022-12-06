@@ -1,4 +1,4 @@
-const ISDEVELOPMENTTEST = true;
+const ISDEVELOPMENTTEST = false;
 
 function GetCurrentApiUrl() {
     if (ISDEVELOPMENTTEST)

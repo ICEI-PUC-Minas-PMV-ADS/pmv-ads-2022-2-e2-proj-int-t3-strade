@@ -27,16 +27,6 @@ function clickDarkBtn() {
     if(document.body.classList.contains("dark")) {
         localStorage.setItem("dark", 1);
     }
+    console.log('clicou')
 });
-}
-
-function validarCheckbox(){
-  var checkboxes = document.getElementsByName('checkboxEncomendas')
-  console.log(checkboxes)
-  
-  for (let i=0; i<checkboxes.length; i++){
-    if (checkboxes[i].checked)
-      return true;
-  }
-  return false;
 }
