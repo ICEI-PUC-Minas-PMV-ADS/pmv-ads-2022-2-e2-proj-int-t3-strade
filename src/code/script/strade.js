@@ -165,6 +165,11 @@ function validarTodosOsCampos(){
   addTransportadora(nomeTransportadoraInput, cnjpInput, emailInput, telInput, cepInput, regioes, senhaInput);
   
   alert('Sua transportadora foi cadastrada.');
+
+  //Atualizar a pg após cadastrar a transportadora.
+  setTimeout(()=>{
+    window.location.href = "index.html"
+  }, 2000)
 }
 
 /* Número de caracteres no  */
