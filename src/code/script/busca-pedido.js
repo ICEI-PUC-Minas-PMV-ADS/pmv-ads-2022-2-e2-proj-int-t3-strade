@@ -1,3 +1,7 @@
+window.onload = function () {
+    clickDarkBtn();
+}
+
 const btnBuscar = document.getElementById("btnBuscar");
 const idPedido = document.querySelector("#idPedido");
 const notesContainer = document.querySelector("#notes_container")
