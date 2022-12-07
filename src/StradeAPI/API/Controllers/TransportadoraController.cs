@@ -99,8 +99,6 @@ namespace API.Controllers {
             if(transportadoraDto.Senha.Length < 8)
                 return NotFound("A senha deve ter no minimo 8 caracteres.");
 
-            var senhaHash = BCrypt.Net.BCrypt.HashPassword(transportadoraDto.Senha);
-
             var informacao = new InformacaoDTO() {
                 Nome = transportadoraDto.Nome,
                 IdInformacao = transportadoraDto.IdInformacao,
@@ -108,7 +106,7 @@ namespace API.Controllers {
                 Email = transportadoraDto.Email,
                 Endereco = transportadoraDto.Endereco,
                 NumeroContato = transportadoraDto.NumeroContato,
-                Senha = senhaHash
+                Senha = transportadoraDto.Senha
             };
 
             var idTransportadora = await _informacaoController.SaveInformacao(context, informacao);

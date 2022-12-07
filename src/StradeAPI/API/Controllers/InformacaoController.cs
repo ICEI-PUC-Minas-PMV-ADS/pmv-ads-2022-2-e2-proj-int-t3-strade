@@ -27,7 +27,6 @@ namespace API.Controllers {
                 Endereco = informacaoDto.Endereco,
                 NumeroContato = informacaoDto.NumeroContato,
                 Senha = senhaHash
-
             };
 
             context.Informacaos.Add(informacao);
