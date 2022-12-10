@@ -47,7 +47,6 @@
 | **Caso de Teste** 	| **CT-08 – Regras de negócio para Transportadoras**	|
 |Requisito Associado | *RNF-001* O sistema deve ter uma lista com uma regra de negócios para o cadastro das transportadoras. |
 | Objetivo do Teste 	|  Verificar se as regras estão sendo disponibilizadas corretamente |
-	@@ -56,12 +38,6 @@
 | Passos 	| - Acessar o site Strade <br> - Clicar em Cadastrar Transportadora|
 |Critério de Êxito | - O site deve se mostrar responsivo em dispositivos móveis. |
 |  	|  	|
