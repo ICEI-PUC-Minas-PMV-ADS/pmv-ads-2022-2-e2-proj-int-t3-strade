@@ -26,6 +26,10 @@ Todos os campos de cadastro são validados e geram alerta de erro caso preenchid
 
 ><img src="./img/Aviso-Cadastro-Concluido.png" height="100%" width="100%">
 
+## CT-11 - Banco de Dados Relacional
+
+![image](https://user-images.githubusercontent.com/16859514/206872140-ac8f4e30-6fb7-4313-ae13-fa6d98490a6e.png)
+
 
 ## CT-01 - Lista de Trasportadoras - Site Loja
 
