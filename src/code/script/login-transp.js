@@ -60,7 +60,7 @@ function validarTodosOsCampos(){
             if (response.isSuccess) {
                 let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
                 localStorage.setItem("token", token)
-                window.location.href = "busca-pedido.html";
+                window.location.href = "status-pedido.html";
             }
         }
     )       
