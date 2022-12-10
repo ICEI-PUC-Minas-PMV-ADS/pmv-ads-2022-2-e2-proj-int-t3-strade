@@ -38,7 +38,7 @@
 | Passos 	| - Acessar o site strade <br> - Selecionar o tema escuro/claro na barra de seleção .|
 |Critério de Êxito | - O site deve atualizar com as cores alteradas. |
 |  	|  	|
-| **Caso de Teste** 	| **CT-07 – Hipersensibilidade**	|
+| **Caso de Teste** 	| **CT-07 – Relatório de comunicações**	|
 |Requisito Associado | *RF-007* O sistema deve gerar um relatório das comunicações feitas pela transportadora ou pelos lojistas. |
 | Objetivo do Teste 	|  Verificar se os relatórios estão sendo gerados corretamente |
 | Passos 	| - Acessar o site Strade <br> - Buscar o pedido desejado <br> -  Clicar em gerar relatório de comunicação.|
