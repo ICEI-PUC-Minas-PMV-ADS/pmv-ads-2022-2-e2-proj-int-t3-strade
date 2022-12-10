@@ -57,7 +57,7 @@ Fluxo Transportadora no site da Strade:
 
 Fluxo Cliente no site da Strade:
 * Caso o cliente queira acessar o status da sua entrega, ele deverá clicar na opção de login no menu superior.
-* Para o caso-modelo, o usuário "Sr Barriga" foi cadastrado cujo email de acesso é "barriga@gmail.com" e senha "teste123".
+* Para o caso-modelo, o usuário "Transportadora Flash" foi cadastrado cujo email de acesso é "fash@flash.com" e senha "teste123".
 * Ao clicar na opção de login, aparecerá um formulário de login que deve ser preenchido com o email e senha do cliente.
 * Ao clicar no botão logar, um pop-up de sucesso ou fracasso do login aparecerá e o cliente será direcionado para a tela de consulta de pedido.
 * De posse do número do pedido na página da loja parceira, basta coloca-lo no input de texto e clicar em buscar.
