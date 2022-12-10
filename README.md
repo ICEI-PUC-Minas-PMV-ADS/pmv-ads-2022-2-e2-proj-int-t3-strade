@@ -48,20 +48,25 @@ Fluxo no site da loja parceira:
 * Por fim, basta clicar no botão comprar no canto inferior direito do site da loja.
 * Ao clica-lo, um pop-op contento o número do pedido do cliente aparecerá (esse número será usado para controle do status da entrega).
 
-Fluxo Transportadora no site da Strade:
+Fluxo Transportadora no site da Strade (cadastro):
 * O cadastro de uma nova transportadora é realizado na terceira opção do menu superior.
 * Para habilitar o formulário de inscrição, a transportadora deve aceitar as regras de negócio no radio button ao lado esquerdo do formulário.
 * Uma vez aceitas as regras, o formulário estará disponível ao preenchimento das informações.
 * Ao término do preenchimento, deve-se clicar no botão cadastrar abaixo do formulário.
 * Um pop-up com a mensagem "Sua transportadora foi cadastrada" aparecerá na página indicando o sucesso do cadastro no banco de dados.
 
-Fluxo Cliente no site da Strade:
-* Caso o cliente queira acessar o status da sua entrega, ele deverá clicar na opção de login no menu superior.
-* Para o caso-modelo, o usuário "Transportadora Flash" foi cadastrado cujo email de acesso é "flash@flash.com" e senha "teste123".
-* Ao clicar na opção de login, aparecerá um formulário de login que deve ser preenchido com o email e senha do cliente.
+
+Fluxo Transportadora no site da Strade (atualização de status do pedido):
+* Ao clicar na opção de login no menu superior, aparecerá um formulário de login que deve ser preenchido com o email e senha da transportadora.
 * Ao clicar no botão logar, um pop-up de sucesso ou fracasso do login aparecerá e o cliente será direcionado para a tela de consulta de pedido.
 * De posse do número do pedido na página da loja parceira, basta coloca-lo no input de texto e clicar em buscar.
-* Uma mensagem com um dos 4 status da entrega aparecerá.
+* Uma mensagem com um dos 4 status da entrega aparecerá e, também, é possível atualizar o referido status no dropdown menu que é habilitado sempre que uma seção de login de transportadora é usada na tela de status.
+
+Fluxo Cliente no site da Strade:
+* Caso o cliente queira acessar o status da sua entrega, ele deverá clicar na opção de "consultar pedido" no menu superior.
+* Para consultar o pedido, basta indica-lo por meio do número recebido no ato da compra.
+* Uma mensagem aparecerá logo abaixo com o status do pedido.
+
 
 # Documentação
 
