@@ -65,6 +65,11 @@
   left: 2em;
 }
 
+.regras-negocio{
+  position: relative;
+  right: 2.4em;
+}
+
  /* Media Query */
 
  @media (max-width: 768px)
