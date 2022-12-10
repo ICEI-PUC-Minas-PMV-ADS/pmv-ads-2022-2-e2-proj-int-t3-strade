@@ -26,7 +26,7 @@ A seguir estão apresentadas as personas que foram encontradas durante a pesquis
 |:---:|:---:|:---:|
 | ![Persona Adriana Andrade](img/persona-adriana-andrade.png) | **Ocupação:** CEO de uma transportadora com 40 empregados com múltiplos veículos de diferentes portes.| **Aplicativos:** Telegram, YouTube, LinkedIn, Whatsapp, Teams, Instagram |
 | **Motivações**| **Frustrações**| **Hobbies e História** |
-| Sua maior motivação está na satisfação dos lojistas. Para Adriana, se o lojista está satisfeito é porque seus clientes estão satisfeitos. | Sente que perde muito tempo para resolver problemas que poderiam ser resolvidos rapidamente com sistema de rastreio. | Paintball com os amigos. Gosta de frequentar restaurantes elegantes. Comidas apimentadas. |
+| Sua maior motivação está na satisfação dos lojistas. Para Adriana, se o lojista está satisfeito é porque seus clientes estão satisfeitos. | Sente que perde muito tempo para resolver problemas que poderiam ser resolvidos rapidamente com o contato direto com o cliente. | Paintball com os amigos. Gosta de frequentar restaurantes elegantes. Comidas apimentadas. |
 
 | Diego Novaes | Idade: 21 |Persona 5 - Consumidor|
 |:---:|:---:|:---:|
@@ -55,7 +55,7 @@ Registramos as histórias das personas encontradas para o projeto e analisamos s
 |**Júlio Assis**| saber onde está o meu pacote. | ficar tranquilo sabendo que o pacote está seguro e chegará no tempo certo.|
 |**Matheus Pereira**| quando comprar ou vender, não ocorra avarias nos produtos. | para evitar transtornos devido a burocracia para resolver o problema. |
 |**Chiara Fernandes**| reduzir a quantidade de reuniões com lojistas para um único contrato | economizar tempo e conseguir focar em outros assuntos que podem ser otimizados.|
-|**Adriana Andrade**| rastreio eficiente com informações claras | resolver seus problemas de forma mais eficiente.|
+|**Adriana Andrade**| ter contato com o cliente | resolver seus problemas de forma mais eficiente.|
 |**Diego Novaes**| maior quantidade de opções de frete | escolher aquele que atender melhor sua necessidade de tempo. |
 |**Tamara Furtado**| Seja possível identificar quais transportadoras possuem funcionários que se encaixam em PCD. | poder escolher a empresa baseado nessa informação. |
 |**Kim Oculamat**| Seja possivel ver as avaliaçoes feitas por clientes das transportadoras | Para ter acesso a qualidade do serviço prestado ao cliente |
@@ -70,8 +70,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | ------ | -------------------------- | -------------- |
 | **RF-001** | O sistema deve listar as transportadoras disponíveis para entrega no endereço indicado. | ALTA |
 | **RF-002** | O site do sistema deve permitir o cadastro de transportadoras locais. | ALTA |
-| **RF-003** | O site do sistema deve disponibilizar um meio para atualização dos status dos itens. | ALTA |
-| **RF-004** | O sistema deve permitir a escolha do tema escuro ou claro para facilitar a navegação das pessoas com hipersensibilidade a luz. | BAIXA |
+| **RF-003** | O site do sistema deve disponibilizar uma página para atualização dos status dos itens. | ALTA |
+| **RF-004** | O sistema deve permitir a avaliação da transportadora depois da entrega. | BAIXA |
+| **RF-005** | O sistema deve disponibilizar meios de contato com o cliente, seja para a transportadora, seja para a loja. | BAIXA |
+| **RF-006** | O sistema deve permitir a escolha do tema escuro ou claro para facilitar a navegação das pessoas com hipersensibilidade a luz. | BAIXA |
+| **RF-007** | O sistema deve gerar um relatório das comunicações feitas pela transportadora ou pelos lojistas. | MÉDIA |
 
 ### Requisitos não Funcionais
 
@@ -79,8 +82,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | ------ | -------------------------- | -------------- |
 | **RNF-001** | O sistema deve ter uma lista com uma regra de negócios para o cadastro das transportadoras. | MÉDIA |
 | **RNF-002** | O site do sistema de cadastro das transportadoras deverá ser responsivo, permitindo a visualização em um celular de forma adequada. | ALTA |
-| **RNF-003** | O sistema deve ter um banco de dados relacional que permita que a API o consulte. | ALTA |
-| **RNF-004** | A equipe somente deve utilizar as linguagens HTML, CSS, JS e C#. | ALTA |
+| **RNF-003** | A lista de transportadoras deve indicar quais delas possuem funciorários PCD. | MÉDIA |
+| **RNF-004** | O sistema deve ter um banco de dados relacional que permita que a API o consulte. | ALTA |
+| **RNF-005** | A equipe somente deve utilizar as linguagens HTML, CSS, JS e C#. | ALTA |
 
 ## Restrições
 
