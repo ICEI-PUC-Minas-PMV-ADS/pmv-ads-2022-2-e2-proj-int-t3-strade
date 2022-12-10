@@ -56,12 +56,16 @@
     font-weight: bold;
 }
 
-#btnBuscar {
+#btnBuscar,
+#btnAlterar,
+#btnOutroPedido {
   border-color: #05543E;
   background-color: #05543E;
 }
 
-#btnBuscar:hover {
+#btnBuscar:hover,
+#btnAlterar:hover,
+#btnOutroPedido:hover {
   border-color: #198754;
   background-color: #198754;
 }
@@ -112,112 +116,11 @@
   top: 9em;
 }
 
- /* Media Query */
-
- /* @media (max-width: 768px)
- {
-  .items-checkbox {
-    grid-template-areas: 
-    "l" 
-    "r"}
- } */
-
- /* DARK MODE */
-
-.card{
-  --bs-card-cap-color: black;
+#idPedido,
+#selectStatus,
+#btnBuscar {
+  margin: 1em;
 }
-
-.dark
-.dark .card{
-  --bs-card-cap-color: #fff;
-}
-
-#change-theme {
-display: none;
-}
-
-.bi {
-font-size: 1.4rem;
-cursor: pointer;
-}
-
-.bi-moon {
-  display: none;
-}
-
-.dark .bi-moon {
-  display: block;
-}
-
-.dark .bi-sun {
-  display: none;
-}
-
-.dark .fixed-top{
-  background-color: #263238;
-    color: #fff;
-}
-
-.dark,
-.dark header,
-.dark main,
-.dark body{
-    background-color: #263238;
-    color: #fff;
-}
-
-.dark 
-ul.list-group {
-  --bs-list-group-bg: #37474f;
-  --bs-list-group-color: #fff;
-}
-
-.dark
-.navbar-brand {
-  --bs-navbar-brand-color: #fff
-}
-
-.dark
-.separation{
-  color: #fff;
-}
-
-.dark 
-.offcanvas{
-  --bs-offcanvas-bg: #37474f;
-  --bs-navbar-active-color: #fff;
-  --bs-offcanvas-color: #fff;
-}
-
-a.nav-link:hover {
-  --bs-navbar-active-color: black;
-}
-
-.dark
-.navbar {
-  --bs-navbar-color: #fff;
-}
-
-.dark .container-fluid
-.dark .navbar 
-.dark .list-group
-.dark .input-group-text {
-  background-color: #37474f;
-  color: #fff;
-}
-
-
-.dark #fundo-img {
-  background-color: #37474f;
-  color: #fff;
-}
-
-.dark .navbar-toggler,
-.dark .btn-close {
-    background-color: #37474f;
-}
-
 
 /** dialog */
 input[type="checkbox"] {
@@ -309,10 +212,9 @@ font-size: 2rem;
 
 .btn {
 background-color: #444;
-width: 7rem;
 height: 2.5rem;
 border: none;
-border-radius: 3rem;
+border-radius: 1em;
 color: #fff;
 text-transform: uppercase;
 cursor: pointer;
@@ -406,4 +308,100 @@ box-shadow: 0 0 1em rgb(0, 0, 0 / .3);
 width: 70%;
 margin: auto;
 padding: 1em;
+}
+
+ /* DARK MODE */
+
+ .card{
+  --bs-card-cap-color: black;
+}
+
+.dark
+.dark .card{
+  --bs-card-cap-color: #fff;
+}
+
+#change-theme {
+display: none;
+}
+
+.bi {
+font-size: 1.4rem;
+cursor: pointer;
+}
+
+.bi-moon {
+  display: none;
+}
+
+.dark .bi-moon {
+  display: block;
+}
+
+.dark .bi-sun {
+  display: none;
+}
+
+.dark .fixed-top{
+  background-color: #263238;
+    color: #fff;
+}
+
+.dark,
+.dark header,
+.dark main,
+.dark body{
+    background-color: #263238;
+    color: #fff;
+}
+
+.dark 
+ul.list-group {
+  --bs-list-group-bg: #37474f;
+  --bs-list-group-color: #fff;
+}
+
+.dark
+.navbar-brand {
+  --bs-navbar-brand-color: #fff
+}
+
+.dark
+.separation{
+  color: #fff;
+}
+
+.dark 
+.offcanvas{
+  --bs-offcanvas-bg: #37474f;
+  --bs-navbar-active-color: #fff;
+  --bs-offcanvas-color: #fff;
+}
+
+a.nav-link:hover {
+  --bs-navbar-active-color: black;
+}
+
+.dark
+.navbar {
+  --bs-navbar-color: #fff;
+}
+
+.dark .container-fluid
+.dark .navbar 
+.dark .list-group
+.dark .input-group-text {
+  background-color: #37474f;
+  color: #fff;
+}
+
+
+.dark #fundo-img {
+  background-color: #37474f;
+  color: #fff;
+}
+
+.dark .navbar-toggler,
+.dark .btn-close {
+    background-color: #37474f;
 }
