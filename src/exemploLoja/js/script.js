@@ -80,7 +80,12 @@ function displayIdPedido(response){
 
   const noteElement = 
     `<div class="note">
-      <h3>O número do seu pedido é: ${response}</h3>
+      <h3>O número do seu pedido é: ${response}
+      </h3>
+    </div>
+    <div class="note">
+      <h4>Para saber o status do pedido, clique <a href="http://brunoruas-001-site1.etempurl.com/busca-pedido.html">AQUI</a>.
+      <h4>
     </div>`;
 
     notesContainerId.innerHTML = noteElement;
