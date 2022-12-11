@@ -47,6 +47,12 @@
 | **Caso de Teste** 	| **CT-08 – Regras de negócio para Transportadoras**	|
 |Requisito Associado | *RNF-001* O sistema deve ter uma lista com uma regra de negócios para o cadastro das transportadoras. |
 | Objetivo do Teste 	|  Verificar se as regras estão sendo disponibilizadas corretamente |
+| Passos     | - Acessar o site Strade <br> - Clicar em Cadastrar Transportadora <br> -  Clicar em "Termos de negócio".|
+|Critério de Êxito | - O site deve mostrar o texto com as regras de negócio como pré-requisitos para o cadastro da transportadora. |
+|      |      |
+| Caso de Teste     | **CT-09 – Responsividade**    |
+|Requisito Associado | RNF-002 O site do sistema de cadastro das transportadoras deverá ser responsivo, permitindo a visualização em um celular de forma adequada. |
+| Objetivo do Teste     |  Atestar que o site está responsivo |
 | Passos 	| - Acessar o site Strade <br> - Clicar em Cadastrar Transportadora|
 |Critério de Êxito | - O site deve se mostrar responsivo em dispositivos móveis. |
 |  	|  	|
