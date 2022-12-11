@@ -6,7 +6,7 @@
 
  Os  testes  realizados  irão  mensurar  Efetividade  (saber  se  os  usuários  conseguem  completar  seus  objetivos)  a  eficiência  (  quantidade  de  esforço  e  recursos  são  necessários),  satisfação  (A experiência foi satisfatória)  
 
- Serão  realizados  por  3  empresas,  3  transportadoras  e  4  usuários  finais.  Os  participantes  assinarão  um  termo  de  consentimento  informando  que  reconhecem  a  participação  voluntária.  E  que  sua  identificação  não  será  apresentada.  Será  realizado  de  forma  online,  remotamente  em  um  protótipo  a  ser  desenvolvido  e  após  todas  as  tarefas  terem  sido  executadas, o participante preencherá um questionário de satisfação pós-teste.  
+Os  participantes  deverão reconhecer  a  participação  voluntária.  E saberão que  sua  identificação  não  será  apresentada.  Será  realizado  de  forma  online,  remotamente  em  um  protótipo  a  ser  desenvolvido  e  após  todas  as  tarefas  terem  sido  executadas, o participante preencherá um questionário de satisfação pós-teste.  
 
 ### Tarefas a serem realizadas pelo dono da transportadora:  
 
@@ -16,19 +16,12 @@
 
 ### Tarefas a serem realizadas pelo o usuário final:  
 
- ●  Após a simulação de compra, coloque o CEP da sua residência no campo indicado.  
-
- ●  Deverá  ser  feita  uma  visualização  da  classificação  da  transportadora  a  ser escolhida.   
+ ●  Após a simulação de compra, coloque a região da sua residência no campo indicado.  
 
  ●  Escolha a transportadora que melhor te atende.  
 
  ●  Acesso ao status de entrega do pedido.  
 
-### Tarefas a serem executadas pela empresa:  
-
- ●  Acesso aos relatórios dos pedidos feitos pelos usuários.  
-
- ●  Banimento  de  determinada  transportadora  em  casa  de  problemas  com  a  entrega  de algum produto anterior.  
 
  Será  feito  um  questionário  com  10  perguntas no forms da Google(https://forms.gle/hzBYjZAxacM4v7oq8),  e  para  cada  uma  dessas  perguntas  o  usuário  poderá  dar  uma  nota  numa  escala  Likert  que  varia  de  1  a  5,  onde  1  significa  que  discorda  completamente  e  5  que  concorda  completamente.  Esse  teste  é  feito  sem  nenhuma  explicação prévia, em que o usuário avalia, tendo o seu  primeiro contato com a aplicação.  
 

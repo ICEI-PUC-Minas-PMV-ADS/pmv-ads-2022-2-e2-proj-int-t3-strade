@@ -36,16 +36,16 @@ Todos os campos de cadastro são validados e geram alerta de erro caso preenchid
 ## CT-06 - Verificar a função de Hipersensibilidade -Dark Mode 
 
 >### Dark Mode Inativo:
-><img src="./img/dark-mode-inativo.png" height="100%" width="100%">
+><img src="./img/Dark-mode-inativo.png" height="100%" width="100%">
 >
 >### Dark Mode ativo
-><img src="./img/dark-mode-ativo.png" height="100%" width="100%">
+><img src="./img/Dark-mode-ativo.png" height="100%" width="100%">
 >
 
 
 ### Listagem Transportadoras
 
-><img src="./img/lista-transportadora.png" height="100%" width="100%">
+><img src="./img/Lista-Transportadora.png" height="100%" width="100%">
 
 
 ## Avaliação 1° Etapa
